@@ -1,3 +1,7 @@
 # raipiot-website
 
-An enterprise website based on Next.js.
+## Tech Stack
+
+- Next.js 14, based on App router
+- TypeScript
+- TailwindCSS

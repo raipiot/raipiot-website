@@ -1,4 +1,6 @@
 {
+  "name": "raipiot-website",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -6,19 +8,52 @@
     "lint": "next lint",
     "turbo:dev": "turbo dev",
     "turbo:build": "turbo build",
-    "turbo:start": "turbo start"
+    "turbo:start": "turbo start",
+    "cspell:check": "cspell \"**\"",
+    "eslint:check": "eslint \"**/*.{ts,tsx,js,jsx}\" --color",
+    "eslint:fix": "pnpm eslint:check --fix",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "prettier:fix": "prettier --write --ignore-unknown .",
+    "cz": "git-cz",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "clsx": "^2.0.0",
+    "dayjs": "^1.11.10",
+    "lucide-react": "^0.301.0",
     "next": "^14.0.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "superjson": "^2.2.1",
+    "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
+    "@brucesong/eslint-config-next": "^0.0.9",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.16",
+    "commitizen": "^4.3.0",
+    "cspell": "^8.2.3",
+    "cz-git": "^1.8.0",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.4.0",
     "turbo": "^1.11.2",
-    "typescript": "~5.3.3"
+    "typescript": "^5.3.3"
   },
-  "private": true
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "private": true,
+  "license": "MIT"
 }
