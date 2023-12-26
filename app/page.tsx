@@ -1,5 +1,14 @@
+import Image from 'next/image'
+
 export default function Home() {
   return (
-    <main className="flex h-screen items-center justify-center text-center text-3xl">raipiot</main>
+    <main className="h-[2000px]">
+      <Image
+        src="/img/qrcode.png"
+        alt=""
+        width={300}
+        height={300}
+      />
+    </main>
   )
 }

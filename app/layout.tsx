@@ -2,6 +2,7 @@ import './global.scss'
 
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
+import type { PropsWithChildren } from 'react'
 
 import { cn } from '@/utils'
 
@@ -34,12 +35,12 @@ export const metadata: Metadata = {
 export const viewport =
   'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no'
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={cn(montserrat.className, 'w-full overflow-x-hidden scroll-smooth relative')}>
         <Header />
-        <div className="relative min-h-screen">{children}</div>
+        <div className="relative min-h-screen pt-20">{children}</div>
         <Footer />
         <ClientInit />
       </body>

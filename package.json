@@ -21,12 +21,14 @@
   "dependencies": {
     "clsx": "^2.0.0",
     "dayjs": "^1.11.10",
+    "immer": "^10.0.3",
     "lucide-react": "^0.301.0",
     "next": "^14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "superjson": "^2.2.1",
-    "tailwind-merge": "^2.2.0"
+    "tailwind-merge": "^2.2.0",
+    "use-immer": "^0.9.0"
   },
   "devDependencies": {
     "@brucesong/eslint-config-next": "^0.0.9",

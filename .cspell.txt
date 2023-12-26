@@ -1,8 +1,12 @@
 brucesong
 clsx
+EPICOR
 gesturestart
+Immer
 lucide
 preinstall
+qrcode
 raipiot
 superjson
 tailwindcss
+unoptimized

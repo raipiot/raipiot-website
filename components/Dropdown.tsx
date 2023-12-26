@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import type { PropsWithChildren } from 'react'
 import { memo, useState } from 'react'
@@ -16,42 +14,69 @@ interface Props
     React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
   > {
   text?: string
+  href?: string
   list?: DropDownItem[]
 }
 
 const Dropdown = memo((props: Props) => {
   const [show, setShow] = useState(false)
   const [hover, setHover] = useState(false)
-  const { text, list, ...rest } = props
+  const { text, list, href, ...rest } = props
+
   return (
     <div
       {...rest}
-      className="relative -mb-1.5 pb-1.5 hover:text-[#333333]"
+      className="relative -mb-8 pb-8"
       onMouseOver={() => setShow(true)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onMouseOut={() => setShow(false)}
     >
-      <label className="cursor-pointer rounded-3xl transition-all">{text}</label>
-      <ul
-        className={cn(
-          'absolute -bottom-1.5 left-0 z-[1] w-fit translate-y-full space-y-1 rounded-md bg-white p-1 text-[#333333] shadow-lg transition-all',
-          show || hover ? 'visible opacity-100' : 'invisible opacity-0'
-        )}
-      >
-        {list?.map((item, index) => (
-          <li
-            key={index}
-            className="w-full whitespace-nowrap rounded-lg p-2 transition-all hover:bg-slate-200"
-            onClick={() => {
-              setShow(false)
-              setHover(false)
-            }}
-          >
-            <Link href={item.href ?? '/'}>{item.text}</Link>
-          </li>
-        ))}
-      </ul>
+      {href ? (
+        <Link
+          href={href}
+          className="rounded-3xl font-medium transition-all"
+        >
+          {text}
+        </Link>
+      ) : (
+        <label
+          className={cn(
+            'rounded-3xl font-medium transition-all',
+            Array.isArray(list) && list.length > 0 && 'cursor-pointer'
+          )}
+        >
+          {text}
+        </label>
+      )}
+      {list && list.length > 0 && (
+        <ul
+          className={cn(
+            'absolute -bottom-2 -translate-x-1/2 left-1/2 z-[1] w-fit translate-y-full space-y-1 rounded-md bg-white p-2 transition-all',
+            // eslint-disable-next-line quotes
+            "after:content-[''] after:absolute after:border-8 after:border-transparent after:border-b-white after:left-1/2 after:-translate-x-1/2 after:bottom-full after:border-solid",
+            show || hover ? 'visible opacity-100' : 'invisible opacity-0'
+          )}
+          style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+          {list.map((item, index) => (
+            <li
+              key={index}
+              className="w-full whitespace-nowrap rounded-lg p-2 transition-all hover:bg-gray-100/50 active:bg-gray-100"
+              onClick={() => {
+                setShow(false)
+                setHover(false)
+              }}
+            >
+              {item.href ? (
+                <Link href={item.href ?? '/'}>{item.text}</Link>
+              ) : (
+                <span>{item.text}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 })

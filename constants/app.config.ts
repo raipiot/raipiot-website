@@ -1,3 +1,4 @@
 export const AppConfig = Object.freeze({
-  appName: ''
+  appName: 'raipiot',
+  appSlogan: 'Intelligent Manufacturing'
 })
