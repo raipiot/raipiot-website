@@ -9,7 +9,7 @@ export const navbar: NavbarItem[] = [
     title: '产品',
     children: [
       {
-        title: '跟单猿',
+        title: '智能供应链协同平台“跟单猿”',
         href: '/waiting'
       }
     ]
@@ -23,14 +23,13 @@ export const navbar: NavbarItem[] = [
       }
     ]
   },
-  { title: '案例' },
   {
     title: '关于我们',
     href: '/about',
     children: [
       { title: '睿朴麟介绍', href: '/about' },
       { title: '资讯动态', href: '/about/news' },
-      { title: '品牌建设', href: '/about/brand' }
+      { title: '雇主品牌', href: '/about/brand' }
     ]
   }
 ]

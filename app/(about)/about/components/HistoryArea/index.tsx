@@ -12,8 +12,8 @@ const data = [
       '获评“高新技术企业”',
       '软著累计 31 件，专利 3件',
       '苏州市新时代工商管理企业家联合会智能制造及半导体专委会理事单位',
-      '跟单猿上线',
-      '第二代 MES 开发完成'
+      '智能供应链协同平台“跟单猿”上线',
+      '第二代 MES 上线'
     ]
   },
   {
@@ -48,10 +48,11 @@ export default function HistoryArea() {
     <>
       <div className="relative hidden h-[380px] w-full p-24 text-white sm:flex">
         <div className="container mx-auto flex flex-col items-center justify-between">
-          <div className="text-4xl">发展里程碑</div>
+          <div className="text-3xl">发展里程碑</div>
           <div className="relative flex w-full justify-between">
-            {data.map((i) => (
+            {data.map((i, index) => (
               <div
+                key={index}
                 className={cn(
                   'rounded-full bg-[#bfc0c1] p-2 cursor-pointer select-none',
                   i.title === current && 'bg-white transition-all'
@@ -76,16 +77,23 @@ export default function HistoryArea() {
           src="https://www.rootcloud.com/cn2023/images/aboutPart4.jpg"
           alt=""
           fill
-          style={{ objectFit: 'cover' }}
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
       </div>
       <div className="container mx-auto hidden space-x-12 sm:flex">
-        {data.map((i) => (
-          <div className="flex flex-[1] flex-col space-y-2">
+        {data.map((i, index) => (
+          <div
+            className="flex flex-[1] flex-col space-y-2"
+            key={index}
+          >
             <div className="text-3xl">{i.title}</div>
             <div className="-ml-3 flex flex-col space-y-1">
               {i.contents.map((c) => (
-                <div className="flex space-x-2">
+                <div
+                  className="flex space-x-2"
+                  key={c}
+                >
                   <span>•</span>
                   <span className="text-[#666666]">{c}</span>
                 </div>

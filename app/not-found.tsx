@@ -1,4 +1,6 @@
-import Button from '@/components/Button'
+import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 
 export default function NotFound() {
   return (
@@ -6,10 +8,10 @@ export default function NotFound() {
       <span className="text-2xl font-bold sm:text-4xl">出错了</span>
       <span className="text-base font-medium sm:text-xl">无法找到您要访问的页面</span>
       <Button
-        link
-        href="/"
+        asChild
+        variant="outline"
       >
-        返回首页
+        <Link href="/">返回首页</Link>
       </Button>
     </div>
   )

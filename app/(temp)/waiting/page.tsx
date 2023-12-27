@@ -1,6 +1,8 @@
+import { SettingsIcon } from 'lucide-react'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
-import Button from '@/components/Button'
+import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: '敬请期待'
@@ -8,13 +10,18 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container absolute inset-0 m-auto flex h-fit w-fit flex-col items-center space-y-6">
-      <span className="text-2xl font-bold sm:text-4xl">全面升级中，敬请期待！</span>
+    <main className="container m-auto flex min-h-screen flex-col items-center justify-center space-y-6">
+      <SettingsIcon
+        size="40"
+        color="#333333"
+        className="animate-spin-slow"
+      />
+      <span className="pl-12 text-2xl font-bold sm:text-4xl">全面升级中，敬请期待！</span>
       <Button
-        link
-        href="/"
+        asChild
+        variant="outline"
       >
-        返回首页
+        <Link href="/">返回首页</Link>
       </Button>
     </main>
   )

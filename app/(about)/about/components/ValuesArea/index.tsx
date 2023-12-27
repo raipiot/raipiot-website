@@ -41,7 +41,8 @@ export default function ValuesArea() {
           src="https://www.rootcloud.com/vancheerfile/Images/2021/7/20210720124446397.jpg"
           alt=""
           fill
-          style={{ objectFit: 'cover' }}
+          sizes="50vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
       </div>
     </div>

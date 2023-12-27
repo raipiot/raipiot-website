@@ -1,14 +1,19 @@
-import Image from 'next/image'
+import BannerArea from './components/BannerArea'
+import CertificationArea from './components/CertificationArea'
+import EcosystemArea from './components/EcosystemArea'
+import ProductArray from './components/ProductArrayArea'
+import RecommendArea from './components/RecommendArea'
+import SolutionArea from './components/SolutionArea'
 
 export default function Home() {
   return (
-    <main className="h-[2000px]">
-      <Image
-        src="/img/qrcode.png"
-        alt=""
-        width={300}
-        height={300}
-      />
+    <main className="flex flex-col items-center">
+      <BannerArea />
+      <RecommendArea />
+      <ProductArray />
+      <CertificationArea />
+      <SolutionArea />
+      <EcosystemArea />
     </main>
   )
 }

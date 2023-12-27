@@ -1,10 +1,11 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-import Button from '@/components/Button'
 import Dropdown from '@/components/Dropdown'
 import Logo from '@/components/Logo'
+import { Button } from '@/components/ui/button'
 import { navbar } from '@/constants'
 import { cn } from '@/utils'
 
@@ -66,13 +67,8 @@ export default function Header() {
         </div>
 
         <div className="flex items-center space-x-6">
-          <Button
-            size="sm"
-            className="rounded-md"
-            link
-            href="/waiting"
-          >
-            预约体验
+          <Button variant="outline">
+            <Link href="/waiting">预约交流</Link>
           </Button>
         </div>
       </div>

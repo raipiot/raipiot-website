@@ -1,3 +1,4 @@
+alicloud
 brucesong
 clsx
 EPICOR
@@ -7,6 +8,8 @@ lucide
 preinstall
 qrcode
 raipiot
+rlig
+rootcloud
 superjson
 tailwindcss
 unoptimized

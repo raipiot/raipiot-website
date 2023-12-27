@@ -26,8 +26,10 @@ export default function AboutArea() {
         <Image
           src="https://www.hand-china.com/static/img/pageimage/company_introduction/jieshao-img.png"
           alt=""
+          priority
           fill
-          style={{ objectFit: 'contain' }}
+          sizes="500px"
+          style={{ objectFit: 'contain', objectPosition: 'center' }}
         />
         <div className={cn('absolute right-[17%] top-[58%]', styles.mapCircle)}>
           <span className="absolute left-4 text-nowrap">苏州（总部）</span>
