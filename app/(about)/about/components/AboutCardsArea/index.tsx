@@ -32,7 +32,7 @@ const cardData = [
 
 export default function AboutCardsArea() {
   return (
-    <div className="container flex flex-col space-y-8 px-4 text-white sm:flex-row sm:space-x-8 sm:space-y-0 sm:px-0">
+    <div className="container flex flex-col space-y-8 px-4 text-white sm:flex-row sm:space-x-8 sm:space-y-0">
       {cardData.map((item) => (
         <div
           className="group relative flex min-h-[300px] flex-[1] items-center justify-center rounded-md transition-all duration-700 hover:flex-[2] sm:h-[500px]"

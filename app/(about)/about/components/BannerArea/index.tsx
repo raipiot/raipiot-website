@@ -17,7 +17,7 @@ export default function BannerArea() {
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
         <div className="-z-20 before:absolute before:inset-0 before:bg-[rgba(0,0,0,.5)] before:content-['']" />
-        <div className="container m-auto flex flex-col space-y-4 px-4 text-white sm:px-0">
+        <div className="container m-auto flex flex-col space-y-4 px-4 text-white">
           <span className="text-4xl">为奋勇攀登的组织搭梯架桥</span>
           <div>
             <Button

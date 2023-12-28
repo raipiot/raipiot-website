@@ -10,7 +10,7 @@ export default function AboutArea() {
       <div className="flex flex-1 flex-col items-center space-y-8">
         <span className="text-3xl font-semibold">关于睿朴麟</span>
 
-        <div className="px-4 indent-8 leading-10 sm:px-0">
+        <div className="px-4 indent-8 leading-10">
           <p>
             苏州睿朴麟信息科技有限公司，是一家向制造企业及其供应链上下游、相关生态互补组织提供综合数字化服务的高新技术企业。公司以“解密数据，赋能决策”为使命，我们愿意为奋勇攀登的企业搭梯架桥，携手跨越产业应用与先进管理理论和数字技术间的鸿沟。
           </p>

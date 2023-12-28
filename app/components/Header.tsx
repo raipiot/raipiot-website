@@ -44,7 +44,7 @@ export default function Header() {
         scrollDirection === 'up' && scrollDistance > 100 && 'shadow'
       )}
     >
-      <div className="container flex justify-between self-center p-4 sm:px-0">
+      <div className="container flex justify-between self-center p-4">
         <div className="flex select-none items-center">
           <Logo
             link
