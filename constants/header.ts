@@ -52,7 +52,11 @@ export const navbar: NavbarItem[] = [
         href: '/waiting'
         // href: '/about/news'
       },
-      { title: '人才天地', href: '/about/position' }
+      {
+        title: '人才天地',
+        href: '/waiting'
+        // href: '/about/position'
+      }
     ]
   }
 ]
