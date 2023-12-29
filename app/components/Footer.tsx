@@ -61,6 +61,7 @@ function Footer() {
             alt=""
             width={100}
             height={100}
+            style={{ width: 'auto', height: 'auto' }}
           />
           <span>公众号</span>
         </div>

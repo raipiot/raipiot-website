@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Card } from '@/components/ui/card'
 
@@ -16,7 +17,10 @@ export default function ProductArray() {
         fill
         style={{ objectFit: 'cover', objectPosition: 'center' }}
       />
-      <div className="container mx-auto text-center">
+      <Link
+        href="/waiting"
+        className="container mx-auto text-center"
+      >
         <span className="text-3xl">睿朴麟数字化综合解决方案</span>
         <div className="mx-auto mt-10 flex max-w-[1080px] select-none space-x-4">
           <div className="flex flex-1 flex-col space-y-2">
@@ -149,7 +153,7 @@ export default function ProductArray() {
           </div>
         </div>
         <div />
-      </div>
+      </Link>
     </div>
   )
 }
