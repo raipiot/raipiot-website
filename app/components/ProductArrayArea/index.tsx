@@ -21,7 +21,7 @@ export default function ProductArray() {
         href="/waiting"
         className="container mx-auto text-center"
       >
-        <span className="text-3xl">睿朴麟数字化综合解决方案</span>
+        <div className="text-3xl">睿朴麟数字化综合解决方案</div>
         <div className="mx-auto mt-10 flex max-w-[1080px] select-none space-x-4">
           <div className="flex flex-1 flex-col space-y-2">
             <Card className="flex flex-col items-center space-y-2 rounded-none p-2">
