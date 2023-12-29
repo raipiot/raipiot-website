@@ -4,8 +4,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-import Dropdown from '@/components/Dropdown'
 import { Button } from '@/components/ui/button'
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle
+} from '@/components/ui/navigation-menu'
 import { navbar } from '@/constants'
 import { cn } from '@/utils'
 
@@ -59,19 +67,60 @@ export default function Header() {
             />
           </Link>
 
-          <div className="ml-20 hidden items-center space-x-12 md:flex">
-            {navbar.map((i) => (
-              <Dropdown
-                key={i.title}
-                text={i.title}
-                href={i.href}
-                list={i.children?.map((item) => ({
-                  href: item.href,
-                  text: item.title
-                }))}
-              />
-            ))}
-          </div>
+          <NavigationMenu className="ml-20 hidden md:flex">
+            <NavigationMenuList>
+              {navbar.map((i) => (
+                <NavigationMenuItem key={i.title}>
+                  <NavigationMenuTrigger className="text-base">{i.title}</NavigationMenuTrigger>
+                  <NavigationMenuContent
+                    className={cn(
+                      'flex whitespace-nowrap p-2',
+                      i.vertical ? 'flex-col space-y-2' : 'space-x-2'
+                    )}
+                  >
+                    {i.children!.map((item) => (
+                      <div
+                        key={item.title}
+                        className="flex flex-col"
+                      >
+                        {item.href ? (
+                          <Link
+                            href={item.href}
+                            legacyBehavior
+                            passHref
+                            className="w-full"
+                          >
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                              {item.title}
+                            </NavigationMenuLink>
+                          </Link>
+                        ) : (
+                          <div className={cn('font-semibold', item.children && 'px-4 py-2')}>
+                            {item.title}
+                          </div>
+                        )}
+                        {item.children?.map((subItem) =>
+                          subItem.href ? (
+                            <Link
+                              href={subItem.href ?? '/'}
+                              legacyBehavior
+                              passHref
+                            >
+                              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                {subItem.title}
+                              </NavigationMenuLink>
+                            </Link>
+                          ) : (
+                            <div>{subItem.title}</div>
+                          )
+                        )}
+                      </div>
+                    ))}
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
 
         <div className="flex items-center space-x-6">
