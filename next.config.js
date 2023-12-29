@@ -1,27 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   trailingSlash: true,
   reactStrictMode: true,
   images: {
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'i0.wp.com',
-        port: '',
-        pathname: '/**'
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.hand-china.com',
-        port: '',
-        pathname: '/**'
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.rootcloud.com',
-        port: '',
-        pathname: '/**'
-      },
       {
         protocol: 'https',
         hostname: 'p1.itc.cn',

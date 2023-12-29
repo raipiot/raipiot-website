@@ -1,3 +1,5 @@
+import ContactArea from '@/components/ContactArea'
+
 import BannerArea from './components/BannerArea'
 import CertificationArea from './components/CertificationArea'
 import EcosystemArea from './components/EcosystemArea'
@@ -14,6 +16,7 @@ export default function Home() {
       <CertificationArea />
       <SolutionArea />
       <EcosystemArea />
+      <ContactArea />
     </main>
   )
 }

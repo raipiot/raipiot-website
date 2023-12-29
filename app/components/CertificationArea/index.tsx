@@ -2,24 +2,24 @@ import Image from 'next/image'
 
 const data = [
   {
-    title: '高新技术企业',
-    src: 'http://www.iso9001-sz.com/aiupl/allimg/210710/2-210G01434430-L.png'
+    title: '国家级高新技术企业',
+    src: '/img/cert/high_tech_enterprise.png'
   },
   {
     title: '双软企业',
-    src: 'http://www.iso9001-sz.com/aiupl/allimg/210710/2-210G01435070-L.jpg'
+    src: '/img/cert/csee.png'
   },
   {
     title: 'ISO/IEC 20000-1、ISO/IEC 27001 认证',
-    src: 'http://www.iso9001-sz.com/aiupl/allimg/210620/2-2106201F0040-L.jpg'
+    src: '/img/cert/iso20000_cert.png'
   },
   {
     title: 'ISO9001',
-    src: 'http://www.iso9001-sz.com/aiupl/allimg/210620/2-2106201AU90-L.png'
+    src: '/img/cert/iso9001_cert.png'
   },
   {
     title: 'GB/T 22080-2016 认证',
-    src: 'https://p1.itc.cn/images01/20230523/9bc5f52c90fe444e8ffd75eaec3f5c39.png'
+    src: '/img/cert/cnas.png'
   }
 ]
 
@@ -27,12 +27,12 @@ export default function CertificationArea() {
   return (
     <div className="w-full bg-[#f7f7fa]">
       <div className="container mx-auto flex flex-col items-center py-24">
-        <span className="mb-10 text-3xl">权威资质</span>
+        <span className="mb-10 text-3xl">荣誉资质</span>
         <div className="flex w-full justify-between">
           {data.map((i) => (
             <div
               key={i.title}
-              className="flex flex-col items-center space-y-8 text-center"
+              className="flex flex-1 flex-col items-center space-y-8 text-center"
             >
               <Image
                 src={i.src}

@@ -7,7 +7,6 @@ import type { PropsWithChildren } from 'react'
 import { cn } from '@/utils'
 
 import ClientInit from './components/ClientInit'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Header from './components/Header'
 
@@ -41,10 +40,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en">
       <body className={cn(montserrat.className, 'w-full overflow-x-hidden scroll-smooth relative')}>
         <Header />
-        <div className="relative min-h-screen pt-20">
-          {children}
-          <Contact />
-        </div>
+        <div className="relative min-h-screen pt-20">{children}</div>
         <Footer />
         <ClientInit />
       </body>

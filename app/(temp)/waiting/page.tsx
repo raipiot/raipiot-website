@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container m-auto flex min-h-screen flex-col items-center justify-center space-y-6">
+    <main className="container m-auto flex h-[calc(100vh-80px)] flex-col items-center justify-center space-y-6">
       <SettingsIcon
         size="40"
         color="#333333"

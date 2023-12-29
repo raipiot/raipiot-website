@@ -1,27 +1,40 @@
+import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-
-import Logo from '@/components/Logo'
 
 function Footer() {
   return (
     <footer className="w-full">
-      <div className="flex flex-col space-y-8 bg-[#333333] px-4 py-8 text-sm text-white sm:flex-row sm:justify-center sm:space-x-8 sm:space-y-0 sm:px-8">
+      <div className="flex flex-col space-y-8 bg-[#1E222D] px-4 py-8 text-sm text-white sm:flex-row sm:justify-center sm:space-x-8 sm:space-y-0 sm:px-8">
         <div className="mt-2 flex select-none flex-col items-center space-y-2 self-center sm:mb-4 sm:mt-0 sm:pe-6">
-          <Logo />
+          <Link
+            href="/"
+            className="cursor-pointer"
+          >
+            <Image
+              src="/img/logo/raipiot_dark.png"
+              alt=""
+              width="90"
+              height="50"
+              style={{ width: 'auto', height: 'auto' }}
+            />
+          </Link>
         </div>
 
         <div className="space-y-2.5 sm:py-2">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 text-lg">
             <span>苏州睿朴麟信息科技有限公司</span>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1">
+            <MapPinIcon size={16} />
             <span>苏州市工业园区金鸡湖大道 88 号人工智能产业园 G1-404</span>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1">
+            <PhoneIcon size={16} />
             <span>0512 - 66307608</span>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1">
+            <MailIcon size={16} />
             <Link
               className="cursor-pointer underline-offset-4 transition-all hover:underline active:opacity-80"
               href="mailto:us@raipiot.com"
@@ -33,10 +46,11 @@ function Footer() {
         </div>
 
         <div className="space-y-2.5 sm:py-2">
-          <div className="flex items-center space-x-2">
-            <span> 睿朴麟信息科技（西安）有限公司 </span>
+          <div className="flex items-center space-x-2 text-lg">
+            <span>睿朴麟信息科技（西安）有限公司 </span>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1">
+            <MapPinIcon size={16} />
             <span>陕西省西安市高新区唐延路 11 号禾盛京广中心 E 座 27 层 2702 室</span>
           </div>
         </div>
@@ -48,7 +62,7 @@ function Footer() {
             width={100}
             height={100}
           />
-          <span>公众号二维码</span>
+          <span>公众号</span>
         </div>
       </div>
 

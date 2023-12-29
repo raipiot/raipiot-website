@@ -9,10 +9,10 @@ const data = [
   {
     title: '2023',
     contents: [
-      '获评“高新技术企业”',
+      '获评“国家级高新技术企业”',
       '软著累计 31 件，专利 3件',
       '苏州市新时代工商管理企业家联合会智能制造及半导体专委会理事单位',
-      '智能供应链协同平台“跟单猿”上线',
+      '智能供应链协同平台“跟单猿”上线\n截至年底，319 家企业注册使用',
       '第二代 MES 上线'
     ]
   },
@@ -33,7 +33,7 @@ const data = [
   },
   {
     title: '2021',
-    contents: ['国际货运 TMS 首版上线']
+    contents: ['承运人 OMS 首版上线', '首单管理咨询项目落地']
   },
   {
     title: '2020',
@@ -74,14 +74,14 @@ export default function HistoryArea() {
         </div>
         <Image
           className="-z-50"
-          src="https://www.rootcloud.com/cn2023/images/aboutPart4.jpg"
+          src="/img/banner/history.jpg"
           alt=""
           fill
           sizes="100vw"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
       </div>
-      <div className="container mx-auto hidden space-x-12 sm:flex">
+      <div className="container mx-auto hidden justify-between space-x-8 sm:flex">
         {data.map((i, index) => (
           <div
             className="flex flex-[1] flex-col space-y-2"
@@ -95,7 +95,7 @@ export default function HistoryArea() {
                   key={c}
                 >
                   <span>•</span>
-                  <span className="text-[#666666]">{c}</span>
+                  <p className="text-[#666666]">{c}</p>
                 </div>
               ))}
             </div>

@@ -18,7 +18,7 @@ export default function ValuesArea() {
   return (
     <div className="relative flex w-full">
       <div className="container absolute inset-0 m-auto flex items-center pl-4 sm:pl-0">
-        <div className="flex flex-col space-y-6">
+        <div className="flex flex-col space-y-6 px-4">
           <TextRow
             title="愿景"
             content="促进企业管理思想的解放和发展"
@@ -38,7 +38,7 @@ export default function ValuesArea() {
 
       <div className="relative h-[400px] flex-1">
         <Image
-          src="https://www.rootcloud.com/vancheerfile/Images/2021/7/20210720124446397.jpg"
+          src="/img/banner/values_4.png"
           alt=""
           fill
           sizes="50vw"

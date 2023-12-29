@@ -1,3 +1,5 @@
+import ContactArea from '@/components/ContactArea'
+
 import AboutArea from './components/AboutArea'
 import AboutCardsArea from './components/AboutCardsArea'
 import BannerArea from './components/BannerArea'
@@ -11,13 +13,14 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="flex flex-col items-center space-y-24 pb-24">
+    <main className="flex flex-col items-center space-y-24">
       <BannerArea />
       <AboutArea />
       <AboutCardsArea />
       <ValuesArea />
       <HistoryArea />
       <CertificationArea />
+      <ContactArea />
     </main>
   )
 }

@@ -9,7 +9,7 @@ export default function BannerArea() {
       <div className="relative flex h-[455px] w-full items-center">
         <Image
           className="absolute left-0 top-0 -z-50"
-          src="https://i0.wp.com/blog.particle.io/wp-content/uploads/2019/06/bg.jpg"
+          src="/img/banner/home.png"
           alt=""
           sizes="100vw"
           fill
@@ -17,11 +17,10 @@ export default function BannerArea() {
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
         <div className="-z-20 before:absolute before:inset-0 before:bg-[rgba(0,0,0,.5)] before:content-['']" />
-        <div className="container m-auto flex flex-col space-y-4 px-4 text-white">
+        <div className="container m-auto flex flex-col space-y-6 px-4 text-white">
           <span className="text-4xl">制造业数字化转型综合服务商</span>
-          <div className="flex flex-col space-y-1">
-            <span className="text-xl">解密数据，赋能决策</span>
-            <span className="text-xl">智能协同，生态共荣</span>
+          <div className="flex flex-col space-y-2">
+            <span>解密数据，赋能决策</span>
           </div>
           <div>
             <Button

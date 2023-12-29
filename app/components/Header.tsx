@@ -1,10 +1,10 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 import Dropdown from '@/components/Dropdown'
-import Logo from '@/components/Logo'
 import { Button } from '@/components/ui/button'
 import { navbar } from '@/constants'
 import { cn } from '@/utils'
@@ -46,10 +46,18 @@ export default function Header() {
     >
       <div className="container flex justify-between self-center p-4">
         <div className="flex select-none items-center">
-          <Logo
-            link
-            className="scale-90"
-          />
+          <Link
+            href="/"
+            className="cursor-pointer"
+          >
+            <Image
+              src="/img/logo/raipiot.png"
+              alt=""
+              width="90"
+              height="50"
+              style={{ width: 'auto', height: 'auto' }}
+            />
+          </Link>
 
           <div className="ml-20 hidden items-center space-x-12 md:flex">
             {navbar.map((i) => (

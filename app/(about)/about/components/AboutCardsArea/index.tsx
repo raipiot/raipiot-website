@@ -10,21 +10,21 @@ const cardData = [
   {
     title: '自主可控',
     icon: <CpuIcon {...iconProps} />,
-    src: 'https://www.rootcloud.com/vancheerfile/Images/2021/7/20210720124035192.jpg',
+    src: '/img/banner/values_1.png',
     description:
       '核心产品方案架构团队平均制造业工龄 20 年以上，世界 500 强、大型跨国公司、领先民营企业的管理实战经验融入自研产品，并结合管理科学演进和用户需求变化不断迭代。'
   },
   {
     title: '创新卓越',
     icon: <LightbulbIcon {...iconProps} />,
-    src: 'https://www.rootcloud.com/vancheerfile/Images/2021/7/20210720123937657.jpg',
+    src: '/img/banner/values_2.png',
     description:
       '企业内部协同与供应链生态协同并举，以去中心化的增值服务为创新特色，精益思想贯穿产品与解决方案，不断引导企业走向卓越的数字化转型之路。'
   },
   {
     title: '经济可靠',
     icon: <ShieldCheckIcon {...iconProps} />,
-    src: 'https://www.rootcloud.com/vancheerfile/Images/2021/7/2021072012408236.jpg',
+    src: '/img/banner/values_3.png',
     description:
       '可提供云端部署及共享运维服务，解决大量制造企业因地域因素导致的 IT 人才匮乏和投入高昂的困惑；合作伙伴选择慎重，加之全面的安全技术架构和信息安全管理体系支撑，确保用户顺畅、安心。'
   }
