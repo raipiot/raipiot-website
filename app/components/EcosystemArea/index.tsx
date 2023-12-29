@@ -62,7 +62,7 @@ export default function EcosystemArea() {
                   width={i.width}
                   height={i.height}
                   alt=""
-                  style={{ objectFit: 'contain', width: 'auto', height: 'auto' }}
+                  style={{ objectFit: 'contain', width: i.width, height: i.height }}
                 />
               </Card>
             </Link>
