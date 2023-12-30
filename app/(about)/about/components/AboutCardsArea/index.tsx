@@ -1,4 +1,4 @@
-import { CpuIcon, LightbulbIcon, ShieldCheckIcon } from 'lucide-react'
+import { ShieldCheckIcon, TargetIcon, TrophyIcon } from 'lucide-react'
 import Image from 'next/image'
 
 const iconProps = {
@@ -9,14 +9,14 @@ const iconProps = {
 const cardData = [
   {
     title: '自主可控',
-    icon: <CpuIcon {...iconProps} />,
+    icon: <TargetIcon {...iconProps} />,
     src: '/img/banner/values_1.png',
     description:
       '核心产品方案架构团队平均制造业工龄 20 年以上，世界 500 强、大型跨国公司、领先民营企业的管理实战经验融入自研产品，并结合管理科学演进和用户需求变化不断迭代。'
   },
   {
     title: '创新卓越',
-    icon: <LightbulbIcon {...iconProps} />,
+    icon: <TrophyIcon {...iconProps} />,
     src: '/img/banner/values_2.png',
     description:
       '企业内部协同与供应链生态协同并举，以去中心化的增值服务为创新特色，精益思想贯穿产品与解决方案，不断引导企业走向卓越的数字化转型之路。'
