@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
@@ -37,6 +38,17 @@ const data = [
 ]
 
 export default function CertificationArea() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((i) => (i + 1) % data.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const getCurrentTitle = () => data.at(currentIndex)!.title
+
   return (
     <div className="w-full bg-[#f7f7fa]">
       <div className="container mx-auto flex flex-col items-center py-24">
@@ -44,12 +56,14 @@ export default function CertificationArea() {
         <Tabs
           defaultValue={data.at(0)!.title}
           className="w-full"
+          value={getCurrentTitle()}
         >
           <TabsList className="m-auto mb-10 flex w-fit justify-center">
-            {data.map((i) => (
+            {data.map((i, idx) => (
               <TabsTrigger
                 key={i.title}
                 value={i.title}
+                onClick={() => setCurrentIndex(idx)}
               >
                 {i.title}
               </TabsTrigger>
