@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: `%s | ${AppConfig.appName}`,
     default: AppConfig.appName
   },
-  description: '',
+  description: '制造业数字化转型综合服务商',
   keywords: [],
   authors: [
     {

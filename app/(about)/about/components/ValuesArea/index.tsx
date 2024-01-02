@@ -38,7 +38,7 @@ export default function ValuesArea() {
 
       <div className="relative h-[400px] flex-1">
         <Image
-          src="/img/banner/values_4.png"
+          src="/img/banner/values_4.jpg"
           alt=""
           fill
           sizes="50vw"

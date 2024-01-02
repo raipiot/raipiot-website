@@ -6,10 +6,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 const data = [
   {
-    title: '软件产品证书',
+    title: '软件企业、产品证书',
     srcList: [
-      { src: '/img/cert/software-1.jpg', width: 400, height: 400 },
-      { src: '/img/cert/software-2.png', width: 400, height: 400 }
+      { src: '/img/cert/software_1.jpg', width: 400, height: 400 },
+      { src: '/img/cert/software_2.jpg', width: 400, height: 400 }
     ]
   },
   {

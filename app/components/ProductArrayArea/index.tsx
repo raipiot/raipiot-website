@@ -11,10 +11,11 @@ export default function ProductArray() {
     <div className="relative w-full py-24">
       <Image
         className="-z-50"
-        src="/img/banner/product_array.png"
+        src="/img/banner/product_array.jpg"
         alt=""
         sizes="100vw"
         fill
+        priority
         style={{ objectFit: 'cover', objectPosition: 'center' }}
       />
       <Link

@@ -101,15 +101,17 @@ export default function Header() {
                         )}
                         {item.children?.map((subItem) =>
                           subItem.href ? (
-                            <Link
-                              href={subItem.href ?? '/'}
-                              legacyBehavior
-                              passHref
-                            >
-                              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                {subItem.title}
-                              </NavigationMenuLink>
-                            </Link>
+                            <div key={subItem.title}>
+                              <Link
+                                href={subItem.href ?? '/'}
+                                legacyBehavior
+                                passHref
+                              >
+                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                  {subItem.title}
+                                </NavigationMenuLink>
+                              </Link>
+                            </div>
                           ) : (
                             <div>{subItem.title}</div>
                           )
