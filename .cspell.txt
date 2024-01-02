@@ -5,10 +5,11 @@ cnas
 csee
 ctyun
 EPICOR
-gsap
 gesturestart
+gsap
 Immer
 lucide
+Photoshop
 preinstall
 qrcode
 raipiot
@@ -17,3 +18,4 @@ rootcloud
 superjson
 tailwindcss
 unoptimized
+Visio

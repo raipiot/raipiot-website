@@ -1,0 +1,12 @@
+.headingText {
+  &::before {
+    display: block;
+    content: '';
+    border-left: 4px #606e93 solid;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
