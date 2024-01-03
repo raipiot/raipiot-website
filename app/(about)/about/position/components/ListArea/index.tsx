@@ -7,7 +7,7 @@ import { jobDetails } from '@/data'
 export default function ListArea() {
   return (
     <div className="container mx-auto mb-24 flex flex-col">
-      <div className="relative mx-auto my-16 h-[500px] w-[960px]">
+      <div className="relative mx-auto mb-24 mt-6 h-[500px] w-[1080px]">
         <Image
           src="/img/banner/staff.jpg"
           className="rounded-sm shadow-sm"
@@ -19,7 +19,7 @@ export default function ListArea() {
       </div>
 
       <div className="mx-auto mb-24 flex max-w-[720px] flex-col space-y-4">
-        <div className="self-center text-3xl font-bold">加入我们</div>
+        <div className="mb-8 self-center text-3xl font-bold">加入我们</div>
 
         {jobDetails.map((jobDetail) => (
           <Link
