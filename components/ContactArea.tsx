@@ -21,9 +21,13 @@ export default function ContactArea() {
           <Image
             src={getSrc('/img/banner/contact.png')}
             alt=""
-            width={360}
-            height={360}
-            style={{}}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{
+              width: 400,
+              height: 'auto'
+            }}
           />
         </div>
       </div>

@@ -52,7 +52,7 @@ export default function Header() {
         scrollDirection === 'up' && scrollDistance > 100 && 'shadow'
       )}
     >
-      <div className="container flex justify-between self-center p-4">
+      <div className="container flex h-full justify-between self-center px-4">
         <div className="flex select-none items-center">
           <Link
             href="/"
@@ -61,10 +61,11 @@ export default function Header() {
             <Image
               src={getSrc('/img/logo/raipiot.png')}
               alt=""
-              width="90"
-              height="50"
+              height={0}
+              width={0}
+              sizes="100vw"
               priority
-              style={{ width: 'auto', height: 'auto' }}
+              style={{ width: 95, height: 'auto' }}
             />
           </Link>
 

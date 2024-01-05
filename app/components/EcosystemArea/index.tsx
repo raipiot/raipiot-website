@@ -9,36 +9,31 @@ const data = [
     title: '炎黄盈动',
     src: '/img/logo/action_soft.png',
     href: 'https://www.actionsoft.com.cn/',
-    width: 90,
-    height: 90
+    width: 90
   },
   {
     title: 'EPICOR',
     src: '/img/logo/epicor.png',
     href: 'https://www.epicor.com/',
-    width: 140,
-    height: 140
+    width: 140
   },
   {
     title: 'AWS',
     src: '/img/logo/aws.png',
     href: 'https://www.amazonaws.cn/',
-    width: 60,
-    height: 60
+    width: 60
   },
   {
     title: '阿里云',
     src: '/img/logo/alicloud.png',
     href: 'https://cn.aliyun.com/',
-    width: 90,
-    height: 90
+    width: 90
   },
   {
     title: '天翼云',
     src: '/img/logo/ctyun.png',
     href: 'https://www.ctyun.cn/',
-    width: 90,
-    height: 90
+    width: 90
   }
 ]
 
@@ -60,10 +55,15 @@ export default function EcosystemArea() {
                 <Image
                   className="transition-all duration-300 group-hover:scale-125 group-active:scale-100"
                   src={getSrc(i.src)}
-                  width={i.width}
-                  height={i.height}
+                  width={0}
+                  height={0}
                   alt=""
-                  style={{ objectFit: 'contain', width: i.width, height: i.height }}
+                  sizes="100vw"
+                  style={{
+                    objectFit: 'contain',
+                    width: i.width,
+                    height: 'auto'
+                  }}
                 />
               </Card>
             </Link>

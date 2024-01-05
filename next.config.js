@@ -4,6 +4,7 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   images: {
+    minimumCacheTTL: 60,
     remotePatterns: [
       {
         protocol: 'https',
