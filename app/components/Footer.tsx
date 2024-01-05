@@ -2,6 +2,8 @@ import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { getSrc } from '@/utils'
+
 function Footer() {
   return (
     <footer className="w-full">
@@ -12,7 +14,7 @@ function Footer() {
             className="cursor-pointer"
           >
             <Image
-              src="/img/logo/raipiot_dark.png"
+              src={getSrc('/img/logo/raipiot_dark.png')}
               alt=""
               width="90"
               height="50"
@@ -57,7 +59,7 @@ function Footer() {
 
         <div className="flex flex-col items-center space-y-2 text-center sm:ps-4">
           <Image
-            src="/img/qrcode.png"
+            src={getSrc('/img/qrcode.png')}
             alt=""
             width={100}
             height={100}
@@ -85,7 +87,7 @@ function Footer() {
           >
             <Image
               className="me-1.5 inline select-none"
-              src="/img/police.png"
+              src={getSrc('/img/police.png')}
               alt=""
               width={16}
               height={16}

@@ -3,13 +3,14 @@ import Link from 'next/link'
 
 import { Separator } from '@/components/ui/separator'
 import { jobDetails } from '@/data'
+import { getSrc } from '@/utils'
 
 export default function ListArea() {
   return (
     <div className="container mx-auto mb-24 flex flex-col">
       <div className="relative mx-auto mb-24 mt-6 h-[500px] w-[1080px]">
         <Image
-          src="/img/banner/staff.jpg"
+          src={getSrc('/img/banner/staff.jpg')}
           className="rounded-sm shadow-sm"
           alt=""
           fill

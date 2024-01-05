@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { cn } from '@/utils'
+import { cn, getSrc } from '@/utils'
 
 import styles from './index.module.scss'
 
@@ -24,7 +24,7 @@ export default function AboutArea() {
       </div>
       <div className="relative my-auto hidden h-[500px] w-[500px] shrink-0 lg:flex">
         <Image
-          src="/img/banner/map.png"
+          src={getSrc('/img/banner/map.png')}
           alt=""
           priority
           fill

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { getSrc } from '@/utils'
 
 const data = [
   {
@@ -78,7 +79,7 @@ export default function CertificationArea() {
               {i.srcList.map((image, imageIndex) => (
                 <Image
                   key={imageIndex}
-                  src={image.src}
+                  src={getSrc(image.src)}
                   alt=""
                   width={image.width}
                   height={image.height}

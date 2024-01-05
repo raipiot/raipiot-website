@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import { getSrc } from '@/utils'
+
 const data = [
   {
     title: '国家级高新技术企业',
@@ -35,7 +37,7 @@ export default function CertificationArea() {
               className="flex flex-1 flex-col items-center space-y-8 text-center"
             >
               <Image
-                src={i.src}
+                src={getSrc(i.src)}
                 width={300}
                 height={300}
                 alt=""

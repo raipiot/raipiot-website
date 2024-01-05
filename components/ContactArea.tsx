@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
+import { getSrc } from '@/utils'
 
 export default function ContactArea() {
   return (
@@ -18,11 +19,11 @@ export default function ContactArea() {
 
         <div className="absolute bottom-0 right-0">
           <Image
-            src="/img/banner/contact.png"
+            src={getSrc('/img/banner/contact.png')}
             alt=""
             width={360}
             height={360}
-            style={{ width: 'auto', height: 'auto' }}
+            style={{}}
           />
         </div>
       </div>

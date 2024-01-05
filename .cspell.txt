@@ -1,4 +1,5 @@
 alicloud
+aliyuncs
 brucesong
 clsx
 cnas

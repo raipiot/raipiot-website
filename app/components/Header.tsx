@@ -15,7 +15,7 @@ import {
   navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu'
 import { navbar } from '@/constants'
-import { cn } from '@/utils'
+import { cn, getSrc } from '@/utils'
 
 export default function Header() {
   const [loaded, setLoaded] = useState(false)
@@ -59,7 +59,7 @@ export default function Header() {
             className="cursor-pointer"
           >
             <Image
-              src="/img/logo/raipiot.png"
+              src={getSrc('/img/logo/raipiot.png')}
               alt=""
               width="90"
               height="50"

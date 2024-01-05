@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { cn } from '@/utils'
+import { cn, getSrc } from '@/utils'
 
 const data = [
   {
@@ -65,7 +65,7 @@ export default function FeatureArea() {
           >
             <div className="relative h-[400px] flex-1">
               <Image
-                src={i.src}
+                src={getSrc(i.src)}
                 alt=""
                 fill
                 style={{ objectFit: 'cover' }}

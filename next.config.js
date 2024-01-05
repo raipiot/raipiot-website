@@ -5,12 +5,12 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
-      // {
-      //   protocol: 'https',
-      //   hostname: '',
-      //   port: '',
-      //   pathname: '/**'
-      // }
+      {
+        protocol: 'https',
+        hostname: 'raipiot-official-website.oss-cn-beijing.aliyuncs.com',
+        port: '',
+        pathname: '/img/**'
+      }
     ]
   }
 }

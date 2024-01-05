@@ -2,16 +2,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Card } from '@/components/ui/card'
-
-import Arrow from './Arrow'
-import ArrowVertical from './ArrowVertical'
+import { getSrc } from '@/utils'
 
 export default function ProductArray() {
   return (
     <div className="relative w-full py-24">
       <Image
         className="-z-50"
-        src="/img/banner/product_array.jpg"
+        src={getSrc('/img/banner/product_array.jpg')}
         alt=""
         sizes="100vw"
         fill
@@ -53,10 +51,7 @@ export default function ProductArray() {
                   </Card>
                 </div>
 
-                <div className="flex flex-col pt-10">
-                  <Arrow width={100} />
-                  <Arrow width={100} />
-                </div>
+                <div className="flex flex-col pt-10" />
 
                 <div className="flex h-full flex-1 flex-col items-center space-y-2">
                   <span>生态协同</span>
@@ -73,12 +68,10 @@ export default function ProductArray() {
               </div>
 
               <div className="flex w-full items-center">
-                <ArrowVertical height={100} />
                 <div className="flex w-full flex-col items-center space-y-2">
                   <div className="flex w-full justify-between">
                     <div />
-                    <ArrowVertical height={50} />
-                    <ArrowVertical height={50} />
+
                     <div />
                   </div>
                   <Card className="flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-none p-2 transition-all hover:scale-105 active:scale-100">
@@ -87,10 +80,7 @@ export default function ProductArray() {
                     <span className="text-sm">流程管理 费控管理 预算管理</span>
                   </Card>
                 </div>
-                <ArrowVertical height={100} />
               </div>
-
-              <ArrowVertical height={50} />
 
               <Card className="w-full flex-1 cursor-pointer rounded-none py-6 font-bold transition-all hover:scale-105 active:scale-100">
                 业财联动基石
@@ -134,19 +124,16 @@ export default function ProductArray() {
 
           <div className="space-y-2">
             <div className="flex items-center space-x-4">
-              <Arrow width={100} />
               <Card className="flex-1 cursor-pointer whitespace-nowrap rounded-none px-8 py-6 transition-all hover:scale-105 active:scale-100">
                 客户
               </Card>
             </div>
             <div className="flex items-center space-x-4">
-              <Arrow width={100} />
               <Card className="flex-1 cursor-pointer whitespace-nowrap rounded-none px-8 py-6 transition-all hover:scale-105 active:scale-100">
                 供应商
               </Card>
             </div>
             <div className="flex items-center space-x-4">
-              <Arrow width={100} />
               <Card className="flex-1 cursor-pointer whitespace-nowrap rounded-none px-8 py-6 transition-all hover:scale-105 active:scale-100">
                 其他资源
               </Card>

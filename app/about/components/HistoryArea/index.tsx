@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-import { cn } from '@/utils'
+import { cn, getSrc } from '@/utils'
 
 const data = [
   {
@@ -74,7 +74,7 @@ export default function HistoryArea() {
         </div>
         <Image
           className="-z-50"
-          src="/img/banner/history.jpg"
+          src={getSrc('/img/banner/history.jpg')}
           alt=""
           fill
           sizes="100vw"

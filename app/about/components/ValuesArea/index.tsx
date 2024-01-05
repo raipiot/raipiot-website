@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import { getSrc } from '@/utils'
+
 interface TextRowProps {
   title: string
   content: string
@@ -38,7 +40,7 @@ export default function ValuesArea() {
 
       <div className="relative h-[400px] flex-1">
         <Image
-          src="/img/banner/values_4.jpg"
+          src={getSrc('/img/banner/values_4.jpg')}
           alt=""
           fill
           sizes="50vw"

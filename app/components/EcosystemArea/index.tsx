@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Card } from '@/components/ui/card'
+import { getSrc } from '@/utils'
 
 const data = [
   {
@@ -58,7 +59,7 @@ export default function EcosystemArea() {
               >
                 <Image
                   className="transition-all duration-300 group-hover:scale-125 group-active:scale-100"
-                  src={i.src}
+                  src={getSrc(i.src)}
                   width={i.width}
                   height={i.height}
                   alt=""
