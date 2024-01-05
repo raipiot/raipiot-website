@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
-import { getSrc } from '@/utils'
+import { getSrc, shimmerPlaceholder } from '@/utils'
 
 export default function BannerArea() {
   return (
@@ -15,6 +15,7 @@ export default function BannerArea() {
           sizes="100vw"
           fill
           priority
+          placeholder={shimmerPlaceholder(9999, 455)}
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
         <div className="-z-20 before:absolute before:inset-0 before:bg-[rgba(0,0,0,.5)] before:content-['']" />

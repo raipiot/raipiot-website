@@ -20,3 +20,4 @@ superjson
 tailwindcss
 unoptimized
 Visio
+xlink
