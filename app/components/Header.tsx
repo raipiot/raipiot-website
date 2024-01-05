@@ -14,6 +14,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu'
+import { Separator } from '@/components/ui/separator'
 import { navbar } from '@/constants'
 import { cn, getSrc } from '@/utils'
 
@@ -90,20 +91,37 @@ export default function Header() {
                             href={item.href}
                             legacyBehavior
                             passHref
-                            className="w-full"
+                            className={cn('w-full', item.hidden && 'opacity-0')}
                           >
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                               {item.title}
                             </NavigationMenuLink>
                           </Link>
                         ) : (
-                          <div className={cn('font-semibold', item.children && 'px-4 py-2')}>
+                          <div
+                            className={cn(
+                              'font-semibold',
+                              item.children && 'px-4 py-2',
+                              item.hidden && 'opacity-0'
+                            )}
+                          >
                             {item.title}
                           </div>
                         )}
-                        {item.children?.map((subItem) =>
-                          subItem.href ? (
-                            <div key={subItem.title}>
+                        {item.children?.map((subItem, subIndex) => {
+                          if (subItem.divider) {
+                            return (
+                              <Separator
+                                key={subIndex}
+                                className="mx-auto my-2 h-[2px] w-[90%]"
+                              />
+                            )
+                          }
+                          return subItem.href ? (
+                            <div
+                              key={subIndex}
+                              className={cn(subItem.hidden && 'opacity-0')}
+                            >
                               <Link
                                 href={subItem.href ?? '/'}
                                 legacyBehavior
@@ -115,9 +133,14 @@ export default function Header() {
                               </Link>
                             </div>
                           ) : (
-                            <div>{subItem.title}</div>
+                            <div
+                              key={subIndex}
+                              className={cn(subItem.hidden && 'opacity-0')}
+                            >
+                              {subItem.title}
+                            </div>
                           )
-                        )}
+                        })}
                       </div>
                     ))}
                   </NavigationMenuContent>

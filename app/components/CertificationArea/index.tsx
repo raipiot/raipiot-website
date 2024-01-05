@@ -38,10 +38,15 @@ export default function CertificationArea() {
             >
               <Image
                 src={getSrc(i.src)}
-                width={300}
-                height={300}
+                width={0}
+                height={0}
                 alt=""
-                style={{ objectFit: 'contain', width: '280px', height: '120px' }}
+                sizes="100vw"
+                style={{
+                  objectFit: 'contain',
+                  width: 140,
+                  height: 140
+                }}
               />
               <span className="text-nowrap">{i.title}</span>
             </div>

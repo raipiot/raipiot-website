@@ -23,7 +23,7 @@ export default function BannerArea() {
         />
         <div className="-z-20 before:absolute before:inset-0 before:bg-[rgba(0,0,0,.5)] before:content-['']" />
         <div className="container m-auto flex flex-col space-y-6 px-4 text-white">
-          <span className="text-4xl">智能供应链协同平台“跟单猿”</span>
+          <span className="text-4xl">智能交付协同平台“跟单猿”</span>
           <div className="flex flex-col space-y-2">
             <span>xxx</span>
           </div>

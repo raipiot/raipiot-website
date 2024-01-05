@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import type { PropsWithChildren } from 'react'
 
-import { cn } from '@/utils'
+import { cn, getSrc } from '@/utils'
 
 import ClientInit from './components/ClientInit'
 import Footer from './components/Footer'
@@ -21,13 +21,26 @@ export const metadata: Metadata = {
     template: `%s | ${AppConfig.appName}`,
     default: AppConfig.appName
   },
-  description: '制造业数字化转型综合服务商',
+  description: '解密数据，赋能决策，制造业数字化转型综合服务商',
+  openGraph: {
+    title: AppConfig.appName,
+    description: '解密数据，赋能决策，制造业数字化转型综合服务商',
+    url: new URL('https://www.raipiot.com'),
+    images: [
+      {
+        url: getSrc('/img/logo/raipiot.png'),
+        alt: AppConfig.appName
+      }
+    ],
+    siteName: AppConfig.appName
+  },
   keywords: [],
   authors: [
     {
       name: 'Bruce Song'
     }
   ],
+  metadataBase: new URL('https://www.raipiot.com'),
   creator: 'Bruce Song',
   publisher: 'Bruce Song'
 }

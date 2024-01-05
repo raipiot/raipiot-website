@@ -9,7 +9,7 @@ import FeatureArea from './components/FeatureArea'
 import SubNavArea from './components/SubNavArea'
 
 export const metadata: Metadata = {
-  title: '智能供应链协同平台“跟单猿”'
+  title: '智能交付协同平台“跟单猿”'
 }
 
 export default function Page() {

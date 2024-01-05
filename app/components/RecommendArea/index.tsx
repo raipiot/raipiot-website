@@ -7,37 +7,39 @@ export default function RecommendArea() {
       <div className="container mx-auto flex h-full items-center justify-between">
         <span className="text-xl">重点推荐</span>
         <div className="flex flex-col space-y-6">
-          <div className="flex items-center space-x-12">
+          <div className="flex items-center space-x-24">
             <Link
               href="/waiting"
-              className="group flex items-center"
+              className="group flex w-[250px] items-center justify-between"
             >
-              <span className="ml-4 mr-12 underline-offset-4 group-hover:underline">
-                智能供应链协同平台“跟单猿”
+              <span className="ml-4 underline-offset-4 group-hover:underline">
+                智能交付协同平台“跟单猿”
               </span>
               <ChevronRightIcon />
             </Link>
 
             <Link
               href="/waiting"
-              className="group flex items-center"
+              className="group flex w-[250px] items-center justify-between"
             >
-              <span className="ml-4 mr-12 underline-offset-4 group-hover:underline">
-                数字化采购平台
-              </span>
+              <span className="ml-4 underline-offset-4 group-hover:underline">数字化采购平台</span>
               <ChevronRightIcon />
             </Link>
           </div>
 
-          <Link
-            href="/waiting"
-            className="group flex items-center"
-          >
-            <span className="ml-4 mr-12 underline-offset-4 group-hover:underline">
-              IoT 云边一体化
-            </span>
-            <ChevronRightIcon />
-          </Link>
+          <div className="flex items-center space-x-12">
+            <Link
+              href="/waiting"
+              className="group flex w-[250px] items-center justify-between"
+            >
+              <span className="ml-4 underline-offset-4 group-hover:underline">
+                云边一体化平台 IoT
+              </span>
+              <ChevronRightIcon />
+            </Link>
+
+            <div className="opacity-0">x</div>
+          </div>
         </div>
         <div />
       </div>
