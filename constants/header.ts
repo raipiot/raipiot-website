@@ -12,7 +12,11 @@ export const navbar: NavbarItem[] = [
       {
         title: '生态协同系列产品',
         children: [
-          { title: '智能供应链协同平台“跟单猿”', href: '/product/gdy' },
+          {
+            title: '智能供应链协同平台“跟单猿”',
+            href: '/waiting'
+            // href: '/product/gdy'
+          },
           { title: '数字化采购平台', href: '/waiting' }
         ]
       },
