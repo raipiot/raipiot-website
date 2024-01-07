@@ -53,7 +53,7 @@ function Footer() {
           </div>
           <div className="flex items-center space-x-1">
             <MapPinIcon size={16} />
-            <span>陕西省西安市高新区唐延路 11 号禾盛京广中心 E 座 27 层 2702 室</span>
+            <span>陕西省西安市高新区唐延路 11 号禾盛京广中心 E 座 28 层 2804 室</span>
           </div>
         </div>
 
