@@ -81,7 +81,7 @@ export default function Header() {
                       i.vertical ? 'flex-col space-y-2' : 'space-x-2'
                     )}
                   >
-                    {i.children!.map((item) => (
+                    {i.children?.map((item) => (
                       <div
                         key={item.title}
                         className="flex flex-col"

@@ -31,7 +31,7 @@ export default function ProductArray() {
 
         <div className="container mx-auto mt-6 flex select-none flex-col space-y-2">
           <Card className="flex items-center space-x-2 rounded-none p-2">
-            <span className="px-1 font-bold">科学的管理水平评估方案</span>
+            <span className="px-1 font-bold">管理水平评估方案</span>
             <Card className="flex flex-1 flex-col rounded-none p-2">
               <span>智能制造能力成熟度模型</span>
               <span className="text-sm">GB/T 39117-2020</span>
@@ -41,8 +41,8 @@ export default function ProductArray() {
               <span className="text-sm">GB/T 37726-2019</span>
             </Card>
             <Card className="flex flex-1 flex-col rounded-none p-2">
-              <span>流程再造新工具</span>
-              <span className="text-sm">PEMM 架迈克尔·哈默</span>
+              <span>流程再造工具</span>
+              <span className="text-sm">迈克尔哈默 PEMM 框架</span>
             </Card>
           </Card>
 
