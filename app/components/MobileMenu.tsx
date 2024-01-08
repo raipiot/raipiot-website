@@ -33,12 +33,11 @@ export default function MobileMenu() {
         <Button
           variant="outline"
           className="block sm:hidden"
-          onClick={() => setOpen(true)}
         >
           <MenuIcon />
         </Button>
       </SheetTrigger>
-      <SheetContent className="w-[400px] overflow-y-scroll sm:w-[540px]">
+      <SheetContent className="w-full overflow-y-scroll">
         <SheetHeader>
           <SheetTitle />
           <SheetDescription>

@@ -42,8 +42,8 @@ export default function CertificationArea() {
                 height={0}
                 alt=""
                 sizes="100vw"
+                className="object-contain"
                 style={{
-                  objectFit: 'contain',
                   width: 140,
                   height: 140
                 }}
