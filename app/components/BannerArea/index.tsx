@@ -15,6 +15,7 @@ export default function BannerArea() {
           sizes="100vw"
           fill
           priority
+          quality={40}
           placeholder={shimmerPlaceholder(9999, 455)}
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />

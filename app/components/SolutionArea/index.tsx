@@ -75,11 +75,11 @@ export default function SolutionArea() {
                   <div className="relative h-[350px] w-1/2 ">
                     <Image
                       src={getSrc(i.src)}
+                      className="object-cover object-center"
                       alt=""
                       fill
                       sizes="50vw"
-                      fetchPriority="high"
-                      style={{ objectFit: 'cover', objectPosition: 'center' }}
+                      priority
                     />
                   </div>
                 </CardContent>

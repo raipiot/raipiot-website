@@ -16,7 +16,7 @@ export default function Page() {
         color="#333333"
         className="animate-spin-slow"
       />
-      <span className="pl-12 text-2xl font-bold sm:text-4xl">全面升级中，敬请期待！</span>
+      <span className="pl-6 text-xl font-bold sm:pl-12 sm:text-4xl">全面升级中，敬请期待！</span>
       <Button
         asChild
         variant="outline"

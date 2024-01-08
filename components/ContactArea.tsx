@@ -7,7 +7,7 @@ import { getSrc } from '@/utils'
 export default function ContactArea() {
   return (
     <div className="w-full">
-      <div className="container relative mx-auto flex h-[200px] justify-between">
+      <div className="container relative mx-auto flex h-[300px] justify-between">
         <div className="flex flex-col justify-center">
           <span className="mb-8 text-2xl font-medium">如果想进一步了解产品或解决方案</span>
           <div>
