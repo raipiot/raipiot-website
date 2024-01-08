@@ -48,7 +48,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 z-50 left-0 right-0 transition-all h-20 bg-white flex justify-center',
+        'fixed top-0 z-50 transition-all h-20 w-screen bg-white flex justify-center',
         scrollDirection === 'down' && scrollDistance > 80 ? 'translate-y-[-100%]' : 'translate-y-0',
         scrollDirection === 'up' && scrollDistance > 100 && 'shadow'
       )}

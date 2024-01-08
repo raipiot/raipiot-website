@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { PropsWithChildren } from 'react'
-import { memo, useState } from 'react'
+import React, { memo, useState } from 'react'
 
 import { cn } from '@/utils'
 

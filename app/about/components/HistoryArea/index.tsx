@@ -1,8 +1,18 @@
 'use client'
 
+import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import * as React from 'react'
 
+import type { CarouselApi } from '@/components/ui/carousel'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel'
 import { cn, getSrc } from '@/utils'
 
 const data = [
@@ -42,7 +52,28 @@ const data = [
 ]
 
 export default function HistoryArea() {
-  const [current, setCurrent] = useState('2023')
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+
+  const plugin = useRef(
+    Autoplay({
+      delay: 2000,
+      stopOnInteraction: true,
+      stopOnMouseEnter: true
+    })
+  )
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCurrent(api.selectedScrollSnap() + 1)
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
 
   return (
     <>
@@ -55,14 +86,14 @@ export default function HistoryArea() {
                 key={index}
                 className={cn(
                   'rounded-full bg-[#bfc0c1] p-2 cursor-pointer select-none',
-                  i.title === current && 'bg-white transition-all'
+                  index + 1 === current && 'bg-white transition-all'
                 )}
-                onClick={() => setCurrent(i.title)}
+                onClick={() => api!.scrollTo(index)}
               >
                 <span
                   className={cn(
                     'flex h-20 w-20 items-center justify-center rounded-full text-[#666666]',
-                    i.title === current && 'bg-[#333333] text-white transition-all'
+                    index + 1 === current && 'bg-[#333333] text-white transition-all'
                   )}
                 >
                   {i.title}
@@ -78,32 +109,46 @@ export default function HistoryArea() {
           alt=""
           fill
           sizes="100vw"
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center'
+          }}
         />
       </div>
-      <div className="container mx-auto hidden justify-between space-x-8 sm:flex">
-        {data.map((i, index) => (
-          <div
-            className="flex flex-[1] flex-col space-y-2"
-            key={index}
-          >
-            <div className="text-3xl">{i.title}</div>
-            <div className="-ml-3 flex flex-col space-y-1">
-              {i.contents.map((c) => (
-                <div
-                  className="flex space-x-2"
-                  key={c}
-                >
-                  <span>•</span>
-                  <p className="text-[#666666]">{c}</p>
+      <div className="container">
+        <div className="mb-4 text-center text-3xl sm:hidden">发展里程碑</div>
+        <Carousel
+          className="mx-auto w-full max-w-[calc(100%-80px)] sm:max-w-5xl 2xl:max-w-full"
+          setApi={setApi}
+          plugins={[plugin.current]}
+          onMouseEnter={() => plugin.current.stop()}
+          onMouseLeave={() => plugin.current.play()}
+        >
+          <CarouselContent>
+            {data.map((i, index) => (
+              <CarouselItem
+                key={index}
+                className="flex flex-col space-y-2 p-8 md:basis-1/2"
+              >
+                <div className="text-3xl">{i.title}</div>
+                <div className="-ml-3 flex flex-col space-y-1 text-sm sm:text-base">
+                  {i.contents.map((c) => (
+                    <div
+                      className="flex space-x-2"
+                      key={c}
+                    >
+                      <span>•</span>
+                      <p className="text-[#666666]">{c}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        ))}
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
-
-      {/* Mobile */}
     </>
   )
 }

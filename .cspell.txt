@@ -1,10 +1,12 @@
 alicloud
 aliyuncs
+autoplay
 brucesong
 clsx
 cnas
 csee
 ctyun
+embla
 EPICOR
 gesturestart
 gsap

@@ -24,10 +24,7 @@ export default function ContactArea() {
             width={0}
             height={0}
             sizes="100vw"
-            style={{
-              width: 400,
-              height: 'auto'
-            }}
+            className="h-auto w-40 sm:w-[400px]"
           />
         </div>
       </div>

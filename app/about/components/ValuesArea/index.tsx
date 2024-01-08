@@ -18,7 +18,7 @@ function TextRow(props: TextRowProps) {
 
 export default function ValuesArea() {
   return (
-    <div className="relative flex w-full">
+    <div className="relative flex h-[400px] w-full">
       <div className="container absolute inset-0 m-auto flex items-center pl-4 sm:pl-0">
         <div className="flex flex-col space-y-6 px-4">
           <TextRow
@@ -38,7 +38,7 @@ export default function ValuesArea() {
 
       <div className="flex-1 bg-[#f7f7fa]" />
 
-      <div className="relative h-[400px] flex-1">
+      <div className="relative hidden h-[400px] flex-1 sm:block">
         <Image
           src={getSrc('/img/banner/values_4.jpg')}
           alt=""

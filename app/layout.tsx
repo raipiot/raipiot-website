@@ -1,7 +1,7 @@
 import './global.scss'
 
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import type { PropsWithChildren } from 'react'
 
 import { cn, getSrc } from '@/utils'
@@ -10,7 +10,7 @@ import ClientInit from './components/ClientInit'
 import Footer from './components/Footer'
 import Header from './components/Header'
 
-const montserrat = Montserrat({ subsets: ['latin'], display: 'auto' })
+const montserrat = Nunito({ subsets: ['latin'], display: 'auto' })
 
 const { AppConfig } = await import('@/constants')
 

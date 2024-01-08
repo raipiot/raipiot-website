@@ -8,7 +8,7 @@ const iconProps = {
   strokeWidth: 1.5
 }
 
-const cardData = [
+const data = [
   {
     title: '自主可控',
     icon: <TargetIcon {...iconProps} />,
@@ -35,23 +35,26 @@ const cardData = [
 export default function AboutCardsArea() {
   return (
     <div className="container flex flex-col space-y-8 px-4 text-white sm:flex-row sm:space-x-8 sm:space-y-0">
-      {cardData.map((item) => (
+      {data.map((item) => (
         <div
-          className="group relative flex min-h-[300px] flex-[1] items-center justify-center rounded-md transition-all duration-700 hover:flex-[2] sm:h-[500px]"
+          className="group relative flex min-h-[300px] flex-[1] items-center justify-center rounded-md transition-all duration-700 hover:flex-[2] sm:h-[300px] lg:h-[450px]"
           key={item.title}
         >
           <Image
             src={item.src}
             alt=""
             fill
-            sizes="50vw"
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            sizes="(max-width: 640px) 100vw, 33vw"
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center'
+            }}
           />
           <div className="relative flex w-full flex-col items-center justify-center space-y-4 transition-all duration-1000 group-hover:-translate-y-10">
             {item.icon}
             <div className="text-2xl">{item.title}</div>
             <div className="h-[2px] w-6 bg-white transition-all duration-1000" />
-            <div className="absolute -bottom-20 w-[500px] translate-y-20 px-12 text-center text-sm opacity-0 transition-all duration-1000 group-hover:translate-y-16 group-hover:opacity-100 sm:translate-y-96">
+            <div className="absolute -bottom-20 translate-y-20 px-12 text-center text-sm opacity-0 transition-all duration-1000 group-hover:translate-y-6 group-hover:opacity-100 sm:max-w-lg sm:translate-y-96 sm:px-4 group-hover:sm:translate-y-20">
               {item.description}
             </div>
           </div>

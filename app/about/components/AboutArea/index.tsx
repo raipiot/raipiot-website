@@ -10,7 +10,7 @@ export default function AboutArea() {
       <div className="flex flex-1 flex-col items-center space-y-8">
         <span className="text-3xl font-semibold">关于睿朴麟</span>
 
-        <div className="px-4 indent-8 leading-10">
+        <div className="px-4 indent-8 text-sm leading-7 sm:text-base sm:leading-10">
           <p>
             苏州睿朴麟信息科技有限公司，是一家向制造企业及其供应链上下游、相关生态互补组织提供综合数字化服务的国家级高新技术企业。公司以“解密数据，赋能决策”为使命，我们愿意为奋勇攀登的企业搭梯架桥，携手跨越产业应用与先进管理理论和数字技术间的鸿沟。
           </p>
@@ -27,8 +27,8 @@ export default function AboutArea() {
           src={getSrc('/img/banner/map.png')}
           alt=""
           priority
+          sizes="100vw"
           fill
-          sizes="500px"
           style={{ objectFit: 'contain', objectPosition: 'center' }}
         />
         <div className={cn('absolute right-[17%] top-[58%]', styles.mapCircle)}>
