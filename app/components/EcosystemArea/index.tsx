@@ -40,9 +40,9 @@ const data = [
 export default function EcosystemArea() {
   return (
     <div className="w-full bg-[#f7f7fa]">
-      <div className="container mx-auto flex flex-col items-center pb-40 pt-24">
+      <div className="container mx-auto flex flex-col items-center py-12 sm:pb-40 sm:pt-24">
         <span className="mb-10 text-3xl">生态合作伙伴</span>
-        <div className="grid w-full grid-cols-5 gap-4">
+        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-5">
           {data.map((i) => (
             <Link
               href={i.href}
@@ -53,16 +53,14 @@ export default function EcosystemArea() {
                 className="group flex h-[120px] w-full items-center justify-center"
               >
                 <Image
-                  className="transition-all duration-300 group-hover:scale-125 group-active:scale-100"
+                  className="h-auto object-contain transition-all duration-300 group-hover:scale-125 group-active:scale-100"
                   src={getSrc(i.src)}
                   width={0}
                   height={0}
                   alt=""
                   sizes="100vw"
                   style={{
-                    objectFit: 'contain',
-                    width: i.width,
-                    height: 'auto'
+                    width: i.width
                   }}
                 />
               </Card>

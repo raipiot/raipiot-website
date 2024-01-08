@@ -10,7 +10,7 @@ import ClientInit from './components/ClientInit'
 import Footer from './components/Footer'
 import Header from './components/Header'
 
-const montserrat = Nunito({ subsets: ['latin'], display: 'auto' })
+const nunito = Nunito({ subsets: ['latin'], display: 'auto' })
 
 const { AppConfig } = await import('@/constants')
 
@@ -51,7 +51,7 @@ export const viewport =
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={cn(montserrat.className, 'w-full overflow-x-hidden scroll-smooth relative')}>
+      <body className={cn(nunito.className, 'w-full overflow-x-hidden scroll-smooth relative')}>
         <Header />
         <div className="relative min-h-screen pt-20">{children}</div>
         <Footer />

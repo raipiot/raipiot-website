@@ -28,9 +28,9 @@ const data = [
 export default function CertificationArea() {
   return (
     <div className="w-full bg-[#f7f7fa]">
-      <div className="container mx-auto flex flex-col items-center py-24">
+      <div className="container mx-auto flex flex-col items-center py-12 sm:py-24">
         <span className="mb-10 text-3xl">荣誉资质</span>
-        <div className="flex w-full justify-between">
+        <div className="flex w-full flex-col justify-between space-y-4 sm:flex-row sm:space-y-0">
           {data.map((i) => (
             <div
               key={i.title}

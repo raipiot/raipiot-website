@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export default function RecommendArea() {
   return (
-    <div className="w-full bg-[#606E93] py-8 text-white">
-      <div className="container mx-auto flex h-full items-center justify-between">
-        <span className="text-xl">重点推荐</span>
-        <div className="flex flex-col space-y-6">
-          <div className="flex items-center space-x-24">
+    <div className="w-full bg-[#606E93] py-4 text-white sm:py-8">
+      <div className="container mx-auto flex h-full flex-col items-center justify-between sm:flex-row">
+        <span className="mb-4 text-xl sm:mb-0">重点推荐</span>
+        <div className="flex flex-col space-y-2 sm:space-y-6">
+          <div className="flex flex-col items-center space-y-2 sm:flex-row sm:space-x-24 sm:space-y-0">
             <Link
               href="/waiting"
               className="group flex w-[250px] items-center justify-between"
@@ -27,7 +27,7 @@ export default function RecommendArea() {
             </Link>
           </div>
 
-          <div className="flex items-center space-x-12">
+          <div className="flex items-center sm:space-x-12">
             <Link
               href="/waiting"
               className="group flex w-[250px] items-center justify-between"
@@ -38,7 +38,7 @@ export default function RecommendArea() {
               <ChevronRightIcon />
             </Link>
 
-            <div className="opacity-0">x</div>
+            <div className="hidden opacity-0 sm:block">x</div>
           </div>
         </div>
         <div />

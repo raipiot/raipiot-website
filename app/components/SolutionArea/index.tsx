@@ -39,7 +39,7 @@ const solutions = [
 
 export default function SolutionArea() {
   return (
-    <div className="w-full py-24">
+    <div className="w-full py-12 sm:py-24">
       <div className="container mx-auto flex flex-col items-center">
         <span className="mb-10 text-3xl">解决方案</span>
         <Tabs
