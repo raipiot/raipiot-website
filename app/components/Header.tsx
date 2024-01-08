@@ -18,6 +18,8 @@ import { Separator } from '@/components/ui/separator'
 import { navbar } from '@/constants'
 import { cn, getSrc } from '@/utils'
 
+import MobileMenu from './MobileMenu'
+
 export default function Header() {
   const [loaded, setLoaded] = useState(false)
   const [scrollDistance, setScrollDistance] = useState(0)
@@ -150,10 +152,11 @@ export default function Header() {
           </NavigationMenu>
         </div>
 
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center space-x-4">
           <Button variant="outline">
             <Link href="/waiting">预约交流</Link>
           </Button>
+          <MobileMenu />
         </div>
       </div>
     </header>

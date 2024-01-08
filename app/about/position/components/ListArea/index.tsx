@@ -7,26 +7,26 @@ import { getSrc } from '@/utils'
 
 export default function ListArea() {
   return (
-    <div className="container mx-auto mb-24 flex flex-col">
-      <div className="relative mx-auto mb-24 mt-6 h-[500px] w-[1080px]">
+    <div className="container mx-auto mb-12 flex flex-col p-4 sm:mb-24">
+      <div className="relative mx-auto mb-12 mt-6 h-[200px] w-full sm:mb-24 sm:h-[500px] sm:w-[1080px]">
         <Image
           src={getSrc('/img/banner/staff.jpg')}
-          className="rounded-sm shadow-sm"
+          className="rounded-sm object-cover object-center shadow-sm"
           alt=""
           fill
+          sizes="100vw"
           priority
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
       </div>
 
-      <div className="mx-auto mb-24 flex max-w-[720px] flex-col space-y-4">
+      <div className="mx-auto mb-12 flex max-w-[720px] flex-col space-y-4 sm:mb-24">
         <div className="mb-8 self-center text-3xl font-bold">加入我们</div>
 
         {jobDetails.map((jobDetail) => (
           <Link
             href={`/about/position/${jobDetail.id}`}
             key={jobDetail.id}
-            className="flex cursor-pointer flex-col space-y-2 rounded-sm p-6 transition-all hover:shadow-md active:opacity-75"
+            className="flex cursor-pointer flex-col space-y-2 rounded-sm py-4 transition-all active:opacity-75 sm:p-6 hover:sm:shadow-md"
           >
             <span className="text-xl font-semibold">{jobDetail.title}</span>
             <div className="flex justify-between space-x-4 text-sm text-[#646a73]">
