@@ -41,7 +41,7 @@ export default function SolutionArea() {
   return (
     <div className="w-full py-12 sm:py-24">
       <div className="container mx-auto flex flex-col items-center">
-        <span className="mb-10 text-3xl">解决方案</span>
+        <span className="mb-10 text-3xl font-medium">解决方案</span>
         <Tabs
           defaultValue={solutions.at(0)!.title}
           className="w-full"
@@ -63,7 +63,7 @@ export default function SolutionArea() {
             >
               <Card className="overflow-hidden">
                 <CardContent className="flex p-0">
-                  <div className="= flex w-1/2 flex-col flex-wrap justify-center pl-12">
+                  <div className="flex w-1/2 flex-col flex-wrap justify-center pl-12">
                     <span className="text-xl font-semibold">{i.fullTitle}</span>
                     <p className="mb-8 mt-4">{i.description}</p>
                     <div>
@@ -72,16 +72,15 @@ export default function SolutionArea() {
                       </Button>
                     </div>
                   </div>
-                  <div className="relative h-[350px] w-1/2 ">
-                    <Image
-                      src={getSrc(i.src)}
-                      className="object-cover object-center"
-                      alt=""
-                      fill
-                      sizes="50vw"
-                      priority
-                    />
-                  </div>
+                  <Image
+                    src={getSrc(i.src)}
+                    className="h-auto w-[400px] object-cover object-center shadow-md"
+                    alt=""
+                    width={0}
+                    height={0}
+                    sizes="50vw"
+                    priority
+                  />
                 </CardContent>
               </Card>
             </TabsContent>

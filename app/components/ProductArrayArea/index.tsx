@@ -20,7 +20,7 @@ export default function ProductArray() {
       />
       <div className="absolute inset-0 -z-10 bg-black opacity-5" />
       <div className="container mx-auto flex flex-col px-4 text-center">
-        <span className="text-2xl sm:text-3xl">睿朴麟数字化综合解决方案</span>
+        <span className="text-2xl font-medium sm:text-3xl">睿朴麟数字化综合解决方案</span>
         <span className="mt-6 text-sm sm:text-base">
           企业数字化转型不能盲目效仿，要依据企业的行业特点、工艺特点、所处发展阶段及管理成熟度进行综合评估后拟定方案
         </span>

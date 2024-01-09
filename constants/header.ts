@@ -16,8 +16,7 @@ export const navbar: NavbarItem[] = [
         children: [
           {
             title: '智能交付协同平台“跟单猿”',
-            // href: '/product/gdy'
-            href: '/waiting'
+            href: '/product/gdy'
           },
           { title: '数字化采购平台', href: '/waiting' },
           { divider: true },

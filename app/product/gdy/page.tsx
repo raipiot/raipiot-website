@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
 import ContactArea from '@/components/ContactArea'
+import SubNav from '@/components/SubNav'
 
-import AdvantageArea from './components/AdvantageArea'
 import ArchitectureArea from './components/ArchitectureArea'
 import BannerArea from './components/BannerArea'
 import FeatureArea from './components/FeatureArea'
-import SubNavArea from './components/SubNavArea'
+import UserArea from './components/UserArea'
 
 export const metadata: Metadata = {
   title: '智能交付协同平台“跟单猿”'
@@ -14,12 +14,18 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="flex flex-col items-center space-y-24">
+    <main className="flex flex-col items-center">
       <BannerArea />
-      <SubNavArea />
-      <AdvantageArea />
+      <SubNav
+        data={[
+          { title: '产品架构', id: 'architecture' },
+          { title: '功能介绍', id: 'feature' },
+          { title: '用户群体', id: 'user' }
+        ]}
+      />
       <ArchitectureArea />
       <FeatureArea />
+      <UserArea />
       <ContactArea />
     </main>
   )

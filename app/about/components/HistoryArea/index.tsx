@@ -79,7 +79,7 @@ export default function HistoryArea() {
     <>
       <div className="relative hidden h-[380px] w-full p-24 text-white sm:flex">
         <div className="container mx-auto flex flex-col items-center justify-between">
-          <div className="text-3xl">发展里程碑</div>
+          <div className="text-3xl font-medium">发展里程碑</div>
           <div className="relative flex w-full justify-between">
             {data.map((i, index) => (
               <div
@@ -116,7 +116,7 @@ export default function HistoryArea() {
         />
       </div>
       <div className="container">
-        <div className="mb-4 text-center text-3xl sm:hidden">发展里程碑</div>
+        <div className="mb-4 text-center text-3xl font-medium sm:hidden">发展里程碑</div>
         <Carousel
           className="mx-auto w-full max-w-[calc(100%-80px)] sm:max-w-5xl 2xl:max-w-full"
           setApi={setApi}

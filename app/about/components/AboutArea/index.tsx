@@ -7,8 +7,8 @@ import styles from './index.module.scss'
 export default function AboutArea() {
   return (
     <div className="container flex space-x-8">
-      <div className="flex flex-1 flex-col items-center space-y-8">
-        <span className="text-3xl font-semibold">关于睿朴麟</span>
+      <div className="flex flex-1 flex-col items-center">
+        <span className="mb-8 text-3xl font-medium">关于睿朴麟</span>
 
         <div className="px-4 indent-8 text-sm leading-7 sm:text-base sm:leading-10">
           <p>
@@ -26,10 +26,10 @@ export default function AboutArea() {
         <Image
           src={getSrc('/img/banner/map.png')}
           alt=""
+          className="object-contain object-center"
           priority
           sizes="100vw"
           fill
-          style={{ objectFit: 'contain', objectPosition: 'center' }}
         />
         <div className={cn('absolute right-[17%] top-[58%]', styles.mapCircle)}>
           <span className="absolute left-4 whitespace-nowrap text-nowrap">苏州（总部）</span>

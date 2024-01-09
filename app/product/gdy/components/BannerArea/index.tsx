@@ -7,7 +7,7 @@ import { getSrc, shimmerPlaceholder } from '@/utils'
 export default function BannerArea() {
   return (
     <div className="relative h-fit w-full">
-      <div className="relative flex h-[455px] w-full items-center">
+      <div className="relative flex h-[450px] w-full items-center">
         <Image
           className="absolute left-0 top-0 -z-50"
           src={getSrc('/img/banner/home.jpg')}
@@ -25,7 +25,7 @@ export default function BannerArea() {
         <div className="container m-auto flex flex-col space-y-6 px-4 text-white">
           <span className="text-4xl">智能交付协同平台“跟单猿”</span>
           <div className="flex flex-col space-y-2">
-            <span>xxx</span>
+            <span />
           </div>
           <div>
             <Button

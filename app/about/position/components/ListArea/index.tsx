@@ -20,7 +20,7 @@ export default function ListArea() {
       </div>
 
       <div className="mx-auto mb-12 flex max-w-[720px] flex-col space-y-4 sm:mb-24">
-        <div className="mb-8 self-center text-3xl font-bold">加入我们</div>
+        <div className="mb-8 self-center text-3xl font-medium">加入我们</div>
 
         {jobDetails.map((jobDetail) => (
           <Link

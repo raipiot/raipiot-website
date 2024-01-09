@@ -7,7 +7,7 @@ import { getSrc, shimmerPlaceholder } from '@/utils'
 export default function BannerArea() {
   return (
     <div className="relative h-fit w-full">
-      <div className="relative flex h-[455px] w-full items-center">
+      <div className="relative flex h-[450px] w-full items-center">
         <Image
           className="-z-50"
           src={getSrc('/img/banner/home.jpg')}

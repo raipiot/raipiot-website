@@ -41,7 +41,7 @@ export default function EcosystemArea() {
   return (
     <div className="w-full bg-[#f7f7fa]">
       <div className="container mx-auto flex flex-col items-center py-12 sm:pb-40 sm:pt-24">
-        <span className="mb-10 text-3xl">生态合作伙伴</span>
+        <span className="mb-10 text-3xl font-medium">生态合作伙伴</span>
         <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-5">
           {data.map((i) => (
             <Link

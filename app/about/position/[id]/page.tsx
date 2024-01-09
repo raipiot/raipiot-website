@@ -28,7 +28,7 @@ export default function Page({ params }: Props) {
   return (
     <div className="container mx-auto max-w-[780px] p-4">
       <Card className="flex flex-col p-4 sm:p-6">
-        <span className="mb-3 text-3xl">{data.title}</span>
+        <span className="mb-3 text-3xl font-medium">{data.title}</span>
         <div className="flex text-sm text-[#999999]">
           <span>{data.location}</span>
           {data.createdAt && (

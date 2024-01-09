@@ -35,7 +35,7 @@ export default function CertificationArea() {
   return (
     <div className="w-full bg-[#f7f7fa]">
       <div className="container mx-auto flex flex-col items-center px-4 py-12 sm:py-24">
-        <span className="mb-10 text-3xl">荣誉资质</span>
+        <span className="mb-10 text-3xl font-medium">荣誉资质</span>
         <Carousel
           className="w-full max-w-[calc(100%-80px)] sm:max-w-5xl 2xl:max-w-full"
           plugins={[plugin.current]}
