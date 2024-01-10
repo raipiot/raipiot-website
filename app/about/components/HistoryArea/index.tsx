@@ -57,7 +57,7 @@ export default function HistoryArea() {
 
   const plugin = useRef(
     Autoplay({
-      delay: 2000,
+      delay: 5000,
       stopOnInteraction: true,
       stopOnMouseEnter: true
     })

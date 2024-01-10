@@ -73,10 +73,18 @@ export default function ProductArray() {
                   <span className="font-bold">价值创造</span>
                   <Card className="flex flex-1 flex-col space-y-2 rounded-none p-2">
                     <span className="font-bold">制造精益化管理</span>
-                    <Card className="rounded-none p-2 text-sm sm:text-base">MES</Card>
-                    <Card className="rounded-none p-2 text-sm sm:text-base">WMS</Card>
-                    <Card className="rounded-none p-2 text-sm sm:text-base">PLM</Card>
-                    <Card className="rounded-none p-2 text-sm sm:text-base">智造软件系列</Card>
+                    <Card className="flex flex-1 items-center justify-center rounded-none p-2 text-sm sm:text-base">
+                      MES
+                    </Card>
+                    <Card className="flex flex-1 items-center justify-center rounded-none p-2 text-sm sm:text-base">
+                      WMS
+                    </Card>
+                    <Card className="flex flex-1 items-center justify-center rounded-none p-2 text-sm sm:text-base">
+                      PLM
+                    </Card>
+                    <Card className="flex flex-1 items-center justify-center rounded-none p-2 text-sm sm:text-base">
+                      智造软件系列
+                    </Card>
                   </Card>
                   <Card className="flex flex-col space-y-2 rounded-none p-2">
                     <span className="font-bold">工业设备数据采集与应用</span>
@@ -89,11 +97,21 @@ export default function ProductArray() {
                   <Card className="flex flex-1 flex-col space-y-2 rounded-none p-2">
                     <span className="font-bold">集成化办公管理平台</span>
                     <span className="text-sm">基于BPM低代码开发</span>
-                    <Card className="rounded-none p-2 text-sm sm:text-base">HRM</Card>
-                    <Card className="rounded-none p-2 text-sm sm:text-base">费控管理</Card>
-                    <Card className="rounded-none p-2 text-sm sm:text-base">项目管理</Card>
-                    <Card className="rounded-none p-2 text-sm sm:text-base">流程管理</Card>
-                    <Card className="rounded-none p-2 text-sm sm:text-base">预算管理</Card>
+                    <Card className="flex flex-1 items-center justify-center rounded-none p-2 text-sm sm:text-base">
+                      HRM
+                    </Card>
+                    <Card className="flex flex-1 items-center justify-center rounded-none p-2 text-sm sm:text-base">
+                      费控管理
+                    </Card>
+                    <Card className="flex flex-1 items-center justify-center rounded-none p-2 text-sm sm:text-base">
+                      项目管理
+                    </Card>
+                    <Card className="flex flex-1 items-center justify-center rounded-none p-2 text-sm sm:text-base">
+                      流程管理
+                    </Card>
+                    <Card className="flex flex-1 items-center justify-center rounded-none p-2 text-sm sm:text-base">
+                      预算管理
+                    </Card>
                   </Card>
                 </div>
               </div>

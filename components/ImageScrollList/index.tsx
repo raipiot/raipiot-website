@@ -67,6 +67,8 @@ const ImageScrollList = memo((props: Props) => {
         <Card
           className={cn('group flex w-full items-center justify-center p-6 shadow-sm ')}
           key={i.title + index}
+          onMouseEnter={() => handleHoverItem()}
+          onMouseLeave={() => handleLeaveItem()}
         >
           <div
             style={{ width: i.width, height: props.height }}
@@ -80,8 +82,6 @@ const ImageScrollList = memo((props: Props) => {
               sizes="100vw"
               width={0}
               height={0}
-              onMouseEnter={() => handleHoverItem()}
-              onMouseLeave={() => handleLeaveItem()}
             />
           </div>
         </Card>

@@ -85,10 +85,15 @@ export default function MobileMenu() {
                             <Link
                               href={subItem.href}
                               key={subIndex}
-                              className="mt-2 transition-all active:opacity-75"
+                              className="mt-2 flex items-center transition-all active:opacity-75"
                               onClick={() => setOpen(false)}
                             >
                               {subItem.title}
+                              {subItem.hot && (
+                                <span className="ms-1 rounded-sm bg-red-500 px-[2px] py-[1px] text-[8px] leading-3 text-white">
+                                  HOT
+                                </span>
+                              )}
                             </Link>
                           ) : (
                             <div

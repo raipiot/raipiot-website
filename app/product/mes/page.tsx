@@ -5,11 +5,9 @@ import SubNav from '@/components/SubNav'
 
 import ArchitectureArea from './components/ArchitectureArea'
 import BannerArea from './components/BannerArea'
-import FeatureArea from './components/FeatureArea'
-import UserArea from './components/UserArea'
 
 export const metadata: Metadata = {
-  title: '智能交付协同平台“跟单猿”'
+  title: '制造执行管理 MES'
 }
 
 export default function Page() {
@@ -19,13 +17,10 @@ export default function Page() {
       <SubNav
         data={[
           { title: '产品架构', id: 'architecture' },
-          { title: '产品功能', id: 'feature' },
-          { title: '用户群体', id: 'user' }
+          { title: '产品功能', id: 'feature' }
         ]}
       />
       <ArchitectureArea />
-      <FeatureArea />
-      <UserArea />
       <ContactArea />
     </div>
   )

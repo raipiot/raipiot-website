@@ -49,7 +49,7 @@ function Footer() {
         </div>
 
         <div className="space-y-2.5 sm:py-2">
-          <div className="ml-2 flex items-center justify-center space-x-2 text-lg sm:justify-start">
+          <div className="ml-2 flex items-center justify-center space-x-2 text-lg sm:ml-0 sm:justify-start">
             <span>睿朴麟信息科技（西安）有限公司</span>
           </div>
           <div className="flex items-center space-x-1">

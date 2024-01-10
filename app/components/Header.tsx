@@ -131,6 +131,11 @@ export default function Header() {
                               >
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                   {subItem.title}
+                                  {subItem.hot && (
+                                    <span className="ms-1 rounded-sm bg-red-500 px-[2px] py-[1px] text-[8px] leading-3 text-white">
+                                      HOT
+                                    </span>
+                                  )}
                                 </NavigationMenuLink>
                               </Link>
                             </div>

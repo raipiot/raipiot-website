@@ -5,9 +5,9 @@ export default function UserArea() {
   return (
     <div
       id="user"
-      className="w-full bg-[#f7f7fa] py-12 sm:py-24"
+      className="w-full bg-[#f7f7fa] pb-12 pt-6 sm:pb-24 sm:pt-12"
     >
-      <div className="container mx-auto space-y-4 overflow-hidden text-center">
+      <div className="container mx-auto space-y-4 overflow-hidden text-center sm:space-y-8">
         <div className="mb-10 text-3xl font-medium">用户群体</div>
         <ImageScrollList
           data={gdyUsers.at(0)}
@@ -16,7 +16,6 @@ export default function UserArea() {
         />
         <ImageScrollList
           data={gdyUsers.at(1)}
-          className="py-4"
           reverse
           height={60}
           duration="60s"

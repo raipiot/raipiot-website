@@ -9,7 +9,7 @@ export default function RecommendArea() {
         <div className="flex flex-col space-y-2 text-sm sm:space-y-6  sm:text-base">
           <div className="flex flex-col items-center space-y-2 sm:flex-row sm:space-x-24 sm:space-y-0">
             <Link
-              href="/waiting"
+              href="/product/gdy"
               className="group flex w-[250px] items-center justify-between"
             >
               <span className="ml-4 underline-offset-4 group-hover:underline">
@@ -19,7 +19,7 @@ export default function RecommendArea() {
             </Link>
 
             <Link
-              href="/waiting"
+              href="/product/srm"
               className="group flex w-[250px] items-center justify-between"
             >
               <span className="ml-4 underline-offset-4 group-hover:underline">数字化采购平台</span>
@@ -29,7 +29,7 @@ export default function RecommendArea() {
 
           <div className="flex items-center sm:space-x-12">
             <Link
-              href="/waiting"
+              href="/product/iot"
               className="group flex w-[250px] items-center justify-between"
             >
               <span className="ml-4 underline-offset-4 group-hover:underline">

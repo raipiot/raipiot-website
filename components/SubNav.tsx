@@ -23,6 +23,22 @@ const SubNav = memo((props: Props) => {
     function handleScroll() {
       const currentScrollPosition = window.scrollY || document.documentElement.scrollTop
       setScrollDistance(currentScrollPosition)
+      const ids = (props.data ?? []).map((i) => i.id).filter((i) => i)
+
+      const visibleIds = ids.filter((id) => {
+        const element = document.getElementById(id!)
+        if (!element) {
+          return false
+        }
+        const { top, bottom } = element.getBoundingClientRect()
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight
+
+        return bottom > 0 && top < viewportHeight - 80 - scrollDistance
+      })
+
+      if (visibleIds?.length > 0) {
+        setActiveMenuId(visibleIds.findLast(() => true))
+      }
     }
     handleScroll()
     window.addEventListener('scroll', handleScroll)
@@ -30,10 +46,15 @@ const SubNav = memo((props: Props) => {
   }, [])
 
   function handleNav(id?: string) {
-    if (!id) return
-    setActiveMenuId(id)
+    if (!id) {
+      return
+    }
+
     const element = document.getElementById(id)
-    if (!element) return
+    if (!element) {
+      return
+    }
+
     const { top } = element.getBoundingClientRect()
     window.scrollTo({ top: top + scrollDistance - 80, behavior: 'smooth' })
   }
@@ -45,8 +66,8 @@ const SubNav = memo((props: Props) => {
   return (
     <div
       className={cn(
-        'w-full bg-[#f7f7fa]',
-        scrollDistance > 630 && 'fixed top-0 bg-white shadow z-40'
+        'w-full bg-[#f7f7fa] hidden sm:block',
+        scrollDistance > 530 && 'fixed top-0 bg-white shadow z-40'
       )}
     >
       <div className="container mx-auto">
