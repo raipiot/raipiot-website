@@ -9,7 +9,7 @@ import RecommendArea from './components/RecommendArea'
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <BannerArea />
       <RecommendArea />
       <ProductArray />
@@ -17,6 +17,6 @@ export default function Home() {
       {/* <SolutionArea /> */}
       <EcosystemArea />
       <ContactArea />
-    </main>
+    </div>
   )
 }

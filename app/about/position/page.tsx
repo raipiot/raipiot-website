@@ -7,9 +7,9 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <PhotoWall />
       <ListArea />
-    </main>
+    </div>
   )
 }

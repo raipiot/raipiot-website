@@ -47,6 +47,7 @@ export default function EcosystemArea() {
             <Link
               href={i.href}
               target="_blank"
+              key={i.title}
             >
               <Card
                 key={i.title}

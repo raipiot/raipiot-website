@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="flex flex-col items-center space-y-12 sm:space-y-24">
+    <div className="flex flex-col items-center space-y-12 sm:space-y-24">
       <BannerArea />
       <AboutArea />
       <AboutCardsArea />
@@ -21,6 +21,6 @@ export default function Page() {
       <HistoryArea />
       <CertificationArea />
       <ContactArea />
-    </main>
+    </div>
   )
 }

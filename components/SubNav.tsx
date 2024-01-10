@@ -45,7 +45,7 @@ const SubNav = memo((props: Props) => {
   return (
     <div
       className={cn(
-        'w-full bg-[hsl(0,0%,95%)]',
+        'w-full bg-[#f7f7fa]',
         scrollDistance > 630 && 'fixed top-0 bg-white shadow z-40'
       )}
     >

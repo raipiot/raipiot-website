@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <BannerArea />
       <SubNav
         data={[
@@ -27,6 +27,6 @@ export default function Page() {
       <FeatureArea />
       <UserArea />
       <ContactArea />
-    </main>
+    </div>
   )
 }

@@ -1,0 +1,17 @@
+.list {
+  animation: loop var(--scroll-duration) linear infinite;
+}
+
+.listReverse {
+  animation: loop var(--scroll-duration) linear infinite reverse;
+}
+
+@keyframes loop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(calc(var(--image-width)), 0, 0);
+  }
+}
