@@ -17,6 +17,7 @@ Photoshop
 preinstall
 qrcode
 raipiot
+RFID
 rlig
 rootcloud
 superjson

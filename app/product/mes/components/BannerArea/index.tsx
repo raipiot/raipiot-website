@@ -25,7 +25,13 @@ export default function BannerArea() {
         <div className="container m-auto flex flex-col space-y-6 px-4 text-white">
           <span className="text-4xl">制造执行管理 MES</span>
           <div className="flex flex-col space-y-2">
-            <span />
+            <span>
+              通过提供实时的、可追溯的生产数据，帮助制造企业更加灵活、高效地运营，适应市场需求的变化，提高生产效率和质量水平
+            </span>
+            <span>
+              采用
+              IoT、云、RFID、边缘计算等互联互通技术，实现数据采集、合理排产、制程防错防漏等高水平管理
+            </span>
           </div>
           <div>
             <Button

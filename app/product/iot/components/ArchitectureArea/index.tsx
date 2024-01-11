@@ -12,7 +12,7 @@ export default function ArchitectureArea() {
         产品架构
       </div>
       <Image
-        src={getSrc('/img/banner/product_array.jpg')}
+        src={getSrc('/img/product/iot/arch.png')}
         alt=""
         priority
         sizes="100vw"

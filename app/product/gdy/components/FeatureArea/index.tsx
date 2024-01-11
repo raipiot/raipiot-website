@@ -1,10 +1,8 @@
 'use client'
 
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { cn, getSrc } from '@/utils'
@@ -66,36 +64,37 @@ const data = [
 export default function FeatureArea() {
   const imgRefs = useRef<HTMLDivElement[]>([])
 
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger)
+
+  //   const ctx = gsap.context(() => {
+  //     imgRefs.current.forEach((img) => {
+  //       gsap.from(img, {
+  //         duration: 500,
+  //         autoAlpha: 0,
+  //         y: 150,
+  //         opacity: 0,
+  //         ease: 'expo.in',
+  //         scrollTrigger: {
+  //           trigger: img,
+  //           start: 'top bottom',
+  //           end: 'bottom top',
+  //           toggleActions: 'play none none reset',
+  //           scrub: true
+  //         }
+  //       })
+  //     })
+  //   })
+  //   return () => {
+  //     ctx.revert()
+  //   }
+  // }, [])
+
   const addToRefs = (el: HTMLDivElement) => {
     if (el && !imgRefs.current.includes(el)) {
       imgRefs.current.push(el)
     }
   }
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    const ctx = gsap.context(() => {
-      imgRefs.current.forEach((img) => {
-        gsap.from(img, {
-          duration: 1,
-          autoAlpha: 0,
-          y: 100,
-          ease: 'power1.out',
-          scrollTrigger: {
-            trigger: img,
-            start: 'top bottom',
-            end: 'bottom top',
-            toggleActions: 'play none none reset',
-            scrub: true
-          }
-        })
-      })
-    })
-    return () => {
-      ctx.revert()
-    }
-  }, [])
 
   return (
     <div
@@ -126,19 +125,24 @@ export default function FeatureArea() {
                 src={getSrc(i.src)}
                 alt=""
                 fill
-                className="rounded-sm object-cover shadow-md"
+                className="select-none rounded-sm object-cover shadow-md"
                 sizes="50vw"
               />
             </div>
-            <div className="flex flex-1 flex-col items-center justify-center space-y-2 pt-8 sm:space-y-4 sm:p-8">
+            <div className="flex flex-1 flex-col items-center justify-center space-y-2 pt-8 sm:items-start sm:space-y-4 sm:p-8">
+              <span className="bg-gradient-to-b from-[#333333] to-[#dddddd] bg-clip-text text-6xl text-transparent">
+                {i.index}
+              </span>
               <span className="text-xl font-medium">{i.title}</span>
               <span className="text-sm leading-8 text-[#666666]">{i.description}</span>
-              <Button
-                asChild
-                variant="outline"
-              >
-                <Link href="/waiting">立即咨询</Link>
-              </Button>
+              <div>
+                <Button
+                  asChild
+                  variant="outline"
+                >
+                  <Link href="/waiting">立即咨询</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

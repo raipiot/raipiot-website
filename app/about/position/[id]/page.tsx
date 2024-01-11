@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
 import { Button } from '@/components/ui/button'
@@ -70,7 +71,12 @@ export default function Page({ params }: Props) {
         )}
 
         <div>
-          <Button className="mt-4 px-8">投递</Button>
+          <Button
+            className="mt-4 px-8"
+            asChild
+          >
+            <Link href="/waiting">投递</Link>
+          </Button>
         </div>
       </Card>
     </div>

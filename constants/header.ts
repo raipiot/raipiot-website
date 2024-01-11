@@ -28,9 +28,9 @@ export const navbar: NavbarItem[] = [
         title: '智能制造',
         children: [
           { title: '制造执行管理 MES', href: '/product/mes', hot: true },
-          { title: '企业仓储管理 WMS', href: '/product/wms' },
+          { title: '企业仓储管理 WMS', href: '/product/wms', hot: true },
           { title: '产品生命周期管理 PLM', href: '/product/plm' },
-          { title: '云边一体化平台 IoT', href: '/product/iot' }
+          { title: '云边一体化平台 IoT', href: '/product/iot', hot: true }
         ]
       },
       {

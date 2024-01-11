@@ -84,7 +84,7 @@ function Footer() {
         <div className="flex flex-col items-center space-x-0 space-y-2 text-xs sm:flex-row sm:space-x-10 sm:space-y-0">
           <Link
             className="flex cursor-pointer items-center transition-all active:opacity-80"
-            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61019002002266"
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002004220"
             target="_blank"
           >
             <Image
@@ -95,14 +95,14 @@ function Footer() {
               height={0}
               sizes="100vw"
             />
-            <span className="underline-offset-4 hover:underline">陕公网安备 61019002002266号</span>
+            <span className="underline-offset-4 hover:underline">苏公网安备 32059002004220 号</span>
           </Link>
           <Link
             className="cursor-pointer underline-offset-4 transition-all hover:underline active:opacity-80"
             href="https://beian.miit.gov.cn/#/Integrated/index"
             target="_blank"
           >
-            陕 ICP 备 2022012948号
+            苏 ICP 备 2022030495 号 - 3
           </Link>
         </div>
       </div>
