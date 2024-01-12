@@ -182,7 +182,7 @@ export default function FeatureArea() {
   return (
     <div
       id="feature"
-      className="w-full py-6 sm:py-12"
+      className="w-full py-12 sm:py-24"
     >
       <div className="container mx-auto flex flex-col space-y-4 text-center">
         <span className="mb-10 text-3xl font-medium">产品功能</span>

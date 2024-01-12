@@ -10,7 +10,7 @@ import { cn } from '@/utils'
 
 import styles from './index.module.scss'
 
-type Props = {
+interface Props {
   params: { id: string }
 }
 
@@ -23,11 +23,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function Page({ params }: Props) {
   const data = jobDetails.find((jobDetail) => jobDetail.id === params.id)
+
   if (!data) {
     redirect('/404')
   }
+
   return (
-    <div className="container mx-auto max-w-[780px] p-4">
+    <div className="container mx-auto flex max-w-[780px] flex-col p-4">
       <Card className="flex flex-col p-4 sm:p-6">
         <span className="mb-3 text-3xl font-medium">{data.title}</span>
         <div className="flex text-sm text-[#999999]">
@@ -79,6 +81,16 @@ export default function Page({ params }: Props) {
           </Button>
         </div>
       </Card>
+
+      <div className="flex justify-center">
+        <Button
+          className="mt-4 px-8"
+          asChild
+          variant="outline"
+        >
+          <Link href="/about/team#join-us">返回</Link>
+        </Button>
+      </div>
     </div>
   )
 }

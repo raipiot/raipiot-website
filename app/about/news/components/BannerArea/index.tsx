@@ -10,22 +10,21 @@ export default function BannerArea() {
       <div className="relative flex h-[450px] w-full items-center">
         <Image
           className="-z-50"
-          src={getSrc('/img/banner/about.jpg')}
+          src={getSrc('/img/banner/home.jpg')}
           alt=""
           sizes="100vw"
           fill
           priority
           quality={40}
           placeholder={shimmerPlaceholder(9999, 455)}
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center'
-          }}
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
         <div className="-z-20 before:absolute before:inset-0 before:bg-[rgba(0,0,0,.5)] before:content-['']" />
         <div className="container m-auto flex flex-col space-y-6 px-4 text-white">
-          <span className="text-4xl">为奋勇攀登的组织搭梯架桥</span>
-          <span />
+          <span className="text-4xl">咨询动态</span>
+          <div className="flex flex-col space-y-2">
+            <span />
+          </div>
           <div>
             <Button
               asChild

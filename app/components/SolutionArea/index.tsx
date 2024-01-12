@@ -1,14 +1,11 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { getSrc } from '@/utils'
 
-const solutions = [
+const data = [
   {
     title: '硅片制造业',
     fullTitle: '光伏硅片制造执行管理系统 MES',
@@ -39,53 +36,38 @@ const solutions = [
 
 export default function SolutionArea() {
   return (
-    <div className="w-full py-12 sm:py-24">
-      <div className="container mx-auto flex flex-col items-center">
+    <div className="w-full">
+      <div className="container mx-auto flex flex-col items-center py-12 sm:py-24">
         <span className="mb-10 text-3xl font-medium">解决方案</span>
-        <Tabs
-          defaultValue={solutions.at(0)!.title}
-          className="w-full"
-        >
-          <TabsList className="m-auto flex w-fit justify-center">
-            {solutions.map((i) => (
-              <TabsTrigger
-                key={i.title}
-                value={i.title}
-              >
-                {i.title}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          {solutions.map((i) => (
-            <TabsContent
-              value={i.title}
+        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          {data.map((i) => (
+            <Card
+              className="group flex cursor-pointer flex-col gap-4 overflow-hidden"
               key={i.title}
             >
-              <Card className="overflow-hidden">
-                <CardContent className="flex p-0">
-                  <div className="flex w-1/2 flex-col flex-wrap justify-center pl-12">
-                    <span className="text-xl font-semibold">{i.fullTitle}</span>
-                    <p className="mb-8 mt-4">{i.description}</p>
-                    <div>
-                      <Button asChild>
-                        <Link href="/waiting">查看详情</Link>
-                      </Button>
-                    </div>
-                  </div>
-                  <Image
-                    src={getSrc(i.src)}
-                    className="h-auto w-[400px] object-cover object-center shadow-md"
-                    alt=""
-                    width={0}
-                    height={0}
-                    sizes="50vw"
-                    priority
-                  />
-                </CardContent>
-              </Card>
-            </TabsContent>
+              <CardHeader className="relative h-[200px] overflow-hidden">
+                <Image
+                  className="select-none object-cover object-center transition-all sm:group-hover:scale-110"
+                  src={getSrc(i.src)}
+                  alt=""
+                  fill
+                  sizes="100vw"
+                />
+              </CardHeader>
+              <CardContent className="flex flex-1 flex-col space-y-2 p-4">
+                <div className="text-center font-medium">{i.title}</div>
+                {i.description && <div className="flex-1 text-sm">{i.description}</div>}
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                >
+                  <Link href="/waiting">了解详情</Link>
+                </Button>
+              </CardContent>
+            </Card>
           ))}
-        </Tabs>
+        </div>
       </div>
     </div>
   )

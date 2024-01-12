@@ -25,7 +25,9 @@ export default function BannerArea() {
         <div className="container m-auto flex flex-col space-y-6 px-4 text-white">
           <span className="text-4xl">智能交付协同平台“跟单猿”</span>
           <div className="flex flex-col space-y-2">
-            <span />
+            <span>
+              打造智能交付协同平台，帮助生态圈内的上下游企业降低交易成本，提高供应链竞争力
+            </span>
           </div>
           <div>
             <Button

@@ -79,7 +79,7 @@ export default function Header() {
                   <NavigationMenuTrigger className="text-base">{i.title}</NavigationMenuTrigger>
                   <NavigationMenuContent
                     className={cn(
-                      'flex whitespace-nowrap p-2',
+                      'flex whitespace-nowrap p-2 min-w-[312px]',
                       i.vertical ? 'flex-col space-y-2' : 'space-x-2'
                     )}
                   >
