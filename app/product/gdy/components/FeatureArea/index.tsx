@@ -64,7 +64,9 @@ const data = [
     title: '多式联运 + 分段运输',
     description:
       '将复杂的运输需求拆分成段委托不同承运方，拥有全局视野，支撑跨承运方的运输计划协同。',
-    src: '/img/product/gdy/7.png'
+    src: '/img/product/gdy/7.png',
+    reverse: false,
+    bgColor: '#f6f7f8'
   },
   {
     index: '08',
@@ -79,7 +81,9 @@ const data = [
     index: '09',
     title: '监控看板',
     description: '在途监控看板展示当前任务和在途异常。',
-    src: '/img/product/gdy/9.png'
+    src: '/img/product/gdy/9.png',
+    reverse: false,
+    bgColor: '#f6f7f8'
   },
   {
     index: '10',
@@ -93,7 +97,9 @@ const data = [
     title: '签收管理',
     description: `规范司机或承运方签收单上传行为。
 签收单台账和查询，签收单上传率统计。`,
-    src: '/img/product/gdy/11.png'
+    src: '/img/product/gdy/11.png',
+    reverse: false,
+    bgColor: '#f6f7f8'
   },
   {
     index: '12',
@@ -107,7 +113,9 @@ const data = [
     title: '运费预估引擎助力决策',
     description: `最优速运推荐：集成的众多速运都是您的供应资源，强大的计算引擎预估运费，推荐最优速运。
 最优承运方推荐：依据运费价格自动计算运费并决策当次发货的价格最优承运方。`,
-    src: '/img/product/gdy/13.png'
+    src: '/img/product/gdy/13.png',
+    reverse: false,
+    bgColor: '#f6f7f8'
   },
   {
     index: '14',
@@ -123,7 +131,9 @@ const data = [
     index: '15',
     title: '商业智能分析',
     description: '运营分析与在途监控看板助力决策和运营管理。',
-    src: '/img/product/gdy/15.png'
+    src: '/img/product/gdy/15.png',
+    reverse: false,
+    bgColor: '#f6f7f8'
   },
   {
     index: '16',
