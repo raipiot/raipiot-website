@@ -21,7 +21,7 @@ export const newsData: NewsItem[] = [
   },
   {
     id: '2',
-    title: '新闻标题',
+    title: '工业和信息化部等十部门印发《绿色建材产业高质量发展实施方案》通知',
     content: '新闻内容',
     createdAt: '2020.01.01',
     type: NewsType.DYNAMICS,

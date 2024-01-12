@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { newsData } from '@/data'
 import { NewsType } from '@/enums'
-import { getSrc } from '@/utils'
+import { extractTextFromHTML, getSrc } from '@/utils'
 
 import { getNewsTypeText } from '../../utils'
 import NewsListTab from '../NewsListTab'
@@ -30,7 +30,10 @@ export default function NewsListArea() {
           {newsData
             .filter((i) => (activeTabId === 0 ? true : i.type === activeTabId))
             .map((i) => (
-              <Link href={`/about/news/${i.id}`}>
+              <Link
+                href={`/about/news/${i.id}`}
+                key={i.id}
+              >
                 <Card
                   key={i.id}
                   className="group flex h-full w-full cursor-pointer flex-col overflow-hidden"
@@ -41,10 +44,9 @@ export default function NewsListArea() {
                       <span>{getNewsTypeText(i.type)}</span>
                     </div>
                     <div className="line-clamp-2 text-2xl font-medium">{i.title}</div>
-                    <div
-                      className="line-clamp-2 text-sm text-[#666666]"
-                      dangerouslySetInnerHTML={{ __html: i.content }}
-                    />
+                    <div className="line-clamp-2 text-sm text-[#666666]">
+                      {extractTextFromHTML(i.content)}
+                    </div>
                   </CardHeader>
 
                   <CardContent className="relative h-[250px] overflow-hidden">

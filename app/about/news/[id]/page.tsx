@@ -32,7 +32,7 @@ export default function Page({ params }: Props) {
   return (
     <div>
       <BannerArea {...data} />
-      <div className="container mx-auto my-12 max-w-[780px] sm:my-24">
+      <div className="container mx-auto my-12 max-w-[980px] sm:my-24">
         <div
           className="leading-9"
           dangerouslySetInnerHTML={{ __html: data.content }}
