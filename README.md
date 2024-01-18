@@ -6,3 +6,13 @@
 - TypeScript
 - TailwindCSS
 - shadcn/ui
+
+## Development
+
+```bash
+pnpm dev
+```
+
+```bash
+pnpm turbo:dev
+```
