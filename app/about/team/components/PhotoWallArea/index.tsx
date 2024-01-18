@@ -5,8 +5,7 @@ import { getSrc } from '@/utils'
 export default function PhotoWallArea() {
   return (
     <div className="container mx-auto flex flex-col p-4 pb-12 pt-6 sm:pb-24 sm:pt-12">
-      <div className="mb-4 text-center text-3xl font-medium">人才天地</div>
-      <div className="mb-8 text-center tracking-wider">
+      <div className="mb-8 text-center text-2xl font-medium">
         员工投公司以热情和增值绩效，公司报员工以富足和体面人生
       </div>
       <div className="mx-auto grid grid-cols-2 gap-0">

@@ -103,8 +103,8 @@ const data = [
   },
   {
     index: '12',
-    title: '运费价格是自动计费的依据，支持多种模式的运费价格。',
-    description: '提货、送货迟到报警、人车分离报警、免堆/免箱超期报警助力事中管理，降低风险。',
+    title: '运费报价管理',
+    description: '运费价格是自动计费的依据，支持多种模式的运费价格。',
     src: '/img/product/gdy/12.png',
     reverse: true
   },

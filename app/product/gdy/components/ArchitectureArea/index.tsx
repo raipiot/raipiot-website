@@ -11,7 +11,7 @@ export default function ArchitectureArea() {
       <div className="container mx-auto flex flex-col items-center px-4 py-12 text-center sm:py-24">
         <div className="mb-10 text-3xl font-medium">产品架构</div>
         <Image
-          src={getSrc('/img/banner/product_array.jpg')}
+          src={getSrc('/img/gdy/product_array.jpg')}
           alt=""
           priority
           sizes="100vw"

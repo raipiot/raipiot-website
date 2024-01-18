@@ -128,7 +128,7 @@ export default function ProductArray() {
               <span className="w-4 font-bold sm:basis-1/4">灵活部署方案</span>
               <div className="flex grow flex-col gap-2 sm:basis-3/4 sm:flex-row">
                 <Card className="flex-1 rounded-none p-2">公有云部署</Card>
-                <Card className="flex-1 rounded-none p-2">私有云部署</Card>
+                <Card className="flex-1 rounded-none p-2">私有化部署</Card>
                 <Card className="flex-1 rounded-none p-2">混合部署</Card>
               </div>
             </Card>
