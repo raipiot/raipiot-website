@@ -4,7 +4,12 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { getSrc, shimmerPlaceholder } from '@/utils'
 
-export default function BannerArea() {
+interface IProps {
+  title: string
+  subTitle: string
+}
+
+export default function BannerArea({ title, subTitle }: IProps) {
   return (
     <div className="relative h-fit w-full">
       <div className="relative flex h-[450px] w-full items-center">
@@ -21,9 +26,9 @@ export default function BannerArea() {
         />
         <div className="-z-20 before:absolute before:inset-0 before:bg-[rgba(0,0,0,.5)] before:content-['']" />
         <div className="container m-auto flex flex-col space-y-6 px-4 text-white">
-          <span className="text-4xl">解密数据，赋能决策</span>
+          <span className="text-4xl">{title}</span>
           <div className="flex flex-col space-y-2">
-            <span>制造业数字化转型综合服务商</span>
+            <span>{subTitle}</span>
           </div>
           <div>
             <Button
