@@ -1,3 +1,5 @@
+import { CaseRecord } from './CaseRecord'
+
 interface NavbarItem {
   title?: string
   href?: string
@@ -51,12 +53,11 @@ export const navbar: NavbarItem[] = [
   },
   {
     title: '成功案例',
-    // children: [{ title: '全面升级中，敬请期待！', href: '/waiting' }],
     children: [
-      { title: '宇泽', href: '/yz' },
-      { title: '美兰德', href: '/mld' },
-      { title: '恒圣', href: '/hs' },
-      { title: '亿达', href: '/yd' }
+      { title: '宇泽', href: CaseRecord.yuze.route },
+      { title: '美兰德', href: CaseRecord.meilande.route },
+      { title: '恒圣', href: CaseRecord.hengsheng.route },
+      { title: '亿达', href: CaseRecord.yida.route }
     ],
     vertical: true
   },

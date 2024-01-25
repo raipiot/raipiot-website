@@ -11,9 +11,12 @@ EPICOR
 gesturestart
 gsap
 Immer
+leidatu
 lucide
+PDCA
 PEMM
 Photoshop
+pinggubaogao
 preinstall
 qrcode
 raipiot

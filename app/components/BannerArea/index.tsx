@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { getSrc, shimmerPlaceholder } from '@/utils'
 
 interface IProps {
   title: string
-  subTitle: string
+  subTitle: ReactNode
 }
 
 export default function BannerArea({ title, subTitle }: IProps) {
@@ -27,9 +28,7 @@ export default function BannerArea({ title, subTitle }: IProps) {
         <div className="-z-20 before:absolute before:inset-0 before:bg-[rgba(0,0,0,.5)] before:content-['']" />
         <div className="container m-auto flex flex-col space-y-6 px-4 text-white">
           <span className="text-4xl">{title}</span>
-          <div className="flex flex-col space-y-2">
-            <span>{subTitle}</span>
-          </div>
+          <div className="flex flex-col space-y-2">{subTitle}</div>
           <div>
             <Button
               asChild

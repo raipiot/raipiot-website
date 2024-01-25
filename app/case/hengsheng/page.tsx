@@ -1,11 +1,11 @@
+import { CaseRecord } from '@/constants/CaseRecord'
+
+import CommonWrapper from '../components/CommonWrapper'
+
 export const metadata = {
-  title: 'Raipiot - 美兰德案例'
+  title: 'raipiot - 恒圣案例'
 }
 
 export default function Page() {
-  return (
-    <div className="flex flex-col items-center space-y-12 sm:space-y-24">
-      <div>m l d</div>
-    </div>
-  )
+  return <CommonWrapper data={CaseRecord.hengsheng} />
 }

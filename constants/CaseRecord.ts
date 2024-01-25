@@ -12,9 +12,9 @@ export const CaseRecord = {
       '企业运营指标需要统一全面的展示'
     ],
     // Raipiot 为企业数字化转型搭梯架桥
-    serviceBridge: ['ERP+MES+智能交付协同'],
+    serviceBridge: ['ERP + MES + 智能交付协同'],
     // 客户价值
-    customerValue: [
+    clienteleValue: [
       '生产现场无纸化率提升 50%',
       '流程规范和数据透明使得参与人数减少 30%',
       '在制品库存降低 10%'
@@ -25,7 +25,7 @@ export const CaseRecord = {
     name: '美兰德',
     // 简介
     intro: [
-      '行业一流的炭/炭复合材料高新技术企业。',
+      '行业一流的炭/炭复合材料高新技术企业',
       '市级名牌产品证书',
       '省级高新技术企业',
       '中国质量认证中心认可',
@@ -39,9 +39,9 @@ export const CaseRecord = {
       '单一IT工具多，流程未体系化'
     ],
     // Raipiot 为企业数字化转型搭梯架桥
-    serviceBridge: ['流程管理+ERP'],
+    serviceBridge: ['流程管理 + ERP'],
     // 客户价值
-    customerValue: [
+    clienteleValue: [
       '能源低碳化',
       '成本管理精细化',
       '现场工艺可视化，标准化',
@@ -57,12 +57,13 @@ export const CaseRecord = {
     EnterpriseDevelopmentPainPoints: [
       '面对资本市场的要求业务需要全面规范',
       '资源如何快速匹配市场需求',
-      '单价下调与利润率的矛盾'
+      '单价下调与利润率的矛盾',
+      '单一 IT 工具多，流程未体系化'
     ],
     // Raipiot 为企业数字化转型搭梯架桥
-    serviceBridge: ['流程管理+RP+智能交付协同'],
+    serviceBridge: ['流程管理 + RP + 智能交付协同'],
     // 客户价值
-    customerValue: ['业务线上化提升50%，合规性全面提高'],
+    clienteleValue: ['业务线上化提升50%，合规性全面提高'],
     route: '/case/hengsheng'
   },
   yida: {
@@ -79,7 +80,7 @@ export const CaseRecord = {
     // Raipiot 为企业数字化转型搭梯架桥
     serviceBridge: ['流程管理+MES+智能交付协同'],
     // 客户价值
-    customerValue: [
+    clienteleValue: [
       '全面推行库存管理，库存正确性上升30%',
       '运营各环节标准化程度上升30%',
       '数据流转效率提升25%',
