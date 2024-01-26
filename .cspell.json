@@ -2,9 +2,16 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
   "language": "en",
-  "words": [],
+  "words": [
+    "hengsheng",
+    "meilande",
+    "yida",
+    "yuze"
+  ],
   "flagWords": [],
-  "dictionaries": ["custom-words"],
+  "dictionaries": [
+    "custom-words"
+  ],
   "dictionaryDefinitions": [
     {
       "name": "custom-words",
