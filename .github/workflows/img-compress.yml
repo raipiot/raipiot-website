@@ -1,5 +1,11 @@
 name: Compress Images
 on:
+  push:
+    paths:
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - '**.webp'
   pull_request:
     paths:
       - '**.jpg'
