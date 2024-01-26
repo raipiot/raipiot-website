@@ -10,7 +10,7 @@ export default function BannerArea() {
       <div className="relative flex h-[450px] w-full items-center">
         <Image
           className="-z-50"
-          src={getSrc('/img/banner/home.jpg')}
+          src={getSrc('/img/banner/news.png')}
           alt=""
           sizes="100vw"
           fill

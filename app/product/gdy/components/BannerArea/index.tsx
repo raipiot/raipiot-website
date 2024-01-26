@@ -10,7 +10,7 @@ export default function BannerArea() {
       <div className="relative flex h-[450px] w-full items-center">
         <Image
           className="absolute left-0 top-0 -z-50"
-          src={getSrc('/img/banner/gdy-banner.png')}
+          src={getSrc('/img/banner/gdy.png')}
           alt=""
           sizes="100vw"
           fill

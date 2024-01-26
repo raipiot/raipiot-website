@@ -1,5 +1,5 @@
+import BannerArea from './components/BannerArea'
 import JoinUsArea from './components/JoinUsArea'
-import PhotoWallArea from './components/PhotoWallArea'
 
 export const metadata = {
   title: '人才天地'
@@ -8,7 +8,8 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col items-center">
-      <PhotoWallArea />
+      <BannerArea />
+      {/* <PhotoWallArea /> */}
       <JoinUsArea />
     </div>
   )

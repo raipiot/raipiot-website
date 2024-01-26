@@ -7,7 +7,7 @@ export default function JoinUsArea() {
   return (
     <div
       id="join-us"
-      className="container mx-auto mb-12 flex max-w-[720px] flex-col space-y-4 sm:mb-24"
+      className="container mx-auto mb-12 flex max-w-[720px] flex-col space-y-4 pt-12 sm:mb-24 sm:pt-24"
     >
       <div className="mb-8 self-center text-3xl font-medium">加入我们</div>
       {jobDetails.map((jobDetail) => (
