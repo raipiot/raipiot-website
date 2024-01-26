@@ -21,7 +21,7 @@ const data = [NewsType.ALL, NewsType.DYNAMICS, NewsType.QLY, NewsType.NEWS, News
 
 const TabArea = memo((props: Props) => (
   <div className={cn('w-full bg-[#f7f7fa]')}>
-    <div className="container mx-auto overflow-x-scroll">
+    <div className="container mx-auto overflow-x-auto">
       <NavigationMenu>
         <NavigationMenuList className="space-x-12 pe-12">
           {data.map((id) => (
