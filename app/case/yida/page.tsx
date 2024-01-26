@@ -3,7 +3,7 @@ import { CaseRecord } from '@/constants/CaseRecord'
 import CommonWrapper from '../components/CommonWrapper'
 
 export const metadata = {
-  title: 'raipiot - 亿达案例'
+  title: CaseRecord.yida.name
 }
 
 export default function Page() {
