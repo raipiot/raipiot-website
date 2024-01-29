@@ -23,7 +23,7 @@ export default function CoreWorth() {
       className="px-auto flex w-full flex-col items-center bg-[#f7f7fa] px-4 pb-4 text-center sm:pb-16"
       id="core-worth"
     >
-      <div className="my-16 px-4 text-3xl font-bold">睿朴麟数字化转型定制方案的核心价值</div>
+      <div className="my-16 mt-24 px-4 text-3xl font-bold">睿朴麟数字化转型定制方案的核心价值</div>
       <div className="grid max-w-[1200px] grid-cols-1 gap-4 px-4 pb-8 sm:grid-cols-3 sm:gap-4 sm:pb-0">
         {descriptions.map((d) => (
           <div className="flex flex-col items-center rounded-sm bg-[#1E222D] p-4 opacity-90 transition-opacity hover:opacity-100">

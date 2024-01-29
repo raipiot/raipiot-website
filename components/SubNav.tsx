@@ -16,47 +16,40 @@ interface Props {
 }
 
 const SubNav = memo((props: Props) => {
-  const [scrollDistance, setScrollDistance] = useState(0)
   const [activeMenuId, setActiveMenuId] = useState(props.data?.at(0)?.id)
 
   useEffect(() => {
     function handleScroll() {
-      const currentScrollPosition = window.scrollY || document.documentElement.scrollTop
-      setScrollDistance(currentScrollPosition)
-      const ids = (props.data ?? []).map((i) => i.id).filter((i) => i)
-
-      const visibleIds = ids.filter((id) => {
-        const element = document.getElementById(id!)
-        if (!element) {
-          return false
+      const io = new IntersectionObserver((entries) => {
+        // 如果当前元素出现在视口中，则设置当前元素的 id 为 activeMenuId，并且跳出循环
+        for (let index = 0; index < entries.length; index += 1) {
+          const element = entries[index]
+          if (element?.isIntersecting && element?.intersectionRatio === 1) {
+            setActiveMenuId(element.target.id)
+            break
+          }
         }
-        const { top, bottom } = element.getBoundingClientRect()
-        const viewportHeight = window.innerHeight || document.documentElement.clientHeight
-
-        return bottom > 0 && top < viewportHeight - 80 - scrollDistance
       })
-
-      if (visibleIds?.length > 0) {
-        setActiveMenuId(visibleIds.findLast(() => true))
-      }
+      console.log('page io:', io)
+      props.data?.forEach((i) => {
+        if (i.id) {
+          const element = document.getElementById(i.id)
+          if (!element) {
+            return
+          }
+          io.observe(element)
+        }
+      })
+      return io
     }
-    handleScroll()
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const io = handleScroll()
+    return () => {
+      io.disconnect()
+    }
   }, [])
 
   function handleNav(id?: string) {
-    if (!id) {
-      return
-    }
-
-    const element = document.getElementById(id)
-    if (!element) {
-      return
-    }
-
-    const { top } = element.getBoundingClientRect()
-    window.scrollTo({ top: top + scrollDistance - 80, behavior: 'smooth' })
+    if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   if (!props.data || props.data.length === 0) {
@@ -65,10 +58,7 @@ const SubNav = memo((props: Props) => {
 
   return (
     <div
-      className={cn(
-        'w-full bg-[#f7f7fa] hidden sm:block',
-        scrollDistance > 530 && 'fixed top-0 bg-white shadow z-40'
-      )}
+      className={cn('w-full bg-[#f7f7fa] hidden sm:block', 'sticky top-0 bg-white shadow z-[999]')}
     >
       <div className="container mx-auto">
         <NavigationMenu>

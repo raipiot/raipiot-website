@@ -5,7 +5,7 @@ import CertificationArea from './components/CertificationArea'
 import EcosystemArea from './components/EcosystemArea'
 import ProductArray from './components/ProductArrayArea'
 import RecommendArea from './components/RecommendArea'
-// import SolutionArea from './components/SolutionArea'
+import SolutionArea from './components/SolutionArea'
 
 export default function Home() {
   return (
@@ -13,11 +13,12 @@ export default function Home() {
       <BannerArea
         title="解密数据，赋能决策"
         subTitle="制造业数字化转型综合服务商"
+        bottomArea={<RecommendArea className="absolute bottom-0" />}
       />
-      <RecommendArea />
+
       <ProductArray />
       <CertificationArea />
-      {/* <SolutionArea /> */}
+      <SolutionArea />
       <EcosystemArea />
       <ContactArea />
     </div>

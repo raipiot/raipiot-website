@@ -8,12 +8,13 @@ import { getSrc, shimmerPlaceholder } from '@/utils'
 interface IProps {
   title: string
   subTitle: ReactNode
+  bottomArea?: ReactNode
 }
 
-export default function BannerArea({ title, subTitle }: IProps) {
+export default function BannerArea({ title, subTitle, bottomArea = null }: IProps) {
   return (
     <div className="relative h-fit w-full">
-      <div className="relative flex h-[450px] w-full items-center">
+      <div className="relative flex h-[450px] w-full flex-wrap items-center">
         <Image
           className="-z-50"
           src={getSrc('/img/banner/home.jpg')}
@@ -38,6 +39,7 @@ export default function BannerArea({ title, subTitle }: IProps) {
             </Button>
           </div>
         </div>
+        {bottomArea && <div className="w-full">{bottomArea}</div>}
       </div>
     </div>
   )

@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import type { PropsWithChildren } from 'react'
 
+import AsideWidget from '@/components/AsideWidget'
 import { cn, getSrc } from '@/utils'
 
 import ClientInit from './components/ClientInit'
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <div className="relative min-h-screen pt-20">{children}</div>
         <Footer />
         <ClientInit />
+        <AsideWidget />
       </body>
     </html>
   )
