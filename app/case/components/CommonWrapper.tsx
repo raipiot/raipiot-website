@@ -45,17 +45,18 @@ export default function CommonWrapper({
             title: '数字化方案定制',
             id: 'solution-progress'
           },
-          { title: '企业痛点', id: 'pain-points' },
           { title: 'raipiot 赋能', id: 'raipiot-feature' },
+          { title: '企业痛点', id: 'pain-points' },
           { title: '客户价值', id: 'clientele-value' }
         ]}
       />
       <CoreWorth />
       <SolutionProcess />
-      {/* 痛点 */}
-      <PainPointArea items={EnterpriseDevelopmentPainPoints} />
+
       {/* Raipiot 为企业数字化转型搭梯架桥 */}
       <RaipiotFeature intro={serviceBridge} />
+      {/* 痛点 */}
+      <PainPointArea items={EnterpriseDevelopmentPainPoints} />
       {/* 客户价值 */}
       <ClienteleValue values={clienteleValue} />
     </div>

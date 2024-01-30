@@ -66,6 +66,9 @@ export default function AsideWidget() {
         </div>
         <div className="group flex items-center justify-end">
           <NotebookPen className="w-5" />
+          <PopArea>
+            <div>预约交流，敬请期待</div>
+          </PopArea>
         </div>
         <div
           className="group flex cursor-pointer items-center justify-end "

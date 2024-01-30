@@ -1,5 +1,6 @@
 'use client'
 
+import { debounce } from 'lodash-es'
 import { memo, useEffect, useState } from 'react'
 
 import { cn } from '@/utils'
@@ -19,37 +20,34 @@ const SubNav = memo((props: Props) => {
   const [activeMenuId, setActiveMenuId] = useState(props.data?.at(0)?.id)
 
   useEffect(() => {
-    function handleScroll() {
-      const io = new IntersectionObserver((entries) => {
-        // 如果当前元素出现在视口中，则设置当前元素的 id 为 activeMenuId，并且跳出循环
-        for (let index = 0; index < entries.length; index += 1) {
-          const element = entries[index]
-          if (element?.isIntersecting && element?.intersectionRatio === 1) {
-            setActiveMenuId(element.target.id)
-            break
-          }
-        }
-      })
-      console.log('page io:', io)
-      props.data?.forEach((i) => {
-        if (i.id) {
-          const element = document.getElementById(i.id)
-          if (!element) {
-            return
-          }
-          io.observe(element)
-        }
-      })
-      return io
-    }
-    const io = handleScroll()
+    const handleScroll = debounce(() => {
+      // 获取第一个距离窗口顶部至少 100 像素的元素
+      const firstElement = props.data
+        ?.filter((i) => i.id)
+        .map((i) => document.getElementById(i.id!))
+        .find((i) => (i?.getBoundingClientRect()?.top || -90) > -80)
+      if (firstElement) {
+        setActiveMenuId(firstElement.id)
+      }
+    }, 100)
+
+    window.addEventListener('scroll', handleScroll)
+
     return () => {
-      io.disconnect()
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
   function handleNav(id?: string) {
-    if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    if (id) {
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+        setTimeout(() => {
+          setActiveMenuId(id)
+        }, 700)
+      }
+    }
   }
 
   if (!props.data || props.data.length === 0) {
