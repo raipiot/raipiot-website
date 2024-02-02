@@ -28,31 +28,37 @@ export default function CommonWrapper({
         subTitle={
           <div>
             {intro.map((i, idx) => (
-              <div key={idx}>{i}</div>
+              <div
+                className="text-xl"
+                key={idx}
+              >
+                {i}
+              </div>
             ))}
           </div>
         }
       />
       <SubNav
         data={[
-          { title: '企业痛点', id: 'pain-points' },
-          { title: 'raipiot 赋能', id: 'raipiot-feature' },
-          { title: '客户价值', id: 'clientele-value' },
           { title: '核心价值', id: 'core-worth' },
           {
             title: '数字化方案定制',
             id: 'solution-progress'
-          }
+          },
+          { title: 'raipiot 赋能', id: 'raipiot-feature' },
+          { title: '企业痛点', id: 'pain-points' },
+          { title: '客户价值', id: 'clientele-value' }
         ]}
       />
-      {/* 痛点 */}
-      <PainPointArea items={EnterpriseDevelopmentPainPoints} />
-      {/* Raipiot 为企业数字化转型搭梯架桥 */}
-      <RaipiotFeature intro={serviceBridge} />
-      {/* 客户价值 */}
-      <ClienteleValue values={clienteleValue} />
       <CoreWorth />
       <SolutionProcess />
+
+      {/* Raipiot 为企业数字化转型搭梯架桥 */}
+      <RaipiotFeature intro={serviceBridge} />
+      {/* 痛点 */}
+      <PainPointArea items={EnterpriseDevelopmentPainPoints} />
+      {/* 客户价值 */}
+      <ClienteleValue values={clienteleValue} />
     </div>
   )
 }

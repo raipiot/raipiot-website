@@ -24,7 +24,7 @@ const data = [
   {
     title: CaseRecord.hengsheng.name,
     fullTitle: '石墨制造业（ERP + BPM）',
-    description: CaseRecord.meilande.intro,
+    description: CaseRecord.hengsheng.intro,
     src: '/img/solutions/graphite.jpg',
     route: CaseRecord.hengsheng.route
   },

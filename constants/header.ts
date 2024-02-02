@@ -1,3 +1,5 @@
+import { CaseRecord } from './CaseRecord'
+
 interface NavbarItem {
   title?: string
   href?: string
@@ -50,16 +52,16 @@ export const navbar: NavbarItem[] = [
     ]
   },
   {
-    title: '成功案例',
+    title: '客户案例',
     children: [
-      // { title: '宇泽', href: CaseRecord.yuze.route },
-      // { title: '美兰德', href: CaseRecord.meilande.route },
-      // { title: '恒圣', href: CaseRecord.hengsheng.route },
-      // { title: '亿达', href: CaseRecord.yida.route }
-      { title: '宇泽', href: '/waiting' },
-      { title: '美兰德', href: '/waiting' },
-      { title: '恒圣', href: '/waiting' },
-      { title: '亿达', href: '/waiting' }
+      { title: '某硅片制造企业', href: CaseRecord.yuze.route },
+      { title: '炭/炭复合材料制企业', href: CaseRecord.meilande.route },
+      { title: '某石墨制品制造企业', href: CaseRecord.hengsheng.route },
+      { title: '某碳纤维制品制造企业', href: CaseRecord.yida.route }
+      // { title: '某硅片制造企业', href: '/waiting' },
+      // { title: '炭/炭复合材料制企业', href: '/waiting' },
+      // { title: '某石墨制品制造企业', href: '/waiting' },
+      // { title: '某碳纤维制品制造企业', href: '/waiting' }
     ],
     vertical: true
   },

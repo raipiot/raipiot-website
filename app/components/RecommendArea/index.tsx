@@ -1,9 +1,11 @@
 import { ChevronRightIcon } from 'lucide-react'
 import Link from 'next/link'
 
-export default function RecommendArea() {
+import { cn } from '@/utils'
+
+export default function RecommendArea({ className = '' }: { className?: string }) {
   return (
-    <div className="w-full bg-[#606E93] py-4 text-white sm:py-8">
+    <div className={cn('w-full bg-[#606e9357] py-4 text-white sm:py-8', className)}>
       <div className="container mx-auto flex h-full flex-col items-center justify-between sm:flex-row">
         <span className="mb-4 text-xl sm:mb-0">重点推荐</span>
         <div className="flex flex-col space-y-2 text-sm sm:space-y-6  sm:text-base">

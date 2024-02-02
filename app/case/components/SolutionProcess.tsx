@@ -1,6 +1,12 @@
-import Image from 'next/image'
-
-import { getSrc } from '@/utils'
+import {
+  DraftingCompass,
+  Drill,
+  LampDesk,
+  PencilRuler,
+  Radar,
+  ScrollText,
+  UserRoundCheck
+} from 'lucide-react'
 
 function Arrow({ className = '' }: { className?: string }) {
   return (
@@ -21,11 +27,28 @@ function Arrow({ className = '' }: { className?: string }) {
   )
 }
 
-function Box({ children, className }: { children: React.ReactNode; className?: string }) {
+function Box({
+  children,
+  className,
+  icon
+}: {
+  children: React.ReactNode
+  className?: string
+  icon?: React.ReactNode
+}) {
   return (
     <div
-      className={`${className ?? 'mb-2'}  max-w-[160px] rounded-sm border border-gray-700 p-1.5 text-[12px]`}
+      className={`${className ?? 'mb-2'}  flex max-w-[160px]  items-center rounded-sm p-1.5 px-0 text-[12px]`}
     >
+      {icon && <div className="mr-1">{icon}</div>}
+      <div className="text-gray-600">{children}</div>
+    </div>
+  )
+}
+
+function SubTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mb-4 w-full rounded-sm bg-[#384054] p-2 text-center text-[12px] text-white sm:mb-0">
       {children}
     </div>
   )
@@ -36,17 +59,21 @@ function PlanComponent() {
     <div className="w-[60vw] text-[12px] sm:w-max">
       <div className="flex flex-col items-center sm:flex-row md:gap-4 lg:gap-2">
         <div className="flex flex-col">
-          <Box>智能制造能力水平评估（GB/T 39117-2020)</Box>
-          <Box>精益六西格玛应用评估 (GB/T 37726-2019 )</Box>
-          <Box>流程成熟度评估（PEMM框架）</Box>
+          <Box icon={<DraftingCompass className="w-[16px]" />}>
+            智能制造能力水平评估（GB/T 39117-2020)
+          </Box>
+          <Box icon={<DraftingCompass className="w-[16px]" />}>
+            精益六西格玛应用评估 (GB/T 37726-2019 )
+          </Box>
+          <Box icon={<DraftingCompass className="w-[16px]" />}>流程成熟度评估（PEMM框架）</Box>
         </div>
         <Arrow />
         <div className="my-4 flex items-center sm:my-0">
           <div className="mr-4">
-            <Box>评估报告</Box>
-            <Box>雷达图</Box>
+            <Box icon={<ScrollText />}>评估报告</Box>
+            <Box icon={<Radar />}>雷达图</Box>
           </div>
-          <div>
+          {/* <div>
             <Image
               className="mb-4"
               src={getSrc('/img/case/pinggubaogao.png')}
@@ -60,14 +87,17 @@ function PlanComponent() {
               width={64}
               height={64}
             />
-          </div>
+          </div> */}
         </div>
         <Arrow />
-        <Box className="mb-4 sm:mb-0">方案设计评估</Box>
+        <Box
+          className="mb-4 sm:mb-0"
+          icon={<PencilRuler />}
+        >
+          方案设计评估
+        </Box>
       </div>
-      <div className="mb-4 w-full rounded-sm bg-yellow-400/80 py-2 text-center text-[12px]  sm:mb-0">
-        P（Plan）方案设计及规划
-      </div>
+      <SubTitle>P（Plan）方案设计及规划</SubTitle>
     </div>
   )
 }
@@ -76,11 +106,14 @@ function DoComponent() {
   return (
     <div className="flex w-[60vw] flex-col justify-between pb-8 text-[12px] sm:w-max sm:pb-0">
       <div className="flex h-[60px] items-center justify-center sm:h-[174px]">
-        <Box className="mb-0 px-8">实施交付</Box>
+        <Box
+          icon={<Drill />}
+          className="mb-0 px-8"
+        >
+          实施交付
+        </Box>
       </div>
-      <div className="w-full rounded-sm bg-yellow-400/80 p-2 text-center text-[12px] ">
-        D（Do）项目实施
-      </div>
+      <SubTitle>D（Do）项目实施</SubTitle>
     </div>
   )
 }
@@ -89,11 +122,14 @@ function CheckComponent() {
   return (
     <div className="flex flex-col justify-between pb-8 sm:pb-0">
       <div className="flex h-[56px] items-center justify-center sm:h-[174px]">
-        <Box className="mb-0 px-8">运营</Box>
+        <Box
+          className="mb-0 px-8"
+          icon={<LampDesk />}
+        >
+          运营
+        </Box>
       </div>
-      <div className="w-full rounded-sm bg-yellow-400/80 p-2 text-center text-[12px] ">
-        C（Check）执行检查
-      </div>
+      <SubTitle>C（Check）执行检查</SubTitle>
     </div>
   )
 }
@@ -103,11 +139,14 @@ function AfterSaleComponent() {
   return (
     <div className="flex flex-col justify-between">
       <div className="flex h-[56px] items-center justify-center sm:h-[174px]">
-        <Box className="mb-0 px-8">售后</Box>
+        <Box
+          icon={<UserRoundCheck />}
+          className="mb-0 px-8"
+        >
+          售后
+        </Box>
       </div>
-      <div className="w-full rounded-sm bg-yellow-400/80 p-2 text-center text-[12px] ">
-        A（Act）结果总结经验固化
-      </div>
+      <SubTitle>A（Act）结果总结经验固化</SubTitle>
     </div>
   )
 }

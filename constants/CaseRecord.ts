@@ -1,7 +1,7 @@
 // 成功案例
 export const CaseRecord = {
   yuze: {
-    name: '宇泽',
+    name: '某硅片制造企业',
     // 简介
     intro: ['光伏 N 型硅片开创者', '多项技术指标参数行业内领先', '国家级高新技术企业'],
     // 企业发展痛点
@@ -22,7 +22,7 @@ export const CaseRecord = {
     route: '/case/yuze'
   },
   meilande: {
-    name: '美兰德',
+    name: '炭/炭复合材料制企业',
     // 简介
     intro: [
       '行业一流的炭/炭复合材料高新技术企业',
@@ -50,9 +50,9 @@ export const CaseRecord = {
     route: '/case/meilande'
   },
   hengsheng: {
-    name: '恒圣',
+    name: '某石墨制品制造企业',
     // 简介
-    intro: ['石墨材料/制品生产加工', '产品销售遍布全国'],
+    intro: ['石墨材料/制品生产加工', '产品销售遍布全国', '数个生产基地遍布全国'],
     // 企业发展痛点
     EnterpriseDevelopmentPainPoints: [
       '面对资本市场的要求业务需要全面规范',
@@ -61,15 +61,15 @@ export const CaseRecord = {
       '单一 IT 工具多，流程未体系化'
     ],
     // Raipiot 为企业数字化转型搭梯架桥
-    serviceBridge: ['流程管理 + RP + 智能交付协同'],
+    serviceBridge: ['流程管理 + ERP + 智能交付协同'],
     // 客户价值
     clienteleValue: ['业务线上化提升50%，合规性全面提高'],
     route: '/case/hengsheng'
   },
   yida: {
-    name: '亿达',
+    name: '某碳纤维制品制造企业',
     // 简介
-    intro: ['碳纤维制品生产加工', '产品主销东北区域'],
+    intro: ['碳纤维制品生产加工', '省级“专精特新”企业'],
     // 企业发展痛点
     EnterpriseDevelopmentPainPoints: [
       '传统管理模式很难适应企业的快速扩张',

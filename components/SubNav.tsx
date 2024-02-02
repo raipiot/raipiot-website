@@ -1,5 +1,6 @@
 'use client'
 
+import { debounce } from 'lodash-es'
 import { memo, useEffect, useState } from 'react'
 
 import { cn } from '@/utils'
@@ -16,47 +17,37 @@ interface Props {
 }
 
 const SubNav = memo((props: Props) => {
-  const [scrollDistance, setScrollDistance] = useState(0)
   const [activeMenuId, setActiveMenuId] = useState(props.data?.at(0)?.id)
 
   useEffect(() => {
-    function handleScroll() {
-      const currentScrollPosition = window.scrollY || document.documentElement.scrollTop
-      setScrollDistance(currentScrollPosition)
-      const ids = (props.data ?? []).map((i) => i.id).filter((i) => i)
-
-      const visibleIds = ids.filter((id) => {
-        const element = document.getElementById(id!)
-        if (!element) {
-          return false
-        }
-        const { top, bottom } = element.getBoundingClientRect()
-        const viewportHeight = window.innerHeight || document.documentElement.clientHeight
-
-        return bottom > 0 && top < viewportHeight - 80 - scrollDistance
-      })
-
-      if (visibleIds?.length > 0) {
-        setActiveMenuId(visibleIds.findLast(() => true))
+    const handleScroll = debounce(() => {
+      // 获取第一个距离窗口顶部至少 100 像素的元素
+      const firstElement = props.data
+        ?.filter((i) => i.id)
+        .map((i) => document.getElementById(i.id!))
+        .find((i) => (i?.getBoundingClientRect()?.top || -90) > -80)
+      if (firstElement) {
+        setActiveMenuId(firstElement.id)
       }
-    }
-    handleScroll()
+    }, 100)
+
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   function handleNav(id?: string) {
-    if (!id) {
-      return
+    if (id) {
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+        setTimeout(() => {
+          setActiveMenuId(id)
+        }, 700)
+      }
     }
-
-    const element = document.getElementById(id)
-    if (!element) {
-      return
-    }
-
-    const { top } = element.getBoundingClientRect()
-    window.scrollTo({ top: top + scrollDistance - 80, behavior: 'smooth' })
   }
 
   if (!props.data || props.data.length === 0) {
@@ -65,10 +56,7 @@ const SubNav = memo((props: Props) => {
 
   return (
     <div
-      className={cn(
-        'w-full bg-[#f7f7fa] hidden sm:block',
-        scrollDistance > 530 && 'fixed top-0 bg-white shadow z-40'
-      )}
+      className={cn('w-full bg-[#f7f7fa] hidden sm:block', 'sticky top-0 bg-white shadow z-[999]')}
     >
       <div className="container mx-auto">
         <NavigationMenu>
