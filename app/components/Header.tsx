@@ -72,7 +72,7 @@ export default function Header() {
             />
           </Link>
 
-          <NavigationMenu className="ml-20 hidden md:flex">
+          <NavigationMenu className="ml-20 hidden sm:flex">
             <NavigationMenuList>
               {navbar.map((i) => (
                 <NavigationMenuItem key={i.title}>
