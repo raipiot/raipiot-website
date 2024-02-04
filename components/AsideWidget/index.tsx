@@ -8,7 +8,7 @@ import { getSrc } from '@/utils'
 
 function PopArea({ children }: { children: React.ReactNode }) {
   return (
-    <div className="absolute right-6 hidden w-max translate-y-4 items-center  transition-all group-hover:flex group-hover:translate-y-0">
+    <div className="absolute right-6 hidden w-max translate-y-4 items-center transition-all group-hover:flex group-hover:translate-y-0">
       <div className="space-x-1 rounded-md bg-white p-2 shadow">{children}</div>
       <span className="h-4 w-4" />
     </div>
@@ -42,7 +42,7 @@ export default function AsideWidget() {
   }
 
   return (
-    <div className="fixed right-0 top-[50%] z-[999999] hidden translate-y-[-50%]  rounded-l-sm bg-[#fff] p-2 text-[#1c1f27] shadow sm:flex">
+    <div className="fixed right-4 top-[50%] z-[999999] hidden translate-y-[-50%] rounded-l-sm bg-[#fff] p-2 text-[#1c1f27] shadow sm:flex">
       <div className="flex flex-col gap-2">
         <div className="group flex w-full items-center">
           <Phone className="w-5" />
@@ -71,7 +71,7 @@ export default function AsideWidget() {
           </PopArea>
         </div>
         <div
-          className="group flex cursor-pointer items-center justify-end "
+          className="group flex cursor-pointer items-center justify-end"
           onClick={handleScrollToTop}
         >
           <ArrowUpToLine className="w-5" />
