@@ -88,6 +88,9 @@ devDependencies:
   '@commitlint/config-conventional':
     specifier: ^18.6.0
     version: 18.6.0
+  '@raipiot-infra/commitlint':
+    specifier: ^0.0.4
+    version: 0.0.4(@commitlint/cli@18.6.0)(@commitlint/config-conventional@18.6.0)(commitizen@4.3.0)(cz-git@1.8.0)
   '@raipiot-infra/cspell':
     specifier: ^0.0.6
     version: 0.0.6(cspell@8.3.2)
@@ -1599,6 +1602,20 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
+
+  /@raipiot-infra/commitlint@0.0.4(@commitlint/cli@18.6.0)(@commitlint/config-conventional@18.6.0)(commitizen@4.3.0)(cz-git@1.8.0):
+    resolution: {integrity: sha512-n04ZJpjx8+3pYf87e7wM/7xpDdc/t9qEgRaay1epjYTupQ8tInhzKcbqXOftOvQUoHsdtk7bYhUgKxwpj77q8A==}
+    peerDependencies:
+      '@commitlint/cli': ^18.6.0
+      '@commitlint/config-conventional': ^18.6.0
+      commitizen: ^4.3.0
+      cz-git: ^1.8.0
+    dependencies:
+      '@commitlint/cli': 18.6.0(@types/node@20.11.16)(typescript@5.3.3)
+      '@commitlint/config-conventional': 18.6.0
+      commitizen: 4.3.0(@types/node@20.11.16)(typescript@5.3.3)
+      cz-git: 1.8.0
+    dev: true
 
   /@raipiot-infra/cspell@0.0.6(cspell@8.3.2):
     resolution: {integrity: sha512-oy8M+DK5t294vmuZW05Abrh+N9bv2QmzFnHBgwz6EbglXSGuyx8iEC09pouBgGOFhLEn+eToDxmmbdnlFDZYzg==}
