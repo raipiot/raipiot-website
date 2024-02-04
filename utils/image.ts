@@ -1,8 +1,7 @@
+import { StorageConfig } from '@raipiot-infra/config'
 import type { PlaceholderValue } from 'next/dist/shared/lib/get-img-props'
 
-import { AppConfig } from '@/constants'
-
-export const getSrc = (url: string, local?: boolean) => (local ? url : AppConfig.ossUrl + url)
+export const getSrc = (url: string, local?: boolean) => (local ? url : StorageConfig.ossUrl + url)
 
 const shimmer = (w: number, h: number) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

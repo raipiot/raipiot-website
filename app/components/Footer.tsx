@@ -1,3 +1,4 @@
+import { BrandConfig } from '@raipiot-infra/config'
 import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,7 +27,7 @@ function Footer() {
 
         <div className="space-y-2.5 sm:py-2">
           <div className="flex items-center justify-center space-x-2 text-lg sm:justify-start">
-            <div>苏州睿朴麟信息科技有限公司</div>
+            <div>{BrandConfig.fullName}</div>
           </div>
           <div className="flex items-center space-x-1">
             <MapPinIcon size={16} />
@@ -40,10 +41,10 @@ function Footer() {
             <MailIcon size={16} />
             <Link
               className="cursor-pointer underline-offset-4 transition-all hover:underline active:opacity-80"
-              href="mailto:us@raipiot.com"
+              href={BrandConfig.getMailTo()}
               target="_blank"
             >
-              us@raipiot.com
+              {BrandConfig.email}
             </Link>
           </div>
         </div>
@@ -73,12 +74,14 @@ function Footer() {
 
       <div className="flex flex-col items-center justify-center space-y-2 bg-[#111111] pb-6 pt-2 text-xs tracking-wider text-white sm:py-4 sm:text-sm">
         <span className="hidden sm:inline">
-          Copyright &copy; {new Date().getFullYear()} · raipiot · 苏州睿朴麟信息科技有限公司版权所有
+          Copyright &copy; {new Date().getFullYear()} · raipiot · {BrandConfig.fullName}版权所有
         </span>
 
         <div className="flex flex-col items-center space-y-2 sm:hidden">
-          <span>Copyright &copy; {new Date().getFullYear()} · raipiot</span>
-          <span>苏州睿朴麟信息科技有限公司版权所有</span>
+          <span>
+            Copyright &copy; {new Date().getFullYear()} · {BrandConfig.name}
+          </span>
+          <span>{BrandConfig.fullName}版权所有</span>
         </div>
 
         <div className="flex flex-col items-center space-x-0 space-y-2 text-xs sm:flex-row sm:space-x-10 sm:space-y-0">

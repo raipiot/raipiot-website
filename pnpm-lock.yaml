@@ -29,6 +29,9 @@ dependencies:
   '@radix-ui/react-tabs':
     specifier: ^1.0.4
     version: 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.52)(react-dom@18.2.0)(react@18.2.0)
+  '@raipiot-infra/config':
+    specifier: ^0.0.5
+    version: 0.0.5
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -1610,12 +1613,19 @@ packages:
       '@commitlint/config-conventional': ^18.6.0
       commitizen: ^4.3.0
       cz-git: ^1.8.0
+    peerDependenciesMeta:
+      cz-git:
+        optional: true
     dependencies:
       '@commitlint/cli': 18.6.0(@types/node@20.11.16)(typescript@5.3.3)
       '@commitlint/config-conventional': 18.6.0
       commitizen: 4.3.0(@types/node@20.11.16)(typescript@5.3.3)
       cz-git: 1.8.0
     dev: true
+
+  /@raipiot-infra/config@0.0.5:
+    resolution: {integrity: sha512-gZaChQkt1cL4OFYUzQ00ZbjL9291JaL3CddZb88oF4JQ5lpf9s2w8Ro6lwlYsEt2uehgyjR8FOP6+wEnPVwC0w==}
+    dev: false
 
   /@raipiot-infra/cspell@0.0.6(cspell@8.3.2):
     resolution: {integrity: sha512-oy8M+DK5t294vmuZW05Abrh+N9bv2QmzFnHBgwz6EbglXSGuyx8iEC09pouBgGOFhLEn+eToDxmmbdnlFDZYzg==}

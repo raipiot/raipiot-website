@@ -1,3 +1,6 @@
 {
-  "extends": "@raipiot-infra/eslint-config-next"
+  "extends": "@raipiot-infra/eslint-config-next",
+  "rules": {
+    "react-refresh/only-export-components": "off" // Next.js 中禁用该规则
+  }
 }
