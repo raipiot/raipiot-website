@@ -22,7 +22,7 @@ export default function AboutArea() {
           </p>
         </div>
       </div>
-      <div className="relative my-auto hidden h-[500px] w-[500px] shrink-0 lg:flex">
+      <div className="relative my-auto hidden size-[500px] shrink-0 lg:flex">
         <Image
           src={getSrc('/img/banner/map.png')}
           alt=""

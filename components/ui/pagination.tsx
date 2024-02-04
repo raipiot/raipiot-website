@@ -71,7 +71,7 @@ function PaginationPrevious({ className, ...props }: React.ComponentProps<typeof
       className={cn('gap-1 pl-2.5', className)}
       {...props}
     >
-      <ChevronLeft className="h-4 w-4" />
+      <ChevronLeft className="size-4" />
       <span>上一页</span>
     </PaginationLink>
   )
@@ -87,7 +87,7 @@ function PaginationNext({ className, ...props }: React.ComponentProps<typeof Pag
       {...props}
     >
       <span>下一页</span>
-      <ChevronRight className="h-4 w-4" />
+      <ChevronRight className="size-4" />
     </PaginationLink>
   )
 }
@@ -99,7 +99,7 @@ function PaginationEllipsis({ className, ...props }: React.ComponentProps<'span'
       className={cn('flex h-9 w-9 items-center justify-center', className)}
       {...props}
     >
-      <MoreHorizontal className="h-4 w-4" />
+      <MoreHorizontal className="size-4" />
       <span className="sr-only">更多</span>
     </span>
   )

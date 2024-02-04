@@ -10,7 +10,7 @@ function PopArea({ children }: { children: React.ReactNode }) {
   return (
     <div className="absolute right-6 hidden w-max translate-y-4 items-center transition-all group-hover:flex group-hover:translate-y-0">
       <div className="space-x-1 rounded-md bg-white p-2 shadow">{children}</div>
-      <span className="h-4 w-4" />
+      <span className="size-4" />
     </div>
   )
 }

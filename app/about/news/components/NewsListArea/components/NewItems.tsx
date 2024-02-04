@@ -25,7 +25,7 @@ export default function NewItems({ activeTabId }: Props) {
                 router.push(`/about/news/${i.id}`)
               }}
             >
-              <Card className="group flex h-full w-full cursor-pointer flex-col overflow-hidden">
+              <Card className="group flex size-full cursor-pointer flex-col overflow-hidden">
                 <CardHeader className="flex flex-1 flex-col space-y-4">
                   <div className="flex justify-between text-sm text-[#666666]">
                     <span>{i.createdAt}</span>
