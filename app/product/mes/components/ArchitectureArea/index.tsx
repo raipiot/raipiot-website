@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { getSrc } from '@/utils'
 
 export default function ArchitectureArea() {
@@ -12,7 +10,7 @@ export default function ArchitectureArea() {
         >
           产品架构
         </div>
-        <Image
+        <NextImage
           className="h-auto w-[1080px] select-none object-contain object-center shadow-md"
           src={getSrc('/img/product/mes/arch.png')}
           alt=""

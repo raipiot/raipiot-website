@@ -1,6 +1,5 @@
 import { SettingsIcon } from 'lucide-react'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 
@@ -21,7 +20,7 @@ export default function Page() {
         asChild
         variant="outline"
       >
-        <Link href="/">返回首页</Link>
+        <NextLink href="/">返回首页</NextLink>
       </Button>
     </main>
   )

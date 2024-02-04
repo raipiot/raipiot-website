@@ -74,14 +74,14 @@ function PlanComponent() {
             <Box icon={<Radar />}>雷达图</Box>
           </div>
           {/* <div>
-            <Image
+            <NextImage
               className="mb-4"
               src={getSrc('/img/case/rate_report.png')}
               alt=""
               width={64}
               height={64}
             />
-            <Image
+            <NextImage
               src={getSrc('/img/case/radar_chart.png')}
               alt=""
               width={64}

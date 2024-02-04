@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { getSrc } from '@/utils'
 
 export default function ArchitectureArea() {
@@ -11,7 +9,7 @@ export default function ArchitectureArea() {
       >
         产品架构
       </div>
-      <Image
+      <NextImage
         src={getSrc('/img/product/iot/arch.png')}
         alt=""
         priority

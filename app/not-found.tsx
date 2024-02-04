@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import { Button } from '@/components/ui/button'
 
 export default function NotFound() {
@@ -11,7 +9,7 @@ export default function NotFound() {
         asChild
         variant="outline"
       >
-        <Link href="/">返回首页</Link>
+        <NextLink href="/">返回首页</NextLink>
       </Button>
     </div>
   )

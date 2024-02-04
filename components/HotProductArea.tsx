@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 import { Button } from '@/components/ui/button'
 import { getSrc } from '@/utils'
 
@@ -12,13 +9,13 @@ export default function HotProductArea() {
           <span className="mb-8 text-2xl font-medium">如果想进一步了解产品或解决方案</span>
           <div>
             <Button asChild>
-              <Link href="/waiting">预约交流</Link>
+              <NextLink href="/waiting">预约交流</NextLink>
             </Button>
           </div>
         </div>
 
         <div className="absolute bottom-0 right-0">
-          <Image
+          <NextImage
             src={getSrc('/img/banner/contact.png')}
             alt=""
             width={0}

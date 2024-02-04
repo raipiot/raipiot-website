@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { getSrc } from '@/utils'
 
 const data = [
@@ -36,7 +34,7 @@ export default function CertificationArea() {
               key={i.title}
               className="flex flex-1 flex-col items-center space-y-8 text-center"
             >
-              <Image
+              <NextImage
                 src={getSrc(i.src)}
                 width={0}
                 height={0}

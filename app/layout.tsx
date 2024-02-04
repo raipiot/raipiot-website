@@ -1,6 +1,5 @@
 import './global.scss'
 
-import { BrandConfig } from '@raipiot-infra/config'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import type { PropsWithChildren } from 'react'
@@ -14,25 +13,27 @@ import Header from './components/Header'
 
 const nunito = Nunito({ subsets: ['latin'], display: 'auto' })
 
+const { companyName, websiteUrl } = BrandConfig
+
 export const metadata: Metadata = {
   generator: '',
-  applicationName: BrandConfig.name,
+  applicationName: companyName,
   title: {
-    template: `%s | ${BrandConfig.name}`,
-    default: BrandConfig.name
+    template: `%s | ${companyName}`,
+    default: companyName
   },
   description: '解密数据，赋能决策，制造业数字化转型综合服务商',
   openGraph: {
-    title: BrandConfig.name,
+    title: companyName,
     description: '解密数据，赋能决策，制造业数字化转型综合服务商',
-    url: new URL(BrandConfig.url),
+    url: new URL(websiteUrl),
     images: [
       {
         url: getSrc('/img/logo/raipiot.png'),
-        alt: BrandConfig.name
+        alt: companyName
       }
     ],
-    siteName: BrandConfig.name
+    siteName: companyName
   },
   keywords: [],
   authors: [
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
       name: 'Bruce Song'
     }
   ],
-  metadataBase: new URL(BrandConfig.url),
+  metadataBase: new URL(websiteUrl),
   creator: 'Bruce Song',
   publisher: 'Bruce Song'
 }

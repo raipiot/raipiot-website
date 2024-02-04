@@ -1,7 +1,5 @@
 'use client'
 
-import { useEffect } from 'react'
-
 import { mobileAdaptor } from '@/utils'
 
 function ClientInit() {

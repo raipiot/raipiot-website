@@ -1,12 +1,10 @@
-import Image from 'next/image'
-
 import { Card } from '@/components/ui/card'
 import { getSrc } from '@/utils'
 
 export default function ProductArray() {
   return (
     <div className="relative w-full py-12 sm:py-24">
-      <Image
+      <NextImage
         className="-z-50 opacity-30"
         src={getSrc('/img/banner/product_array.jpg')}
         alt=""

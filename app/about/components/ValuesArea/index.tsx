@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { getSrc } from '@/utils'
 
 interface TextRowProps {
@@ -39,7 +37,7 @@ export default function ValuesArea() {
       <div className="flex-1 bg-[#f7f7fa]" />
 
       <div className="relative hidden h-[400px] flex-1 sm:block">
-        <Image
+        <NextImage
           src={getSrc('/img/banner/values_4.jpg')}
           alt=""
           fill

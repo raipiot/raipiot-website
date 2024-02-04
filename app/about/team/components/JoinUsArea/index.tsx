@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import { Separator } from '@/components/ui/separator'
 import { jobDetails } from '@/data'
 
@@ -11,7 +9,7 @@ export default function JoinUsArea() {
     >
       <div className="mb-8 self-center text-3xl font-medium">加入我们</div>
       {jobDetails.map((jobDetail) => (
-        <Link
+        <NextLink
           href={`/about/position/${jobDetail.id}`}
           key={jobDetail.id}
           className="flex cursor-pointer flex-col space-y-2 rounded-sm py-4 transition-all active:opacity-75 sm:p-6 hover:sm:shadow-md"
@@ -23,7 +21,7 @@ export default function JoinUsArea() {
           </div>
           <Separator />
           <p className="line-clamp-2 text-sm text-[#8f959e]">{jobDetail.jobResponsibilities}</p>
-        </Link>
+        </NextLink>
       ))}
     </div>
   )

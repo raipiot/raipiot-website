@@ -1,9 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRef } from 'react'
-
 import { Button } from '@/components/ui/button'
 import { cn, getSrc } from '@/utils'
 
@@ -204,7 +200,7 @@ export default function FeatureArea() {
               className="relative h-[200px] sm:h-[350px] sm:flex-1"
               ref={addToRefs}
             >
-              <Image
+              <NextImage
                 src={getSrc(i.src)}
                 alt=""
                 fill
@@ -225,7 +221,7 @@ export default function FeatureArea() {
                   asChild
                   variant="outline"
                 >
-                  <Link href="/waiting">立即咨询</Link>
+                  <NextLink href="/waiting">立即咨询</NextLink>
                 </Button>
               </div>
             </div>

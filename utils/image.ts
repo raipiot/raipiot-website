@@ -1,4 +1,3 @@
-import { StorageConfig } from '@raipiot-infra/config'
 import type { PlaceholderValue } from 'next/dist/shared/lib/get-img-props'
 
 export const getSrc = (url: string, local?: boolean) => (local ? url : StorageConfig.ossUrl + url)

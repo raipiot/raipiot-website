@@ -1,5 +1,8 @@
+const AutoImport = require('unplugin-auto-import/webpack').default
+const { nextPresets } = require('@raipiot-infra/auto-import')
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   output: 'standalone',
   trailingSlash: true,
   reactStrictMode: true,
@@ -13,7 +16,14 @@ const nextConfig = {
         pathname: '/img/**'
       }
     ]
+  },
+  webpack: (config) => {
+    config.plugins.push(
+      AutoImport({
+        imports: [...nextPresets],
+        dts: '@types/auto-imports.d.ts'
+      })
+    )
+    return config
   }
 }
-
-module.exports = nextConfig
