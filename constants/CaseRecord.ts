@@ -11,7 +11,7 @@ export const CaseRecord = {
       '生产过程控制需要提高追溯性，准确性',
       '企业运营指标需要统一全面的展示'
     ],
-    // Raipiot 为企业数字化转型搭梯架桥
+    // raipiot 为企业数字化转型搭梯架桥
     serviceBridge: ['ERP + MES + 智能交付协同'],
     // 客户价值
     clienteleValue: [
@@ -38,7 +38,7 @@ export const CaseRecord = {
       '工艺路线标准化与客户需求多样性的矛盾',
       '单一IT工具多，流程未体系化'
     ],
-    // Raipiot 为企业数字化转型搭梯架桥
+    // raipiot 为企业数字化转型搭梯架桥
     serviceBridge: ['流程管理 + ERP'],
     // 客户价值
     clienteleValue: [
@@ -60,7 +60,7 @@ export const CaseRecord = {
       '单价下调与利润率的矛盾',
       '单一 IT 工具多，流程未体系化'
     ],
-    // Raipiot 为企业数字化转型搭梯架桥
+    // raipiot 为企业数字化转型搭梯架桥
     serviceBridge: ['流程管理 + ERP + 智能交付协同'],
     // 客户价值
     clienteleValue: ['业务线上化提升50%，合规性全面提高'],
@@ -77,7 +77,7 @@ export const CaseRecord = {
       '一线员工流动率大，现成作业未形成标准化',
       '企业扩产期，效率成本比例失衡'
     ],
-    // Raipiot 为企业数字化转型搭梯架桥
+    // raipiot 为企业数字化转型搭梯架桥
     serviceBridge: ['流程管理+MES+智能交付协同'],
     // 客户价值
     clienteleValue: [
