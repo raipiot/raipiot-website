@@ -26,10 +26,18 @@ export default function CoreWorth() {
       <div className="my-16 mt-24 px-4 text-3xl font-bold">睿朴麟数字化转型定制方案的核心价值</div>
       <div className="grid max-w-[1200px] grid-cols-1 gap-4 px-4 pb-8 sm:grid-cols-3 sm:gap-4 sm:pb-0">
         {descriptions.map((d) => (
-          <div className="flex flex-col items-center rounded-sm bg-[#1E222D] p-4 opacity-90 transition-opacity hover:opacity-100">
+          <div
+            key={d.title}
+            className="flex flex-col items-center rounded-sm bg-[#1E222D] p-4 opacity-90 transition-opacity hover:opacity-100"
+          >
             <div className="my-4 pb-4 text-xl font-bold text-white">{d.title}</div>
             {d.subTitles.map((s) => (
-              <div className="text-center text-sm text-gray-300">{s}</div>
+              <div
+                key={s}
+                className="text-center text-sm text-gray-300"
+              >
+                {s}
+              </div>
             ))}
           </div>
         ))}

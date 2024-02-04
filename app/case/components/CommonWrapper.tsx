@@ -17,6 +17,7 @@ interface Props {
     route: string
   }
 }
+
 export default function CommonWrapper({
   data: { intro, name, EnterpriseDevelopmentPainPoints, serviceBridge, clienteleValue }
 }: Props) {
@@ -29,8 +30,8 @@ export default function CommonWrapper({
           <div>
             {intro.map((i, idx) => (
               <div
-                className="text-xl"
                 key={idx}
+                className="text-xl"
               >
                 {i}
               </div>
@@ -53,7 +54,7 @@ export default function CommonWrapper({
       <CoreWorth />
       <SolutionProcess />
 
-      {/* Raipiot 为企业数字化转型搭梯架桥 */}
+      {/* raipiot 为企业数字化转型搭梯架桥 */}
       <RaipiotFeature intro={serviceBridge} />
       {/* 痛点 */}
       <PainPointArea items={EnterpriseDevelopmentPainPoints} />
