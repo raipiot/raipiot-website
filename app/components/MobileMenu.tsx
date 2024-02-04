@@ -1,6 +1,4 @@
 import { MenuIcon } from 'lucide-react'
-import Link from 'next/link'
-import { useState } from 'react'
 
 import {
   Accordion,
@@ -58,12 +56,12 @@ export default function MobileMenu() {
                         key={ci.title}
                       >
                         {ci.href ? (
-                          <Link
+                          <NextLink
                             href={ci.href}
                             onClick={() => setOpen(false)}
                           >
                             {ci.title}
-                          </Link>
+                          </NextLink>
                         ) : (
                           <div
                             key={ci.title}
@@ -82,7 +80,7 @@ export default function MobileMenu() {
                             )
                           }
                           return subItem.href ? (
-                            <Link
+                            <NextLink
                               href={subItem.href}
                               key={subIndex}
                               className="mt-2 flex items-center transition-all active:opacity-75"
@@ -94,7 +92,7 @@ export default function MobileMenu() {
                                   HOT
                                 </span>
                               )}
-                            </Link>
+                            </NextLink>
                           ) : (
                             <div
                               key={subIndex}

@@ -1,19 +1,18 @@
 import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
 
 import { getSrc } from '@/utils'
 
-function Footer() {
+async function Footer() {
+  const { companyName, companyFullName, email, getMailTo } = BrandConfig
   return (
     <footer className="w-full">
       <div className="flex flex-col space-y-8 bg-[#1E222D] px-4 py-8 text-xs text-white sm:flex-row sm:justify-center sm:space-x-8 sm:space-y-0 sm:px-8 sm:text-sm">
         <div className="mt-2 flex select-none flex-col items-center space-y-2 self-center sm:mb-4 sm:mt-0 sm:pe-6">
-          <Link
+          <NextLink
             href="/"
             className="cursor-pointer"
           >
-            <Image
+            <NextImage
               src={getSrc('/img/logo/raipiot_dark.png')}
               alt=""
               width={0}
@@ -21,12 +20,12 @@ function Footer() {
               sizes="100vw"
               className="h-auto w-28"
             />
-          </Link>
+          </NextLink>
         </div>
 
         <div className="space-y-2.5 sm:py-2">
           <div className="flex items-center justify-center space-x-2 text-lg sm:justify-start">
-            <div>苏州睿朴麟信息科技有限公司</div>
+            <div>{companyFullName}</div>
           </div>
           <div className="flex items-center space-x-1">
             <MapPinIcon size={16} />
@@ -38,13 +37,13 @@ function Footer() {
           </div>
           <div className="flex items-center space-x-1">
             <MailIcon size={16} />
-            <Link
+            <NextLink
               className="cursor-pointer underline-offset-4 transition-all hover:underline active:opacity-80"
-              href="mailto:us@raipiot.com"
+              href={getMailTo()}
               target="_blank"
             >
-              us@raipiot.com
-            </Link>
+              {email}
+            </NextLink>
           </div>
         </div>
 
@@ -59,7 +58,7 @@ function Footer() {
         </div>
 
         <div className="flex flex-col items-center space-y-2 text-center sm:ps-4">
-          <Image
+          <NextImage
             src={getSrc('/img/qrcode.png')}
             alt=""
             width={0}
@@ -73,21 +72,23 @@ function Footer() {
 
       <div className="flex flex-col items-center justify-center space-y-2 bg-[#111111] pb-6 pt-2 text-xs tracking-wider text-white sm:py-4 sm:text-sm">
         <span className="hidden sm:inline">
-          Copyright &copy; {new Date().getFullYear()} · raipiot · 苏州睿朴麟信息科技有限公司版权所有
+          Copyright &copy; {new Date().getFullYear()} · raipiot · {companyFullName}版权所有
         </span>
 
         <div className="flex flex-col items-center space-y-2 sm:hidden">
-          <span>Copyright &copy; {new Date().getFullYear()} · raipiot</span>
-          <span>苏州睿朴麟信息科技有限公司版权所有</span>
+          <span>
+            Copyright &copy; {new Date().getFullYear()} · {companyName}
+          </span>
+          <span>{companyFullName}版权所有</span>
         </div>
 
         <div className="flex flex-col items-center space-x-0 space-y-2 text-xs sm:flex-row sm:space-x-10 sm:space-y-0">
-          <Link
+          <NextLink
             className="flex cursor-pointer items-center transition-all active:opacity-80"
             href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002004220"
             target="_blank"
           >
-            <Image
+            <NextImage
               className="me-1.5 inline w-4 select-none"
               src={getSrc('/img/police.png')}
               alt=""
@@ -96,14 +97,14 @@ function Footer() {
               sizes="100vw"
             />
             <span className="underline-offset-4 hover:underline">苏公网安备 32059002004220 号</span>
-          </Link>
-          <Link
+          </NextLink>
+          <NextLink
             className="cursor-pointer underline-offset-4 transition-all hover:underline active:opacity-80"
             href="https://beian.miit.gov.cn/#/Integrated/index"
             target="_blank"
           >
             苏 ICP 备 2022030495 号 - 3
-          </Link>
+          </NextLink>
         </div>
       </div>
     </footer>

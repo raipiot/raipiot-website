@@ -11,8 +11,9 @@ export default function ClienteleValue({ values }: Props) {
       <div className="mx-4 flex flex-col items-center text-center">
         {values.map((text) => (
           <div
-            className="p-4"
             id={text}
+            key={text}
+            className="p-4"
           >
             {text}
           </div>

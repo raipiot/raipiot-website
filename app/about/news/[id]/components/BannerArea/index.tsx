@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import type { NewsItem } from '@/types'
 import { getSrc, shimmerPlaceholder } from '@/utils'
 
@@ -9,7 +7,7 @@ export default function BannerArea(props: NewsItem) {
   return (
     <div className="relative h-fit w-full">
       <div className="relative flex h-[450px] w-full items-center">
-        <Image
+        <NextImage
           className="-z-50"
           src={getSrc(props.src)}
           alt=""

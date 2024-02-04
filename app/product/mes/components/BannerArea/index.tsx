@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 import { Button } from '@/components/ui/button'
 import { getSrc, shimmerPlaceholder } from '@/utils'
 
@@ -8,7 +5,7 @@ export default function BannerArea() {
   return (
     <div className="relative h-fit w-full">
       <div className="relative flex h-[450px] w-full items-center">
-        <Image
+        <NextImage
           className="absolute left-0 top-0 -z-50"
           src={getSrc('/img/banner/mes.png')}
           alt=""
@@ -38,7 +35,7 @@ export default function BannerArea() {
               asChild
               variant="secondary"
             >
-              <Link href="/waiting">预约交流</Link>
+              <NextLink href="/waiting">预约交流</NextLink>
             </Button>
           </div>
         </div>

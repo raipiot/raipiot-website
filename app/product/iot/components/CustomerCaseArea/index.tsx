@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { getSrc } from '@/utils'
@@ -28,7 +25,7 @@ export default function CustomerCaseArea() {
               key={i.title}
             >
               <CardHeader className="relative h-[250px] overflow-hidden">
-                <Image
+                <NextImage
                   src={getSrc(i.src)}
                   alt=""
                   fill
@@ -44,7 +41,7 @@ export default function CustomerCaseArea() {
                   variant="outline"
                   size="sm"
                 >
-                  <Link href="/waiting">了解详情</Link>
+                  <NextLink href="/waiting">了解详情</NextLink>
                 </Button>
               </CardContent>
             </Card>

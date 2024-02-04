@@ -1,5 +1,4 @@
 import { ShieldCheckIcon, TargetIcon, TrophyIcon } from 'lucide-react'
-import Image from 'next/image'
 
 import { getSrc } from '@/utils'
 
@@ -40,7 +39,7 @@ export default function AboutCardsArea() {
           className="group relative flex min-h-[320px] flex-[1] items-center justify-center rounded-md transition-all duration-700 hover:flex-[2] sm:h-[300px] lg:h-[450px]"
           key={item.title}
         >
-          <Image
+          <NextImage
             src={item.src}
             alt=""
             fill

@@ -1,8 +1,6 @@
 'use client'
 
-import Image from 'next/image'
 import type { CSSProperties } from 'react'
-import React, { memo, useMemo, useState } from 'react'
 
 import { cn, getSrc } from '@/utils'
 
@@ -74,7 +72,7 @@ const ImageScrollList = memo((props: Props) => {
             style={{ width: i.width, height: props.height }}
             className="flex"
           >
-            <Image
+            <NextImage
               className="object-contain transition-all duration-500 group-hover:scale-110 group-active:scale-100"
               style={{ width: i.width, height: 'auto' }}
               src={getSrc(i.src)}

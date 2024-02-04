@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import type { ReactNode } from 'react'
 
 import { Button } from '@/components/ui/button'
@@ -15,7 +13,7 @@ export default function BannerArea({ title, subTitle, bottomArea = null }: IProp
   return (
     <div className="relative h-fit w-full">
       <div className="relative flex h-[450px] w-full flex-wrap items-center">
-        <Image
+        <NextImage
           className="-z-50"
           src={getSrc('/img/banner/home.jpg')}
           alt=""
@@ -35,7 +33,7 @@ export default function BannerArea({ title, subTitle, bottomArea = null }: IProp
               asChild
               variant="secondary"
             >
-              <Link href="/waiting">预约交流</Link>
+              <NextLink href="/waiting">预约交流</NextLink>
             </Button>
           </div>
         </div>

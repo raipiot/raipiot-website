@@ -1,9 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
-
 import { Button } from '@/components/ui/button'
 import {
   NavigationMenu,
@@ -57,11 +53,11 @@ export default function Header() {
     >
       <div className="container flex h-full justify-between self-center px-4">
         <div className="flex select-none items-center">
-          <Link
+          <NextLink
             href="/"
             className="cursor-pointer"
           >
-            <Image
+            <NextImage
               src={getSrc('/img/logo/raipiot.png')}
               alt=""
               height={0}
@@ -70,7 +66,7 @@ export default function Header() {
               priority
               style={{ width: 95, height: 'auto' }}
             />
-          </Link>
+          </NextLink>
 
           <NavigationMenu className="ml-20 hidden sm:flex">
             <NavigationMenuList>
@@ -89,7 +85,7 @@ export default function Header() {
                         className="flex flex-col"
                       >
                         {item.href ? (
-                          <Link
+                          <NextLink
                             href={item.href}
                             legacyBehavior
                             passHref
@@ -98,7 +94,7 @@ export default function Header() {
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                               {item.title}
                             </NavigationMenuLink>
-                          </Link>
+                          </NextLink>
                         ) : (
                           <div
                             className={cn(
@@ -124,7 +120,7 @@ export default function Header() {
                               key={subIndex}
                               className={cn(subItem.hidden && 'opacity-0')}
                             >
-                              <Link
+                              <NextLink
                                 href={subItem.href ?? '/'}
                                 legacyBehavior
                                 passHref
@@ -137,7 +133,7 @@ export default function Header() {
                                     </span>
                                   )}
                                 </NavigationMenuLink>
-                              </Link>
+                              </NextLink>
                             </div>
                           ) : (
                             <div
@@ -162,7 +158,7 @@ export default function Header() {
             variant="outline"
             asChild
           >
-            <Link href="/waiting">预约交流</Link>
+            <NextLink href="/waiting">预约交流</NextLink>
           </Button>
           <MobileMenu />
         </div>

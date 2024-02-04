@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 import { Card } from '@/components/ui/card'
 import { getSrc } from '@/utils'
 
@@ -44,7 +41,7 @@ export default function EcosystemArea() {
         <span className="mb-10 text-3xl font-medium">生态合作伙伴</span>
         <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-5">
           {data.map((i) => (
-            <Link
+            <NextLink
               href={i.href}
               target="_blank"
               key={i.title}
@@ -53,7 +50,7 @@ export default function EcosystemArea() {
                 key={i.title}
                 className="group flex h-[120px] w-full items-center justify-center"
               >
-                <Image
+                <NextImage
                   className="h-auto object-contain transition-all duration-300 group-hover:scale-125 group-active:scale-100"
                   src={getSrc(i.src)}
                   width={0}
@@ -65,7 +62,7 @@ export default function EcosystemArea() {
                   }}
                 />
               </Card>
-            </Link>
+            </NextLink>
           ))}
         </div>
       </div>

@@ -13,27 +13,27 @@ import Header from './components/Header'
 
 const nunito = Nunito({ subsets: ['latin'], display: 'auto' })
 
-const { AppConfig } = await import('@/constants')
+const { companyName, websiteUrl } = BrandConfig
 
 export const metadata: Metadata = {
   generator: '',
-  applicationName: AppConfig.appName,
+  applicationName: companyName,
   title: {
-    template: `%s | ${AppConfig.appName}`,
-    default: AppConfig.appName
+    template: `%s | ${companyName}`,
+    default: companyName
   },
   description: '解密数据，赋能决策，制造业数字化转型综合服务商',
   openGraph: {
-    title: AppConfig.appName,
+    title: companyName,
     description: '解密数据，赋能决策，制造业数字化转型综合服务商',
-    url: new URL('https://www.raipiot.com'),
+    url: new URL(websiteUrl),
     images: [
       {
         url: getSrc('/img/logo/raipiot.png'),
-        alt: AppConfig.appName
+        alt: companyName
       }
     ],
-    siteName: AppConfig.appName
+    siteName: companyName
   },
   keywords: [],
   authors: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       name: 'Bruce Song'
     }
   ],
-  metadataBase: new URL('https://www.raipiot.com'),
+  metadataBase: new URL(websiteUrl),
   creator: 'Bruce Song',
   publisher: 'Bruce Song'
 }

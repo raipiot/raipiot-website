@@ -1,9 +1,6 @@
 'use client'
 
 import Autoplay from 'embla-carousel-autoplay'
-import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
-import * as React from 'react'
 
 import type { CarouselApi } from '@/components/ui/carousel'
 import {
@@ -103,7 +100,7 @@ export default function HistoryArea() {
             <div className="absolute inset-x-0 top-1/2 -z-10 h-1 w-full bg-[#bfc0c1]" />
           </div>
         </div>
-        <Image
+        <NextImage
           className="-z-50"
           src={getSrc('/img/banner/history.jpg')}
           alt=""

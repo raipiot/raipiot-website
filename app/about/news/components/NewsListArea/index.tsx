@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-
 import { NewsType } from '@/enums'
 
 import NewsListTab from '../NewsListTab'

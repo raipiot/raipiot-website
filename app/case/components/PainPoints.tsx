@@ -1,6 +1,5 @@
-import clsx from 'clsx'
-
 import { Card } from '@/components/ui/card'
+import { cn } from '@/utils'
 
 interface Props {
   items: string[]
@@ -18,7 +17,7 @@ export default function PainPointArea({ items }: Props) {
           {items.map((i, idx) => (
             <Card
               key={i}
-              className={clsx(
+              className={cn(
                 'flex h-40 flex-col items-center space-y-2 from-blue-950 to-gray-600 p-6 text-center text-white',
                 idx % 2 === 0 ? 'bg-gradient-to-br' : 'bg-gradient-to-bl'
               )}

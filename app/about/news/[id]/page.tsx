@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
 import { Button } from '@/components/ui/button'
@@ -35,6 +34,7 @@ export default function Page({ params }: Props) {
       <div className="container mx-auto my-12 max-w-[980px] sm:my-24">
         <div
           className="leading-9"
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: data.content }}
         />
         <div className="flex justify-center">
@@ -43,7 +43,7 @@ export default function Page({ params }: Props) {
             asChild
             variant="outline"
           >
-            <Link href="/about/news#news-list">返回</Link>
+            <NextLink href="/about/news#news-list">返回</NextLink>
           </Button>
         </div>
 
@@ -53,9 +53,9 @@ export default function Page({ params }: Props) {
             variant="outline"
           >
             {prev ? (
-              <Link href={`/about/news/${prev.id}`}>
+              <NextLink href={`/about/news/${prev.id}`}>
                 <span className="truncate">上一篇：{prev.title}</span>
-              </Link>
+              </NextLink>
             ) : (
               <span>已是第一篇</span>
             )}
@@ -67,9 +67,9 @@ export default function Page({ params }: Props) {
             variant="outline"
           >
             {next ? (
-              <Link href={`/about/news/${next.id}`}>
+              <NextLink href={`/about/news/${next.id}`}>
                 <span className="truncate">下一篇：{next.title}</span>
-              </Link>
+              </NextLink>
             ) : (
               <span>已是最后一篇</span>
             )}

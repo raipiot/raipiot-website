@@ -1,12 +1,10 @@
-import Image from 'next/image'
-
 import { getSrc, shimmerPlaceholder } from '@/utils'
 
 export default function BannerArea() {
   return (
     <div className="relative h-fit w-full">
       <div className="relative flex h-[450px] w-full items-center">
-        <Image
+        <NextImage
           className="-z-50"
           src={getSrc('/img/banner/team.png')}
           alt=""

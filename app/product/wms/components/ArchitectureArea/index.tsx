@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { getSrc } from '@/utils'
 
 export default function ArchitectureArea() {
@@ -10,7 +8,7 @@ export default function ArchitectureArea() {
     >
       <div className="container mx-auto flex flex-col items-center px-4 py-12 text-center sm:py-24">
         <div className="mb-10 text-3xl font-medium">产品架构</div>
-        <Image
+        <NextImage
           className="h-auto w-[1080px] select-none object-contain object-center shadow-md"
           src={getSrc('/img/product/wms/arch.png')}
           alt=""

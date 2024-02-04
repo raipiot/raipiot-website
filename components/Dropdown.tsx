@@ -1,6 +1,4 @@
-import Link from 'next/link'
-import type { PropsWithChildren } from 'react'
-import React, { memo, useState } from 'react'
+import type { DetailedHTMLProps, PropsWithChildren } from 'react'
 
 import { cn } from '@/utils'
 
@@ -11,7 +9,7 @@ interface DropDownItem {
 
 interface Props
   extends PropsWithChildren<
-    React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+    DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
   > {
   text?: string
   href?: string
@@ -33,12 +31,12 @@ const Dropdown = memo((props: Props) => {
       onMouseOut={() => setShow(false)}
     >
       {href ? (
-        <Link
+        <NextLink
           href={href}
           className="rounded-3xl font-medium transition-all"
         >
           {text}
-        </Link>
+        </NextLink>
       ) : (
         <label
           className={cn(
@@ -69,7 +67,7 @@ const Dropdown = memo((props: Props) => {
               }}
             >
               {item.href ? (
-                <Link href={item.href ?? '/'}>{item.text}</Link>
+                <NextLink href={item.href ?? '/'}>{item.text}</NextLink>
               ) : (
                 <span>{item.text}</span>
               )}

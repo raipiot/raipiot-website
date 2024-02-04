@@ -1,8 +1,6 @@
 'use client'
 
 import Autoplay from 'embla-carousel-autoplay'
-import Image from 'next/image'
-import { useRef } from 'react'
 
 import {
   Carousel,
@@ -52,7 +50,7 @@ export default function CertificationArea() {
                 )}
               >
                 <div className="flex flex-col items-center space-y-3 p-1">
-                  <Image
+                  <NextImage
                     src={getSrc(i.src)}
                     alt=""
                     width={0}

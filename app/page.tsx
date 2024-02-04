@@ -5,7 +5,7 @@ import CertificationArea from './components/CertificationArea'
 import EcosystemArea from './components/EcosystemArea'
 import ProductArray from './components/ProductArrayArea'
 import RecommendArea from './components/RecommendArea'
-import SolutionArea from './components/SolutionArea'
+// import SolutionArea from './components/SolutionArea'
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
 
       <ProductArray />
       <CertificationArea />
-      <SolutionArea />
+      {/* <SolutionArea /> */}
       <EcosystemArea />
       <ContactArea />
     </div>

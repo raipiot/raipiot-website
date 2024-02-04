@@ -1,6 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { redirect } from 'next/navigation'
 
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -77,7 +75,7 @@ export default function Page({ params }: Props) {
             className="mt-4 px-8"
             asChild
           >
-            <Link href="/waiting">投递</Link>
+            <NextLink href="/waiting">投递</NextLink>
           </Button>
         </div>
       </Card>
@@ -88,7 +86,7 @@ export default function Page({ params }: Props) {
           asChild
           variant="outline"
         >
-          <Link href="/about/team#join-us">返回</Link>
+          <NextLink href="/about/team#join-us">返回</NextLink>
         </Button>
       </div>
     </div>

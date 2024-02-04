@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { cn, getSrc } from '@/utils'
 
 import styles from './index.module.scss'
@@ -22,8 +20,8 @@ export default function AboutArea() {
           </p>
         </div>
       </div>
-      <div className="relative my-auto hidden h-[500px] w-[500px] shrink-0 lg:flex">
-        <Image
+      <div className="relative my-auto hidden size-[500px] shrink-0 lg:flex">
+        <NextImage
           src={getSrc('/img/banner/map.png')}
           alt=""
           className="object-contain object-center"

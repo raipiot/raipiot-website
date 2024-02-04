@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { CaseRecord } from '@/constants/CaseRecord'
@@ -49,7 +46,7 @@ export default function SolutionArea() {
               key={i.title}
             >
               <CardHeader className="relative h-[200px] overflow-hidden">
-                <Image
+                <NextImage
                   className="select-none object-cover object-center transition-all sm:group-hover:scale-110"
                   src={getSrc(i.src)}
                   alt=""
@@ -76,7 +73,7 @@ export default function SolutionArea() {
                   variant="outline"
                   size="sm"
                 >
-                  <Link href={i.route}>了解详情</Link>
+                  <NextLink href={i.route}>了解详情</NextLink>
                 </Button>
               </CardContent>
             </Card>
