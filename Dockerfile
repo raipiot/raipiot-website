@@ -4,7 +4,7 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml* ./
+COPY package.json pnpm-lock.yaml* .npmrc ./
 RUN \
   if [ -f pnpm-lock.yaml ]; then npm i pnpm -g && pnpm i --frozen-lockfile; \
   else echo "Lockfile not found." && exit 1; \
