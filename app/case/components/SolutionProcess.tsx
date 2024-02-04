@@ -76,13 +76,13 @@ function PlanComponent() {
           {/* <div>
             <Image
               className="mb-4"
-              src={getSrc('/img/case/pinggubaogao.png')}
+              src={getSrc('/img/case/rate_report.png')}
               alt=""
               width={64}
               height={64}
             />
             <Image
-              src={getSrc('/img/case/leidatu.png')}
+              src={getSrc('/img/case/radar_chart.png')}
               alt=""
               width={64}
               height={64}

@@ -10,6 +10,7 @@
     "turbo:build": "turbo build",
     "turbo:start": "turbo start",
     "cspell:check": "cspell \"**\"",
+    "cspell:sort:dict": "sort -u -o .cspell.txt .cspell.txt",
     "eslint:check": "eslint \"**/*.{ts,tsx,js,jsx}\" --color",
     "eslint:fix": "pnpm eslint:check --fix",
     "prettier:check": "prettier --check --ignore-unknown .",
@@ -48,6 +49,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",
+    "@raipiot-infra/cspell": "^0.0.6",
     "@raipiot-infra/eslint-config-next": "^0.0.6",
     "@raipiot-infra/prettier": "^0.0.3",
     "@types/lodash-es": "^4.17.12",
