@@ -14,6 +14,7 @@ import { cn, getSrc } from '@/utils'
 const data = [
   { title: '软件企业证书', src: '/img/cert/software_1.jpg', width: 600 },
   { title: '软件产品证书', src: '/img/cert/software_2.jpg', width: 600 },
+  { title: '高新技术企业证书', src: '/img/cert/high_tech_enterprise_cert.png', width: 700 },
   { title: 'ISO/IEC 20000-1', src: '/img/cert/20000_zh.jpg', width: 250 },
   { title: 'ISO/IEC 20000-1', src: '/img/cert/20000_en.jpg', width: 250 },
   { title: 'ISO/IEC 27001 证书', src: '/img/cert/27001_zh.jpg', width: 250 },
