@@ -9,7 +9,7 @@ export default function PainPointArea({ items }: Props) {
   return (
     <div
       id="pain-points"
-      className="w-full"
+      className="z-[999] w-full bg-white"
     >
       <div className="container mx-auto flex flex-col items-center px-4 py-12 sm:py-24">
         <div className="mb-10 text-center text-3xl font-medium">企业痛点</div>
