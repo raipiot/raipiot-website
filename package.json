@@ -52,7 +52,7 @@
     "@commitlint/config-conventional": "^18.6.0",
     "@raipiot-infra/auto-import": "^0.0.16",
     "@raipiot-infra/commitlint": "^0.0.5",
-    "@raipiot-infra/cspell": "^0.0.8",
+    "@raipiot-infra/cspell": "^0.0.10",
     "@raipiot-infra/eslint-config-next": "^0.0.8",
     "@raipiot-infra/prettier": "^0.0.4",
     "@types/lodash-es": "^4.17.12",

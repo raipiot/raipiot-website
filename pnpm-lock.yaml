@@ -98,8 +98,8 @@ devDependencies:
     specifier: ^0.0.5
     version: 0.0.5(@commitlint/cli@18.6.0)(@commitlint/config-conventional@18.6.0)(commitizen@4.3.0)(cz-git@1.8.0)
   '@raipiot-infra/cspell':
-    specifier: ^0.0.8
-    version: 0.0.8(cspell@8.4.1)
+    specifier: ^0.0.10
+    version: 0.0.10(cspell@8.4.1)
   '@raipiot-infra/eslint-config-next':
     specifier: ^0.0.8
     version: 0.0.8(eslint@8.56.0)(tailwindcss@3.4.1)(typescript@5.3.3)
@@ -1840,6 +1840,9 @@ packages:
       '@commitlint/config-conventional': ^18.6.0
       commitizen: ^4.3.0
       cz-git: ^1.8.0
+    peerDependenciesMeta:
+      cz-git:
+        optional: true
     dependencies:
       '@commitlint/cli': 18.6.0(@types/node@20.11.19)(typescript@5.3.3)
       '@commitlint/config-conventional': 18.6.0
@@ -1851,10 +1854,10 @@ packages:
     resolution: {integrity: sha512-ZOlmYxL622AEQ95DI3cnEcv43F/+WSOYThdE6wk7z71VQBBaubwLFwT5BC9u3Xgf9PIussXjcPceE/JBxr2k+w==}
     dev: false
 
-  /@raipiot-infra/cspell@0.0.8(cspell@8.4.1):
-    resolution: {integrity: sha512-6vnNab5bDDDi2APOiSV06+JUAjIDoJcaNggbaeJZFpFLnMVeOvqFJ292lRLCd5sUfJ7f69tp7v+bSE893i1cJw==}
+  /@raipiot-infra/cspell@0.0.10(cspell@8.4.1):
+    resolution: {integrity: sha512-mmVlu2EvYOjxlKiukO75uPlL5oC/R9OmFeCML3JhFjoLjE0SvdSHncHs+3/0sFW1ORoCNRiJSPINTScHuHoirQ==}
     peerDependencies:
-      cspell: ^8.3.2
+      cspell: ^8.4.1
     dependencies:
       cspell: 8.4.1
     dev: true
