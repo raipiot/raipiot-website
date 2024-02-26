@@ -27,6 +27,9 @@
     ".next",
     ".turbo",
     "out",
-    "Dockerfile"
+    "Dockerfile",
+    "@types/auto-imports.d.ts",
+    "next.config.js",
+    "package.json"
   ]
 }
