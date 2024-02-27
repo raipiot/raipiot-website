@@ -58,10 +58,11 @@ export const navbar: NavbarItem[] = [
       // { title: '炭/炭复合材料制企业', href: CaseRecord.meilande.route },
       // { title: '某石墨制品制造企业', href: CaseRecord.hengsheng.route },
       // { title: '某碳纤维制品制造企业', href: CaseRecord.yida.route }
-      { title: '某硅片制造企业', href: '/waiting' },
-      { title: '炭/炭复合材料制企业', href: '/waiting' },
-      { title: '某石墨制品制造企业', href: '/waiting' },
-      { title: '某碳纤维制品制造企业', href: '/waiting' }
+      // { title: '某硅片制造企业', href: '/waiting' },
+      // { title: '炭/炭复合材料制企业', href: '/waiting' },
+      // { title: '某石墨制品制造企业', href: '/waiting' },
+      // { title: '某碳纤维制品制造企业', href: '/waiting' }
+      { title: '敬请期待', href: '/waiting' }
     ],
     vertical: true
   },
