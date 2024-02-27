@@ -10,5 +10,6 @@
       "addWords": true
     }
   ],
-  "import": ["@raipiot-infra/cspell"]
+  "import": ["@raipiot-infra/cspell"],
+  "ignorePaths": ["./Dockerfile"]
 }
