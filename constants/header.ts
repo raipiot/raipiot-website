@@ -1,6 +1,6 @@
 // import { CaseRecord } from './CaseRecord'
 
-interface NavbarItem {
+export interface NavbarItem {
   title?: string
   href?: string
   children?: NavbarItem[]
@@ -17,12 +17,23 @@ export const navbar: NavbarItem[] = [
       {
         title: '供应链生态协同',
         children: [
-          { title: '智能交付协同平台“跟单猿”', href: '/product/gdy', hot: true },
-          { title: '数字化采购平台', href: '/product/srm' },
-          { divider: true },
-          { title: '企业物流运输管理 TMS', href: '/product/tms' },
-          { title: '承运人运营管理 OMS', href: '/product/oms' },
-          { title: '供应商关系管理 SRM', href: '/product/srm' },
+          {
+            title: '智能交付协同平台“跟单猿”',
+            href: '/product/gdy',
+            hot: true,
+            children: [
+              { title: '企业物流运输管理 TMS', href: '/product/tms' },
+              { title: '承运人运营管理 OMS', href: '/product/oms' }
+            ]
+          },
+          {
+            title: '数字化采购平台',
+            href: '/product/srm',
+            children: [
+              { title: '供应商关系管理 SRM', href: '/product/srm' },
+              { title: '商城', href: '/waiting' }
+            ]
+          },
           { title: '客户关系管理 CRM', href: '/product/crm' }
         ]
       },
@@ -46,7 +57,8 @@ export const navbar: NavbarItem[] = [
           { title: '费控管理', href: '/product/bpm' },
           { title: '项目管理', href: '/product/bpm' },
           { title: '流程管理', href: '/product/bpm' },
-          { title: '预算管理', href: '/product/bpm' }
+          { title: '预算管理', href: '/product/bpm' },
+          { title: '合同管理', href: '/waiting' }
         ]
       }
     ]

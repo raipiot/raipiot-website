@@ -1,0 +1,20 @@
+on:
+  pull_request:
+    types: [review_requested, reopened, synchronize]
+
+jobs:
+  send-msg:
+    runs-on: ${{ matrix.os }}
+    env:
+      IMAGE_URL: https://plus.unsplash.com/premium_photo-1663100722417-6e36673fe0ed?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    steps:
+      - name: WeChat Work notification by news
+        uses: chf007/action-wechat-work@master
+        env:
+          WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
+        with:
+          msgtype: news
+          articles: '[{"title":"Github Code review","description":"\n\n${{github.event.pull_request.user.login}}: ${{ github.event.pull_request.title }}","url":"https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}","picurl":"${{ env.IMAGE_URL }}"}]'
