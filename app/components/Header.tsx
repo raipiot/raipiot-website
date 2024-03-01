@@ -11,10 +11,101 @@ import {
   navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu'
 import { Separator } from '@/components/ui/separator'
+import type { NavbarItem } from '@/constants'
 import { navbar } from '@/constants'
 import { cn, getSrc } from '@/utils'
 
 import MobileMenu from './MobileMenu'
+
+function Hot({ hot }: { hot?: boolean }) {
+  return hot ? (
+    <span className="ms-1 rounded-sm bg-red-500 px-[2px] py-[1px] text-[8px] leading-3 text-white">
+      HOT
+    </span>
+  ) : null
+}
+
+function SubChildren({ item, className = '' }: { item: NavbarItem; className?: string }) {
+  return (
+    <div className={cn('flex flex-col', className)}>
+      {item.href ? (
+        <NextLink
+          href={item.href!}
+          legacyBehavior
+          passHref
+          className={cn('w-full', item.hidden && 'opacity-0', className)}
+        >
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <div className="flex items-center">
+              {item.title}
+              <Hot hot={item.hot} />
+            </div>
+          </NavigationMenuLink>
+        </NextLink>
+      ) : (
+        <div
+          className={cn(
+            'font-semibold flex items-center',
+            item.children && 'px-4 py-2',
+            item.hidden && 'opacity-0',
+            className
+          )}
+        >
+          {item.title}
+          <Hot hot={item.hot} />
+        </div>
+      )}
+      {item.children?.map((subItem) => {
+        if (subItem.divider) {
+          return (
+            <Separator
+              key={subItem.title}
+              className="mx-auto my-2 h-[2px] w-[90%]"
+            />
+          )
+        }
+        return subItem.href ? (
+          <div
+            key={subItem.title}
+            className={cn(subItem.hidden && 'opacity-0')}
+          >
+            <NextLink
+              href={subItem.href ?? '/'}
+              legacyBehavior
+              passHref
+            >
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                {subItem.title}
+                <Hot hot={subItem.hot} />
+              </NavigationMenuLink>
+            </NextLink>
+            {subItem.children?.map((subSubItem) => (
+              <SubChildren
+                className="pl-4"
+                key={subSubItem.title}
+                item={subSubItem}
+              />
+            ))}
+          </div>
+        ) : (
+          <div
+            key={subItem.title}
+            className={cn(subItem.hidden && 'opacity-0')}
+          >
+            {subItem.title}
+            {subItem.children?.map((subSubItem, subSubIndex) => (
+              <SubChildren
+                className="pl-4"
+                key={subItem.title}
+                item={subSubItem}
+              />
+            ))}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
 
 export default function Header() {
   const [loaded, setLoaded] = useState(false)
@@ -79,73 +170,7 @@ export default function Header() {
                       i.vertical ? 'flex-col space-y-2' : 'space-x-2'
                     )}
                   >
-                    {i.children?.map((item) => (
-                      <div
-                        key={item.title}
-                        className="flex flex-col"
-                      >
-                        {item.href ? (
-                          <NextLink
-                            href={item.href}
-                            legacyBehavior
-                            passHref
-                            className={cn('w-full', item.hidden && 'opacity-0')}
-                          >
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                              {item.title}
-                            </NavigationMenuLink>
-                          </NextLink>
-                        ) : (
-                          <div
-                            className={cn(
-                              'font-semibold',
-                              item.children && 'px-4 py-2',
-                              item.hidden && 'opacity-0'
-                            )}
-                          >
-                            {item.title}
-                          </div>
-                        )}
-                        {item.children?.map((subItem, subIndex) => {
-                          if (subItem.divider) {
-                            return (
-                              <Separator
-                                key={subIndex}
-                                className="mx-auto my-2 h-[2px] w-[90%]"
-                              />
-                            )
-                          }
-                          return subItem.href ? (
-                            <div
-                              key={subIndex}
-                              className={cn(subItem.hidden && 'opacity-0')}
-                            >
-                              <NextLink
-                                href={subItem.href ?? '/'}
-                                legacyBehavior
-                                passHref
-                              >
-                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                  {subItem.title}
-                                  {subItem.hot && (
-                                    <span className="ms-1 rounded-sm bg-red-500 px-[2px] py-[1px] text-[8px] leading-3 text-white">
-                                      HOT
-                                    </span>
-                                  )}
-                                </NavigationMenuLink>
-                              </NextLink>
-                            </div>
-                          ) : (
-                            <div
-                              key={subIndex}
-                              className={cn(subItem.hidden && 'opacity-0')}
-                            >
-                              {subItem.title}
-                            </div>
-                          )
-                        })}
-                      </div>
-                    ))}
+                    {i.children?.map((item) => <SubChildren item={item} />)}
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               ))}
