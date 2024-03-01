@@ -142,7 +142,7 @@ export default function Header() {
         scrollDirection === 'up' && scrollDistance > 100 && 'shadow'
       )}
     >
-      <div className="container flex h-full justify-between self-center px-4">
+      <div className="container flex h-full justify-between self-center px-4 sm:px-6">
         <div className="flex select-none items-center">
           <NextLink
             href="/"
