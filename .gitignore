@@ -13,6 +13,10 @@
 # production
 /build
 
+# cache
+.cspellcache
+.eslintcache
+
 # misc
 .DS_Store
 *.pem
