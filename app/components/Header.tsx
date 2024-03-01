@@ -93,10 +93,10 @@ function SubChildren({ item, className = '' }: { item: NavbarItem; className?: s
             className={cn(subItem.hidden && 'opacity-0')}
           >
             {subItem.title}
-            {subItem.children?.map((subSubItem, subSubIndex) => (
+            {subItem.children?.map((subSubItem) => (
               <SubChildren
                 className="pl-4"
-                key={subItem.title}
+                key={subSubItem.title}
                 item={subSubItem}
               />
             ))}

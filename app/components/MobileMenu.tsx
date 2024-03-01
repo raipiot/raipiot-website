@@ -95,12 +95,12 @@ function SubChildren({
             className={cn(subItem.hidden && 'opacity-0')}
           >
             <div>{subItem.title}</div>
-            {subItem.children?.map((subSubItem, subSubIndex) => (
+            {subItem.children?.map((subSubItem) => (
               <SubChildren
                 item={subSubItem}
                 setOpen={setOpen}
                 className="pl-4"
-                key={subItem.title}
+                key={subSubItem.title}
               />
             ))}
           </div>
@@ -111,7 +111,7 @@ function SubChildren({
 }
 
 export default function MobileMenu() {
-  const [open, setOpen] = useState(!false)
+  const [open, setOpen] = useState(false)
 
   return (
     <Sheet
