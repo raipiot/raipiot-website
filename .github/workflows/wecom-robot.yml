@@ -17,4 +17,4 @@ jobs:
           WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
         with:
           msgtype: news
-          articles: '[{"title":"Github Code review","description":"\n\n${{github.event.pull_request.user.login}}: ${{ github.event.pull_request.title }}","url":"https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}","picurl":"${{ env.IMAGE_URL }}"}]'
+          articles: '[{"title":"Github Code Review","description":"\n${{github.repository}}\n${{github.event.pull_request.user.login}}: ${{ github.event.pull_request.title }}","url":"https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}","picurl":"${{ env.IMAGE_URL }}"}]'
