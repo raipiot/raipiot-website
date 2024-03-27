@@ -6,3 +6,5 @@ yida
 yuze
 libc
 nextjs
+Axure
+Xmind
