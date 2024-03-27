@@ -83,7 +83,7 @@ export const jobDetails: JobDetail[] = [
     title: 'ERP 财务实施顾问',
     location: '项目地',
     createdAt: '2024-03-27',
-    departmentResponsibilities: '负责ERP项目的需求调研、方案设计、系统配置、培训、月结、日常运维。',
+    // departmentResponsibilities: '负责ERP项目的需求调研、方案设计、系统配置、培训、月结、日常运维。',
     jobResponsibilities: `1. 参与 ERP 相关项目的实施或运维工作，制定所负责应收、应付、资产、总账、成本模块的实施策略、方案、方法和计划。
 2. 学习和掌握业务部门（财务）或用户的业务流程，与业务部门用户沟通，调研、分析、总结客户需求，提出整体解决思路，形成相应的解决方案。
 3. 梳理和分析与财务流程相关的客户化需求，撰写功能设计文档，配合开发顾问进行客户化，参与对开发结果的测试工作和推广。
@@ -108,7 +108,7 @@ export const jobDetails: JobDetail[] = [
     title: 'ERP 实施顾问',
     location: '苏州及业务所在地',
     createdAt: '2024-03-27',
-    departmentResponsibilities: 'ERP、BPM第三方软件产品项目管理、售前支持、实施与二次开发等',
+    // departmentResponsibilities: 'ERP、BPM第三方软件产品项目管理、售前支持、实施与二次开发等',
     jobResponsibilities: `1. 负责与客户各业务部门进行沟通协调，整理客户需求、设计解决方案、编制业务蓝图、负责实施落地。
 2. 负责协助产品经理进行产品规划设计，参与研发团队系统研发过程。
 3. 负责组织用户进行新功能的测试和培训，协助建立关键用户体系，协助关键用户编写相关操作手册，定期给关键用户进行培训。
